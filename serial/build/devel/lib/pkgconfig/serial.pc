@@ -1,0 +1,8 @@
+prefix=/home/exbot/wsy_robot/src/serial/build/devel
+
+Name: serial
+Description: Description of serial
+Version: 1.2.1
+Cflags: -I/home/exbot/wsy_robot/src/serial/include
+Libs: -L/home/exbot/wsy_robot/src/serial/build/devel/lib -lserial
+Requires: 

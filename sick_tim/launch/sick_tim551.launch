@@ -1,0 +1,4 @@
+<launch>
+    <node name="sick_tim551_2050001" pkg="sick_tim" type="sick_tim551_2050001" respawn="false" output="screen" />
+    <node pkg="tf" type="static_transform_publisher" name="laser_base_broadcaster" args="0.34 0 0.40 0 0 0 1 base_link laser 50" />
+</launch>

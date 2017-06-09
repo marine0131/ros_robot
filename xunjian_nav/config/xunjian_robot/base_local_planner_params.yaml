@@ -1,0 +1,50 @@
+controller_frequency: 10
+recovery_behavior_enabled: false
+clearing_rotation_allowed: false
+
+TrajectoryPlannerROS:
+   max_vel_x: 0.4  #0.2
+   min_vel_x: 0.1  #0.1 设置为很大的负值，这将允许机器人陷入一个环境中后退从而达到避障的目的；
+   max_vel_y: 0.0  # zero for a differential drive robot
+   min_vel_y: 0.0
+   max_vel_theta: 0.4 #0.3
+   min_vel_theta: -0.4  #0.15
+   min_in_place_vel_theta: 0.2
+   escape_vel: -0.1
+   acc_lim_x: 1.0
+   acc_lim_y: 0.0 # zero for a differential drive robot
+   acc_lim_theta: 2
+
+   holonomic_robot: false
+   yaw_goal_tolerance: 0.2 # about 11 degrees
+   xy_goal_tolerance: 0.3  # 20 cm
+   latch_xy_goal_tolerance: true  #false
+   pdist_scale: 0.8  #0.8
+   gdist_scale: 0.3  #0.4
+   meter_scoring: true
+
+   heading_lookahead: 0.35
+   heading_scoring: false
+   heading_scoring_timestep: 0.8
+   occdist_scale: 0.02   #0.1  越小越好，这样就不会在障碍物附近陷住
+   oscillation_reset_dist: 0.2   #0.05
+   publish_cost_grid_pc: false
+   prune_plan: true
+   reset_distance: 4
+
+   sim_time: 2.5  # 2   这里设置<=2.0会产生局限的性能，尤其是机器人通过狭小的通道；
+   sim_granularity: 0.05  #It basically means how frequent should the points on this trajectory be examined；越小计算资源越多
+   angular_sim_granularity: 0.025
+   vx_samples: 8
+   vy_samples: 0 # zero for a differential drive robot
+   vtheta_samples: 20 #一般情况下vtheta_samples>vx_samples  20  40
+   dwa: true
+   simple_attractor: false
+
+NavfnROS:
+  allow_unknown: true
+  recovery_behavior_enabled: false
+  visualize_potential: true
+  cost_factor: 0.55
+  neutral_cost: 66
+  lethal_cost: 253

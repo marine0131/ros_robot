@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/exbot/wsy_robot/src/serial/build/devel/setup.sh
