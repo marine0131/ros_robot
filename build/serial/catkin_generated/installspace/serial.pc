@@ -1,0 +1,8 @@
+prefix=/home/whj/ros/install
+
+Name: serial
+Description: Description of serial
+Version: 1.2.1
+Cflags: -I/home/whj/ros/install/include
+Libs: -L/home/whj/ros/install/lib -lserial
+Requires: 
