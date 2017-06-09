@@ -276,20 +276,6 @@ actionlib_msgs_generate_messages_py/fast:
 .PHONY : actionlib_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-xunjian_nav/CMakeFiles/car_speed.dir/rule:
-	cd /home/whj/ros/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/car_speed.dir/rule
-.PHONY : xunjian_nav/CMakeFiles/car_speed.dir/rule
-
-# Convenience name for target.
-car_speed: xunjian_nav/CMakeFiles/car_speed.dir/rule
-.PHONY : car_speed
-
-# fast build rule for target.
-car_speed/fast:
-	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/car_speed.dir/build.make xunjian_nav/CMakeFiles/car_speed.dir/build
-.PHONY : car_speed/fast
-
-# Convenience name for target.
 xunjian_nav/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
 	cd /home/whj/ros/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 .PHONY : xunjian_nav/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
@@ -360,18 +346,18 @@ odometry_pub1/fast:
 .PHONY : odometry_pub1/fast
 
 # Convenience name for target.
-xunjian_nav/CMakeFiles/serial_example_node.dir/rule:
-	cd /home/whj/ros/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/serial_example_node.dir/rule
-.PHONY : xunjian_nav/CMakeFiles/serial_example_node.dir/rule
+xunjian_nav/CMakeFiles/serial_node.dir/rule:
+	cd /home/whj/ros/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/serial_node.dir/rule
+.PHONY : xunjian_nav/CMakeFiles/serial_node.dir/rule
 
 # Convenience name for target.
-serial_example_node: xunjian_nav/CMakeFiles/serial_example_node.dir/rule
-.PHONY : serial_example_node
+serial_node: xunjian_nav/CMakeFiles/serial_node.dir/rule
+.PHONY : serial_node
 
 # fast build rule for target.
-serial_example_node/fast:
-	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/serial_example_node.dir/build.make xunjian_nav/CMakeFiles/serial_example_node.dir/build
-.PHONY : serial_example_node/fast
+serial_node/fast:
+	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/serial_node.dir/build.make xunjian_nav/CMakeFiles/serial_node.dir/build
+.PHONY : serial_node/fast
 
 # Convenience name for target.
 xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
@@ -486,6 +472,20 @@ ultrasound_obstacles/fast:
 .PHONY : ultrasound_obstacles/fast
 
 # Convenience name for target.
+xunjian_nav/CMakeFiles/wheel_speed_pub.dir/rule:
+	cd /home/whj/ros/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/wheel_speed_pub.dir/rule
+.PHONY : xunjian_nav/CMakeFiles/wheel_speed_pub.dir/rule
+
+# Convenience name for target.
+wheel_speed_pub: xunjian_nav/CMakeFiles/wheel_speed_pub.dir/rule
+.PHONY : wheel_speed_pub
+
+# fast build rule for target.
+wheel_speed_pub/fast:
+	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/wheel_speed_pub.dir/build.make xunjian_nav/CMakeFiles/wheel_speed_pub.dir/build
+.PHONY : wheel_speed_pub/fast
+
+# Convenience name for target.
 xunjian_nav/CMakeFiles/xunjian_nav_gencpp.dir/rule:
 	cd /home/whj/ros/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/xunjian_nav_gencpp.dir/rule
 .PHONY : xunjian_nav/CMakeFiles/xunjian_nav_gencpp.dir/rule
@@ -597,30 +597,6 @@ yaw_print/fast:
 	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/yaw_print.dir/build.make xunjian_nav/CMakeFiles/yaw_print.dir/build
 .PHONY : yaw_print/fast
 
-src/car_speed.o: src/car_speed.cpp.o
-.PHONY : src/car_speed.o
-
-# target to build an object file
-src/car_speed.cpp.o:
-	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/car_speed.dir/build.make xunjian_nav/CMakeFiles/car_speed.dir/src/car_speed.cpp.o
-.PHONY : src/car_speed.cpp.o
-
-src/car_speed.i: src/car_speed.cpp.i
-.PHONY : src/car_speed.i
-
-# target to preprocess a source file
-src/car_speed.cpp.i:
-	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/car_speed.dir/build.make xunjian_nav/CMakeFiles/car_speed.dir/src/car_speed.cpp.i
-.PHONY : src/car_speed.cpp.i
-
-src/car_speed.s: src/car_speed.cpp.s
-.PHONY : src/car_speed.s
-
-# target to generate assembly for a file
-src/car_speed.cpp.s:
-	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/car_speed.dir/build.make xunjian_nav/CMakeFiles/car_speed.dir/src/car_speed.cpp.s
-.PHONY : src/car_speed.cpp.s
-
 src/odometry_pub.o: src/odometry_pub.cpp.o
 .PHONY : src/odometry_pub.o
 
@@ -669,29 +645,29 @@ src/odometry_pub1.cpp.s:
 	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/odometry_pub1.dir/build.make xunjian_nav/CMakeFiles/odometry_pub1.dir/src/odometry_pub1.cpp.s
 .PHONY : src/odometry_pub1.cpp.s
 
-src/serial_example_node.o: src/serial_example_node.cpp.o
-.PHONY : src/serial_example_node.o
+src/serial_node.o: src/serial_node.cpp.o
+.PHONY : src/serial_node.o
 
 # target to build an object file
-src/serial_example_node.cpp.o:
-	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/serial_example_node.dir/build.make xunjian_nav/CMakeFiles/serial_example_node.dir/src/serial_example_node.cpp.o
-.PHONY : src/serial_example_node.cpp.o
+src/serial_node.cpp.o:
+	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/serial_node.dir/build.make xunjian_nav/CMakeFiles/serial_node.dir/src/serial_node.cpp.o
+.PHONY : src/serial_node.cpp.o
 
-src/serial_example_node.i: src/serial_example_node.cpp.i
-.PHONY : src/serial_example_node.i
+src/serial_node.i: src/serial_node.cpp.i
+.PHONY : src/serial_node.i
 
 # target to preprocess a source file
-src/serial_example_node.cpp.i:
-	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/serial_example_node.dir/build.make xunjian_nav/CMakeFiles/serial_example_node.dir/src/serial_example_node.cpp.i
-.PHONY : src/serial_example_node.cpp.i
+src/serial_node.cpp.i:
+	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/serial_node.dir/build.make xunjian_nav/CMakeFiles/serial_node.dir/src/serial_node.cpp.i
+.PHONY : src/serial_node.cpp.i
 
-src/serial_example_node.s: src/serial_example_node.cpp.s
-.PHONY : src/serial_example_node.s
+src/serial_node.s: src/serial_node.cpp.s
+.PHONY : src/serial_node.s
 
 # target to generate assembly for a file
-src/serial_example_node.cpp.s:
-	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/serial_example_node.dir/build.make xunjian_nav/CMakeFiles/serial_example_node.dir/src/serial_example_node.cpp.s
-.PHONY : src/serial_example_node.cpp.s
+src/serial_node.cpp.s:
+	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/serial_node.dir/build.make xunjian_nav/CMakeFiles/serial_node.dir/src/serial_node.cpp.s
+.PHONY : src/serial_node.cpp.s
 
 src/ultra_print.o: src/ultra_print.cpp.o
 .PHONY : src/ultra_print.o
@@ -741,6 +717,30 @@ src/ultrasound_obstacles.cc.s:
 	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build.make xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.s
 .PHONY : src/ultrasound_obstacles.cc.s
 
+src/wheel_speed_pub.o: src/wheel_speed_pub.cpp.o
+.PHONY : src/wheel_speed_pub.o
+
+# target to build an object file
+src/wheel_speed_pub.cpp.o:
+	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/wheel_speed_pub.dir/build.make xunjian_nav/CMakeFiles/wheel_speed_pub.dir/src/wheel_speed_pub.cpp.o
+.PHONY : src/wheel_speed_pub.cpp.o
+
+src/wheel_speed_pub.i: src/wheel_speed_pub.cpp.i
+.PHONY : src/wheel_speed_pub.i
+
+# target to preprocess a source file
+src/wheel_speed_pub.cpp.i:
+	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/wheel_speed_pub.dir/build.make xunjian_nav/CMakeFiles/wheel_speed_pub.dir/src/wheel_speed_pub.cpp.i
+.PHONY : src/wheel_speed_pub.cpp.i
+
+src/wheel_speed_pub.s: src/wheel_speed_pub.cpp.s
+.PHONY : src/wheel_speed_pub.s
+
+# target to generate assembly for a file
+src/wheel_speed_pub.cpp.s:
+	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/wheel_speed_pub.dir/build.make xunjian_nav/CMakeFiles/wheel_speed_pub.dir/src/wheel_speed_pub.cpp.s
+.PHONY : src/wheel_speed_pub.cpp.s
+
 src/yaw_print.o: src/yaw_print.cpp.o
 .PHONY : src/yaw_print.o
 
@@ -780,7 +780,6 @@ help:
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_py"
-	@echo "... car_speed"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
@@ -792,7 +791,7 @@ help:
 	@echo "... odometry_pub"
 	@echo "... odometry_pub1"
 	@echo "... rebuild_cache"
-	@echo "... serial_example_node"
+	@echo "... serial_node"
 	@echo "... test"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_lisp"
@@ -802,6 +801,7 @@ help:
 	@echo "... tf_generate_messages_py"
 	@echo "... ultra_print"
 	@echo "... ultrasound_obstacles"
+	@echo "... wheel_speed_pub"
 	@echo "... xunjian_nav_gencpp"
 	@echo "... xunjian_nav_generate_messages"
 	@echo "... xunjian_nav_generate_messages_cpp"
@@ -810,24 +810,24 @@ help:
 	@echo "... xunjian_nav_genlisp"
 	@echo "... xunjian_nav_genpy"
 	@echo "... yaw_print"
-	@echo "... src/car_speed.o"
-	@echo "... src/car_speed.i"
-	@echo "... src/car_speed.s"
 	@echo "... src/odometry_pub.o"
 	@echo "... src/odometry_pub.i"
 	@echo "... src/odometry_pub.s"
 	@echo "... src/odometry_pub1.o"
 	@echo "... src/odometry_pub1.i"
 	@echo "... src/odometry_pub1.s"
-	@echo "... src/serial_example_node.o"
-	@echo "... src/serial_example_node.i"
-	@echo "... src/serial_example_node.s"
+	@echo "... src/serial_node.o"
+	@echo "... src/serial_node.i"
+	@echo "... src/serial_node.s"
 	@echo "... src/ultra_print.o"
 	@echo "... src/ultra_print.i"
 	@echo "... src/ultra_print.s"
 	@echo "... src/ultrasound_obstacles.o"
 	@echo "... src/ultrasound_obstacles.i"
 	@echo "... src/ultrasound_obstacles.s"
+	@echo "... src/wheel_speed_pub.o"
+	@echo "... src/wheel_speed_pub.i"
+	@echo "... src/wheel_speed_pub.s"
 	@echo "... src/yaw_print.o"
 	@echo "... src/yaw_print.i"
 	@echo "... src/yaw_print.s"

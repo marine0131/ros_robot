@@ -7,10 +7,10 @@
 	<!-- laser -->
   	<!--<include file="$(find rplidar_ros)/launch/rplidar.launch"/>-->
   	<!--<include file="$(find laser_filters)/examples/shadow_filter_a2.launch"/>-->
-  	<include file="$(find sick_tim)/launch/sick_tim551_2050001.launch"/>
+  	<include file="$(find sick_tim)/launch/sick_tim561_2050101.launch"/>
 	
 	<!-- map_server -->
-  	<node name="map_server" pkg="map_server" type="map_server" args="$(find xunjian_nav)/maps/company_map0602.yaml" respawn="false" />
+  	<node name="map_server" pkg="map_server" type="map_server" args="$(find xunjian_nav)/maps/company_map0525.yaml" respawn="false" />
 
 	<!-- amcl -->
   	<include file="$(find xunjian_nav)/launch/amcl.launch" />

@@ -110,8 +110,8 @@ include_directories(
 # )
 
 ## Declare a cpp executable
-add_executable(serial_example_node src/serial_example_node.cpp )
-target_link_libraries(serial_example_node
+add_executable(serial_node src/serial_node.cpp )
+target_link_libraries(serial_node
    ${catkin_LIBRARIES}
  )
 
@@ -125,8 +125,8 @@ target_link_libraries(odometry_pub1
    ${catkin_LIBRARIES}
  )
 
-add_executable(car_speed src/car_speed.cpp )
-target_link_libraries(car_speed
+add_executable(wheel_speed_pub src/wheel_speed_pub.cpp )
+target_link_libraries(wheel_speed_pub
    ${catkin_LIBRARIES}
  )
 

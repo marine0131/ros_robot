@@ -12,7 +12,6 @@
 /home/whj/ros/build/xunjian_nav/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir
 /home/whj/ros/build/xunjian_nav/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir
 /home/whj/ros/build/xunjian_nav/CMakeFiles/actionlib_msgs_generate_messages_py.dir
-/home/whj/ros/build/xunjian_nav/CMakeFiles/car_speed.dir
 /home/whj/ros/build/CMakeFiles/clean_test_results.dir
 /home/whj/ros/build/serial/tests/CMakeFiles/clean_test_results_serial.dir
 /home/whj/ros/build/sick_tim/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir
@@ -51,7 +50,7 @@
 /home/whj/ros/build/serial/tests/CMakeFiles/serial-test.dir
 /home/whj/ros/build/serial/tests/CMakeFiles/serial-test-timer.dir
 /home/whj/ros/build/serial/CMakeFiles/serial_example.dir
-/home/whj/ros/build/xunjian_nav/CMakeFiles/serial_example_node.dir
+/home/whj/ros/build/xunjian_nav/CMakeFiles/serial_node.dir
 /home/whj/ros/build/sick_tim/CMakeFiles/sick_tim310.dir
 /home/whj/ros/build/sick_tim/CMakeFiles/sick_tim310_1130000m01.dir
 /home/whj/ros/build/sick_tim/CMakeFiles/sick_tim310s01.dir
@@ -71,6 +70,7 @@
 /home/whj/ros/build/xunjian_nav/CMakeFiles/tf_generate_messages_py.dir
 /home/whj/ros/build/xunjian_nav/CMakeFiles/ultra_print.dir
 /home/whj/ros/build/xunjian_nav/CMakeFiles/ultrasound_obstacles.dir
+/home/whj/ros/build/xunjian_nav/CMakeFiles/wheel_speed_pub.dir
 /home/whj/ros/build/xunjian_nav/CMakeFiles/xunjian_nav_gencpp.dir
 /home/whj/ros/build/xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir
 /home/whj/ros/build/xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_cpp.dir

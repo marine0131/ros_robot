@@ -904,19 +904,6 @@ actionlib_msgs_generate_messages_py/fast:
 .PHONY : actionlib_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named car_speed
-
-# Build rule for target.
-car_speed: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 car_speed
-.PHONY : car_speed
-
-# fast build rule for target.
-car_speed/fast:
-	$(MAKE) -f xunjian_nav/CMakeFiles/car_speed.dir/build.make xunjian_nav/CMakeFiles/car_speed.dir/build
-.PHONY : car_speed/fast
-
-#=============================================================================
 # Target rules for targets named nav_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -982,17 +969,17 @@ odometry_pub1/fast:
 .PHONY : odometry_pub1/fast
 
 #=============================================================================
-# Target rules for targets named serial_example_node
+# Target rules for targets named serial_node
 
 # Build rule for target.
-serial_example_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 serial_example_node
-.PHONY : serial_example_node
+serial_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 serial_node
+.PHONY : serial_node
 
 # fast build rule for target.
-serial_example_node/fast:
-	$(MAKE) -f xunjian_nav/CMakeFiles/serial_example_node.dir/build.make xunjian_nav/CMakeFiles/serial_example_node.dir/build
-.PHONY : serial_example_node/fast
+serial_node/fast:
+	$(MAKE) -f xunjian_nav/CMakeFiles/serial_node.dir/build.make xunjian_nav/CMakeFiles/serial_node.dir/build
+.PHONY : serial_node/fast
 
 #=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_cpp
@@ -1097,6 +1084,19 @@ ultrasound_obstacles: cmake_check_build_system
 ultrasound_obstacles/fast:
 	$(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build.make xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build
 .PHONY : ultrasound_obstacles/fast
+
+#=============================================================================
+# Target rules for targets named wheel_speed_pub
+
+# Build rule for target.
+wheel_speed_pub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wheel_speed_pub
+.PHONY : wheel_speed_pub
+
+# fast build rule for target.
+wheel_speed_pub/fast:
+	$(MAKE) -f xunjian_nav/CMakeFiles/wheel_speed_pub.dir/build.make xunjian_nav/CMakeFiles/wheel_speed_pub.dir/build
+.PHONY : wheel_speed_pub/fast
 
 #=============================================================================
 # Target rules for targets named xunjian_nav_gencpp
@@ -1273,13 +1273,12 @@ help:
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_py"
-	@echo "... car_speed"
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... odometry_pub"
 	@echo "... odometry_pub1"
-	@echo "... serial_example_node"
+	@echo "... serial_node"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_py"
@@ -1288,6 +1287,7 @@ help:
 	@echo "... tf_generate_messages_py"
 	@echo "... ultra_print"
 	@echo "... ultrasound_obstacles"
+	@echo "... wheel_speed_pub"
 	@echo "... xunjian_nav_gencpp"
 	@echo "... xunjian_nav_generate_messages"
 	@echo "... xunjian_nav_generate_messages_cpp"

@@ -110,39 +110,39 @@ include_directories(
 # )
 
 ## Declare a cpp executable
-#add_executable(serial_example_node src/serial_example_node.cpp )
-#target_link_libraries(serial_example_node
-#   ${catkin_LIBRARIES}
-# )
+add_executable(serial_node src/serial_node.cpp )
+target_link_libraries(serial_example_node
+   ${catkin_LIBRARIES}
+ )
 
-#add_executable(odometry_pub src/odometry_pub.cpp )
-#target_link_libraries(odometry_pub
-#   ${catkin_LIBRARIES}
-# )
+add_executable(odometry_pub src/odometry_pub.cpp )
+target_link_libraries(odometry_pub
+   ${catkin_LIBRARIES}
+ )
 
-#add_executable(odometry_pub1 src/odometry_pub1.cpp )
-#target_link_libraries(odometry_pub1
-#   ${catkin_LIBRARIES}
-# )
+add_executable(odometry_pub1 src/odometry_pub1.cpp )
+target_link_libraries(odometry_pub1
+   ${catkin_LIBRARIES}
+ )
 
-#add_executable(car_speed src/car_speed.cpp )
-#target_link_libraries(car_speed
-#   ${catkin_LIBRARIES}
-# )
+add_executable(wheel_speed_pub src/wheel_speed_pub.cpp )
+target_link_libraries(wheel_speed_pub
+   ${catkin_LIBRARIES}
+ )
 
-#add_executable(yaw_print src/yaw_print.cpp )
-#target_link_libraries(yaw_print
-#   ${catkin_LIBRARIES}
-# )
-#add_executable(ultra_print src/ultra_print.cpp )
-#target_link_libraries(ultra_print
-#   ${catkin_LIBRARIES}
-# )
+add_executable(yaw_print src/yaw_print.cpp )
+target_link_libraries(yaw_print
+   ${catkin_LIBRARIES}
+ )
+add_executable(ultra_print src/ultra_print.cpp )
+target_link_libraries(ultra_print
+   ${catkin_LIBRARIES}
+ )
 
-#add_executable(ultrasound_obstacles src/ultrasound_obstacles.cc )
-#target_link_libraries(ultrasound_obstacles
-#   ${catkin_LIBRARIES}
-# )
+add_executable(ultrasound_obstacles src/ultrasound_obstacles.cc )
+target_link_libraries(ultrasound_obstacles
+   ${catkin_LIBRARIES}
+ )
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(xunjian_nav_node xunjian_nav_generate_messages_cpp)

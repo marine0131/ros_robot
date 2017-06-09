@@ -28,10 +28,10 @@ void sensorMsg_Callback(const xunjian_nav::Sensor& sensorMsg){
 
 int main(int argc, char **argv)
 {
-	ros::init(argc,argv,"odometry_publisher");
+	ros::init(argc,argv,"odometry_pub");
 	ros::NodeHandle n;
 	
-	ros::Subscriber sensor_sub=n.subscribe("sensor_msgs",1000,sensorMsg_Callback);
+	ros::Subscriber sensor_sub=n.subscribe("encoder",1000,sensorMsg_Callback);
 	ros::Publisher odom_pub=n.advertise<nav_msgs::Odometry>("odom",1000);//定义发布里程计的对象odom_pub
 	tf::TransformBroadcaster odom_broadcaster;//定义odom->base_link的坐标转换对象odom_broadcaster
 

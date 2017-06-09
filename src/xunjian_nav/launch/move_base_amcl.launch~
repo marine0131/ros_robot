@@ -10,7 +10,7 @@
   	<include file="$(find sick_tim)/launch/sick_tim551_2050001.launch"/>
 	
 	<!-- map_server -->
-  	<node name="map_server" pkg="map_server" type="map_server" args="$(find xunjian_nav)/maps/company_map0602.yaml" respawn="false" />
+  	<node name="map_server" pkg="map_server" type="map_server" args="$(find xunjian_nav)/maps/company_map0525.yaml" respawn="false" />
 
 	<!-- amcl -->
   	<include file="$(find xunjian_nav)/launch/amcl.launch" />
@@ -25,6 +25,7 @@
     	<!--<rosparam file="$(find xunjian_nav)/config/xunjian_robot/navfn_params.yaml" command="load"/>-->
   	</node>
   	
+	<!-- rviz -->
 	<node name="rviz" pkg="rviz" type="rviz"  required="true"
     	args="-d $(find xunjian_nav)/rviz/nav_test.rviz" />
 </launch>
