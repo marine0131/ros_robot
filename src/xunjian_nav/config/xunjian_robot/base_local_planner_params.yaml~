@@ -35,7 +35,7 @@ TrajectoryPlannerROS:
    sim_time: 2.5  # 2   这里设置<=2.0会产生局限的性能，尤其是机器人通过狭小的通道；
    sim_granularity: 0.05  #It basically means how frequent should the points on this trajectory be examined；越小计算资源越多
    angular_sim_granularity: 0.025
-   vx_samples: 15
+   vx_samples: 8
    vy_samples: 0 # zero for a differential drive robot
    vtheta_samples: 20 #一般情况下vtheta_samples>vx_samples  20  40
    dwa: true
