@@ -20,20 +20,20 @@ rosrun rviz rviz
 激光节点      roslaunch   rplidar_ros  view_rplidar.launch   
 
 
-最新的运行指令   1.rosrun xunjian_nav  serial_example_node
+最新的运行指令   1.rosrun xunjian_nav  serial_node
                 2.rostopic pub -1 motor_encoderClean std_msgs/Empty
                 3.roslaunch xunjian_nav xunjian_robot.launch
                 4.roslaunch xunjian_nav move_base_gmapping.launch
                 5.rosrun rviz rviz -d `rospack find rbx1_nav`/gmapping.rviz
 
-amcl运行命令   1.rosrun xunjian_nav  serial_example_node
-              2.rostopic pub -1 motor_encoderClean std_msgs/Empty
+amcl运行命令   1.rosrun xunjian_nav  serial_node
+              2.rostopic pub -1 encoder_reset std_msgs/Empty
               3.roslaunch xunjian_nav xunjian_robot.launch
               4.roslaunch rplidar_ros  rplidar.launch
               5.roslaunch xunjian_nav  move_base_amcl.launch
               6.rosrun rviz rviz -d `rospack find rbx1_nav/rviz`/amcl.rviz
 
-键盘控制           rosrun xunjian_nav  serial_example_node
+键盘控制           rosrun xunjian_nav  serial_node
                   roslaunch xunjian_nav xunjian_robot.launch
                   roslaunch rbx1_nav keyboard_teleop.launch 
 
@@ -42,8 +42,8 @@ amcl运行命令   1.rosrun xunjian_nav  serial_example_node
                2.rostopic pub -1 encoder_reset std_msgs/Empty
                3.roslaunch xunjian_nav xunjian_robot.launch
                4.roslaunch xunjian_nav  move_base_amcl.launch
-建图       1.rosrun xunjian_nav  serial_example_node
-               2.rostopic pub -1 motor_encoderClean std_msgs/Empty
+建图       	1.rosrun xunjian_nav  serial_node
+               2.rostopic pub -1 encoder_reset std_msgs/Empty
                3.roslaunch xunjian_nav gmapping_demo.launch
                4.roscd xunjian_nav/maps
                5.rosrun map_server map_saver -f company_map

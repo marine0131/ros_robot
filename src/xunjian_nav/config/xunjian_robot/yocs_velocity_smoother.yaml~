@@ -4,4 +4,4 @@ speed_lim_v: 0.4
 speed_lim_w: 0.4
 decel_factor: 1.0
 frequency: 20.0
-robot_feedback: 1 #1
+robot_feedback: 2 #1

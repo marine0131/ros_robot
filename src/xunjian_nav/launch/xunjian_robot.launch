@@ -1,9 +1,12 @@
 <launch>
     	<arg name="simulation" default="$(optenv XUNJIAN_SIMULATION false)"/>
     	<param name="/use_sim_time" value="$(arg simulation)"/>
+	
 	<node pkg="xunjian_nav" type="wheel_speed_pub" name="wheel_speed_pub"  />
+	
 	<node pkg="xunjian_nav" type="odometry_pub" name="odometry_pub"  />
-  	<!--<node pkg="xunjian_nav" type="ultrasound_obstacles"  name="ultrasound_avoid_obstacles"  />-->
+  	
+	<!--<node pkg="xunjian_nav" type="ultrasound_avoidance"  name="ultrasound_avoidance"  />-->
 	<!--<node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0.015 0 0.73 0 0 0 1 base_link laser 50"  />-->
   	<!--<node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 map odom 50" />-->
 	
@@ -15,7 +18,6 @@
         <arg name="smooth_cmd_vel_topic"  value="smoother_cmd_vel"/>
         <!--<arg name="robot_cmd_vel_topic"   value="robot_cmd_vel"/>-->s
         <arg name="odom_topic"            value="odom"/>
-
   	<!-- nodelet manager -->
     	<node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager_name)" args="manager"/>
   	<!-- velocity smoother -->

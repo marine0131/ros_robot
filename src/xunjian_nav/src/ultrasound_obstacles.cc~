@@ -40,7 +40,7 @@ void rangeCallBack(const xunjian_nav::Ultrasound &range)
     ros::NodeHandle nh;
     pub=nh.advertise<geometry_msgs::Twist>("/ultrasound/cmd_vel",1000);
     sub1=nh.subscribe("cmd_vel",1000,&cmd_velCallBack);
-    sub2=nh.subscribe("range",1000,&rangeCallBack);
+    sub2=nh.subscribe("ultra_dist",1000,&rangeCallBack);
     ros::spin();
     return 0;
 }

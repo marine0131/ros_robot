@@ -36,7 +36,7 @@ void rangeCallBack(const xunjian_nav::Ultrasound &range)
 }
 
   int main(int argc,char **argv){
-    ros::init(argc,argv,"ultrasound_avoid_obstacles");
+    ros::init(argc,argv,"ultrasound_avoidance");
     ros::NodeHandle nh;
     pub=nh.advertise<geometry_msgs::Twist>("/ultrasound/cmd_vel",1000);
     sub1=nh.subscribe("cmd_vel",1000,&cmd_velCallBack);
