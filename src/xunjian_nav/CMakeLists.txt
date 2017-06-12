@@ -139,8 +139,8 @@ target_link_libraries(ultra_print
    ${catkin_LIBRARIES}
  )
 
-add_executable(ultrasound_obstacles src/ultrasound_obstacles.cc )
-target_link_libraries(ultrasound_obstacles
+add_executable(ultrasound_avoidance src/ultrasound_avoidance.cc )
+target_link_libraries(ultrasound_avoidance
    ${catkin_LIBRARIES}
  )
 ## Add cmake target dependencies of the executable/library

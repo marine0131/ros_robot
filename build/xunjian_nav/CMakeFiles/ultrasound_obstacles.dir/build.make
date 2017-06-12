@@ -49,37 +49,37 @@ include xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/progress.make
 # Include the compile flags for this target's objects.
 include xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/flags.make
 
-xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/flags.make
-xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o: /home/whj/ros/src/xunjian_nav/src/ultrasound_obstacles.cc
+xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/flags.make
+xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o: /home/whj/ros/src/xunjian_nav/src/ultrasound_avoidance.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/ros/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o"
-	cd /home/whj/ros/build/xunjian_nav && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o -c /home/whj/ros/src/xunjian_nav/src/ultrasound_obstacles.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o"
+	cd /home/whj/ros/build/xunjian_nav && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o -c /home/whj/ros/src/xunjian_nav/src/ultrasound_avoidance.cc
 
-xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.i"
-	cd /home/whj/ros/build/xunjian_nav && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/whj/ros/src/xunjian_nav/src/ultrasound_obstacles.cc > CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.i
+xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.i"
+	cd /home/whj/ros/build/xunjian_nav && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/whj/ros/src/xunjian_nav/src/ultrasound_avoidance.cc > CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.i
 
-xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.s"
-	cd /home/whj/ros/build/xunjian_nav && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/whj/ros/src/xunjian_nav/src/ultrasound_obstacles.cc -o CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.s
+xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.s"
+	cd /home/whj/ros/build/xunjian_nav && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/whj/ros/src/xunjian_nav/src/ultrasound_avoidance.cc -o CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.s
 
-xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o.requires:
-.PHONY : xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o.requires
+xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o.requires:
+.PHONY : xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o.requires
 
-xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o.provides: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o.requires
-	$(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build.make xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o.provides.build
-.PHONY : xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o.provides
+xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o.provides: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o.requires
+	$(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build.make xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o.provides.build
+.PHONY : xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o.provides
 
-xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o.provides.build: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o
+xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o.provides.build: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o
 
 # Object files for target ultrasound_obstacles
 ultrasound_obstacles_OBJECTS = \
-"CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o"
+"CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o"
 
 # External object files for target ultrasound_obstacles
 ultrasound_obstacles_EXTERNAL_OBJECTS =
 
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_obstacles: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o
+/home/whj/ros/devel/lib/xunjian_nav/ultrasound_obstacles: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o
 /home/whj/ros/devel/lib/xunjian_nav/ultrasound_obstacles: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build.make
 /home/whj/ros/devel/lib/xunjian_nav/ultrasound_obstacles: /home/whj/ros/devel/lib/libserial.so
 /home/whj/ros/devel/lib/xunjian_nav/ultrasound_obstacles: /opt/ros/indigo/lib/libtf.so
@@ -112,7 +112,7 @@ ultrasound_obstacles_EXTERNAL_OBJECTS =
 xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build: /home/whj/ros/devel/lib/xunjian_nav/ultrasound_obstacles
 .PHONY : xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build
 
-xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/requires: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o.requires
+xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/requires: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o.requires
 .PHONY : xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/requires
 
 xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/clean:

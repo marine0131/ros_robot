@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/whj/ros/src/xunjian_nav/src/ultrasound_obstacles.cc" "/home/whj/ros/build/xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o"
+  "/home/whj/ros/src/xunjian_nav/src/ultrasound_avoidance.cc" "/home/whj/ros/build/xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

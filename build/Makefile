@@ -1073,17 +1073,17 @@ ultra_print/fast:
 .PHONY : ultra_print/fast
 
 #=============================================================================
-# Target rules for targets named ultrasound_obstacles
+# Target rules for targets named ultrasound_avoidance
 
 # Build rule for target.
-ultrasound_obstacles: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ultrasound_obstacles
-.PHONY : ultrasound_obstacles
+ultrasound_avoidance: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ultrasound_avoidance
+.PHONY : ultrasound_avoidance
 
 # fast build rule for target.
-ultrasound_obstacles/fast:
-	$(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build.make xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build
-.PHONY : ultrasound_obstacles/fast
+ultrasound_avoidance/fast:
+	$(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build.make xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build
+.PHONY : ultrasound_avoidance/fast
 
 #=============================================================================
 # Target rules for targets named wheel_speed_pub
@@ -1286,7 +1286,7 @@ help:
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
 	@echo "... ultra_print"
-	@echo "... ultrasound_obstacles"
+	@echo "... ultrasound_avoidance"
 	@echo "... wheel_speed_pub"
 	@echo "... xunjian_nav_gencpp"
 	@echo "... xunjian_nav_generate_messages"

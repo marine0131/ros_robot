@@ -180,8 +180,8 @@ clean: CMakeFiles/run_tests.dir/clean
 # Target rules for target CMakeFiles/tests.dir
 
 # All Build rule for target.
-CMakeFiles/tests.dir/all: serial/tests/CMakeFiles/serial-test.dir/all
 CMakeFiles/tests.dir/all: serial/tests/CMakeFiles/serial-test-timer.dir/all
+CMakeFiles/tests.dir/all: serial/tests/CMakeFiles/serial-test.dir/all
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/ros/build/CMakeFiles 
@@ -1557,29 +1557,29 @@ clean: sick_tim/CMakeFiles/sick_tim551_2050001.dir/clean
 # Target rules for target sick_tim/CMakeFiles/sick_tim_3xx.dir
 
 # All Build rule for target.
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/sick_tim_gencfg.dir/all
 sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/roscpp_generate_messages_py.dir/all
 sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/roscpp_generate_messages_py.dir/all
 sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/std_msgs_generate_messages_py.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/all
 sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/all
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/std_msgs_generate_messages_py.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
 sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/sick_tim_gencfg.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+sick_tim/CMakeFiles/sick_tim_3xx.dir/all: sick_tim/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
 	$(MAKE) -f sick_tim/CMakeFiles/sick_tim_3xx.dir/build.make sick_tim/CMakeFiles/sick_tim_3xx.dir/depend
 	$(MAKE) -f sick_tim/CMakeFiles/sick_tim_3xx.dir/build.make sick_tim/CMakeFiles/sick_tim_3xx.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/ros/build/CMakeFiles  21 22 23 24
@@ -1861,7 +1861,7 @@ xunjian_nav/all: xunjian_nav/CMakeFiles/odometry_pub.dir/all
 xunjian_nav/all: xunjian_nav/CMakeFiles/odometry_pub1.dir/all
 xunjian_nav/all: xunjian_nav/CMakeFiles/serial_node.dir/all
 xunjian_nav/all: xunjian_nav/CMakeFiles/ultra_print.dir/all
-xunjian_nav/all: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/all
+xunjian_nav/all: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/all
 xunjian_nav/all: xunjian_nav/CMakeFiles/wheel_speed_pub.dir/all
 xunjian_nav/all: xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir/all
 xunjian_nav/all: xunjian_nav/CMakeFiles/yaw_print.dir/all
@@ -1890,7 +1890,7 @@ xunjian_nav/clean: xunjian_nav/CMakeFiles/tf_generate_messages_cpp.dir/clean
 xunjian_nav/clean: xunjian_nav/CMakeFiles/tf_generate_messages_lisp.dir/clean
 xunjian_nav/clean: xunjian_nav/CMakeFiles/tf_generate_messages_py.dir/clean
 xunjian_nav/clean: xunjian_nav/CMakeFiles/ultra_print.dir/clean
-xunjian_nav/clean: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/clean
+xunjian_nav/clean: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/clean
 xunjian_nav/clean: xunjian_nav/CMakeFiles/wheel_speed_pub.dir/clean
 xunjian_nav/clean: xunjian_nav/CMakeFiles/xunjian_nav_gencpp.dir/clean
 xunjian_nav/clean: xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir/clean
@@ -2605,38 +2605,38 @@ clean: xunjian_nav/CMakeFiles/ultra_print.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target xunjian_nav/CMakeFiles/ultrasound_obstacles.dir
+# Target rules for target xunjian_nav/CMakeFiles/ultrasound_avoidance.dir
 
 # All Build rule for target.
-xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/all: serial/CMakeFiles/serial.dir/all
-	$(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build.make xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/depend
-	$(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build.make xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build
+xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/all: serial/CMakeFiles/serial.dir/all
+	$(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build.make xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/depend
+	$(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build.make xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/ros/build/CMakeFiles  30
-	@echo "Built target ultrasound_obstacles"
-.PHONY : xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/all
+	@echo "Built target ultrasound_avoidance"
+.PHONY : xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/all
 
 # Include target in all.
-all: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/all
+all: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/rule: cmake_check_build_system
+xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/whj/ros/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/whj/ros/build/CMakeFiles 0
-.PHONY : xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/rule
+.PHONY : xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/rule
 
 # Convenience name for target.
-ultrasound_obstacles: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/rule
-.PHONY : ultrasound_obstacles
+ultrasound_avoidance: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/rule
+.PHONY : ultrasound_avoidance
 
 # clean rule for target.
-xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/clean:
-	$(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build.make xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/clean
-.PHONY : xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/clean
+xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/clean:
+	$(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build.make xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/clean
+.PHONY : xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/clean
 
 # clean rule for target.
-clean: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/clean
+clean: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -2709,9 +2709,9 @@ clean: xunjian_nav/CMakeFiles/xunjian_nav_gencpp.dir/clean
 # Target rules for target xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir
 
 # All Build rule for target.
-xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir/all: xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_lisp.dir/all
 xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir/all: xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_cpp.dir/all
 xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir/all: xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_py.dir/all
+xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir/all: xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_lisp.dir/all
 	$(MAKE) -f xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir/build.make xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir/depend
 	$(MAKE) -f xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir/build.make xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/ros/build/CMakeFiles 
@@ -2747,9 +2747,9 @@ clean: xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir/clean
 
 # All Build rule for target.
 xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_cpp.dir/all: sick_tim/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_cpp.dir/all: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Sensor.dir/all
 xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_cpp.dir/all: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/all
 xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_cpp.dir/all: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Ultrasound.dir/all
-xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_cpp.dir/all: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Sensor.dir/all
 	$(MAKE) -f xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_cpp.dir/build.make xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_cpp.dir/depend
 	$(MAKE) -f xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_cpp.dir/build.make xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_cpp.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/ros/build/CMakeFiles  32 33 34
@@ -2781,9 +2781,9 @@ clean: xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_cpp.dir/clean
 
 # All Build rule for target.
 xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_lisp.dir/all: sick_tim/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_lisp.dir/all: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Sensor.dir/all
 xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_lisp.dir/all: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/all
 xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_lisp.dir/all: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Ultrasound.dir/all
-xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_lisp.dir/all: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Sensor.dir/all
 	$(MAKE) -f xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_lisp.dir/build.make xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_lisp.dir/depend
 	$(MAKE) -f xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_lisp.dir/build.make xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_lisp.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/ros/build/CMakeFiles  35 36 37
@@ -2815,9 +2815,9 @@ clean: xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_lisp.dir/clean
 
 # All Build rule for target.
 xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_py.dir/all: sick_tim/CMakeFiles/std_msgs_generate_messages_py.dir/all
+xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_py.dir/all: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Sensor.dir/all
 xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_py.dir/all: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/all
 xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_py.dir/all: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Ultrasound.dir/all
-xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_py.dir/all: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Sensor.dir/all
 	$(MAKE) -f xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_py.dir/build.make xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_py.dir/depend
 	$(MAKE) -f xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_py.dir/build.make xunjian_nav/CMakeFiles/xunjian_nav_generate_messages_py.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/ros/build/CMakeFiles  38 39 40 41

@@ -458,18 +458,18 @@ ultra_print/fast:
 .PHONY : ultra_print/fast
 
 # Convenience name for target.
-xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/rule:
-	cd /home/whj/ros/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/rule
-.PHONY : xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/rule
+xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/rule:
+	cd /home/whj/ros/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/rule
+.PHONY : xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/rule
 
 # Convenience name for target.
-ultrasound_obstacles: xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/rule
-.PHONY : ultrasound_obstacles
+ultrasound_avoidance: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/rule
+.PHONY : ultrasound_avoidance
 
 # fast build rule for target.
-ultrasound_obstacles/fast:
-	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build.make xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build
-.PHONY : ultrasound_obstacles/fast
+ultrasound_avoidance/fast:
+	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build.make xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build
+.PHONY : ultrasound_avoidance/fast
 
 # Convenience name for target.
 xunjian_nav/CMakeFiles/wheel_speed_pub.dir/rule:
@@ -693,29 +693,29 @@ src/ultra_print.cpp.s:
 	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/ultra_print.dir/build.make xunjian_nav/CMakeFiles/ultra_print.dir/src/ultra_print.cpp.s
 .PHONY : src/ultra_print.cpp.s
 
-src/ultrasound_obstacles.o: src/ultrasound_obstacles.cc.o
-.PHONY : src/ultrasound_obstacles.o
+src/ultrasound_avoidance.o: src/ultrasound_avoidance.cc.o
+.PHONY : src/ultrasound_avoidance.o
 
 # target to build an object file
-src/ultrasound_obstacles.cc.o:
-	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build.make xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o
-.PHONY : src/ultrasound_obstacles.cc.o
+src/ultrasound_avoidance.cc.o:
+	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build.make xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.o
+.PHONY : src/ultrasound_avoidance.cc.o
 
-src/ultrasound_obstacles.i: src/ultrasound_obstacles.cc.i
-.PHONY : src/ultrasound_obstacles.i
+src/ultrasound_avoidance.i: src/ultrasound_avoidance.cc.i
+.PHONY : src/ultrasound_avoidance.i
 
 # target to preprocess a source file
-src/ultrasound_obstacles.cc.i:
-	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build.make xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.i
-.PHONY : src/ultrasound_obstacles.cc.i
+src/ultrasound_avoidance.cc.i:
+	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build.make xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.i
+.PHONY : src/ultrasound_avoidance.cc.i
 
-src/ultrasound_obstacles.s: src/ultrasound_obstacles.cc.s
-.PHONY : src/ultrasound_obstacles.s
+src/ultrasound_avoidance.s: src/ultrasound_avoidance.cc.s
+.PHONY : src/ultrasound_avoidance.s
 
 # target to generate assembly for a file
-src/ultrasound_obstacles.cc.s:
-	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/build.make xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.s
-.PHONY : src/ultrasound_obstacles.cc.s
+src/ultrasound_avoidance.cc.s:
+	cd /home/whj/ros/build && $(MAKE) -f xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build.make xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.s
+.PHONY : src/ultrasound_avoidance.cc.s
 
 src/wheel_speed_pub.o: src/wheel_speed_pub.cpp.o
 .PHONY : src/wheel_speed_pub.o
@@ -800,7 +800,7 @@ help:
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
 	@echo "... ultra_print"
-	@echo "... ultrasound_obstacles"
+	@echo "... ultrasound_avoidance"
 	@echo "... wheel_speed_pub"
 	@echo "... xunjian_nav_gencpp"
 	@echo "... xunjian_nav_generate_messages"
@@ -822,9 +822,9 @@ help:
 	@echo "... src/ultra_print.o"
 	@echo "... src/ultra_print.i"
 	@echo "... src/ultra_print.s"
-	@echo "... src/ultrasound_obstacles.o"
-	@echo "... src/ultrasound_obstacles.i"
-	@echo "... src/ultrasound_obstacles.s"
+	@echo "... src/ultrasound_avoidance.o"
+	@echo "... src/ultrasound_avoidance.i"
+	@echo "... src/ultrasound_avoidance.s"
 	@echo "... src/wheel_speed_pub.o"
 	@echo "... src/wheel_speed_pub.i"
 	@echo "... src/wheel_speed_pub.s"

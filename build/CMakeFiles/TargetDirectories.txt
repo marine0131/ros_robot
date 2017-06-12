@@ -69,7 +69,7 @@
 /home/whj/ros/build/xunjian_nav/CMakeFiles/tf_generate_messages_lisp.dir
 /home/whj/ros/build/xunjian_nav/CMakeFiles/tf_generate_messages_py.dir
 /home/whj/ros/build/xunjian_nav/CMakeFiles/ultra_print.dir
-/home/whj/ros/build/xunjian_nav/CMakeFiles/ultrasound_obstacles.dir
+/home/whj/ros/build/xunjian_nav/CMakeFiles/ultrasound_avoidance.dir
 /home/whj/ros/build/xunjian_nav/CMakeFiles/wheel_speed_pub.dir
 /home/whj/ros/build/xunjian_nav/CMakeFiles/xunjian_nav_gencpp.dir
 /home/whj/ros/build/xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir

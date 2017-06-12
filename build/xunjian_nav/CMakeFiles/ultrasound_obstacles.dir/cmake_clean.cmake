@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_obstacles.cc.o"
+  "CMakeFiles/ultrasound_obstacles.dir/src/ultrasound_avoidance.cc.o"
   "/home/whj/ros/devel/lib/xunjian_nav/ultrasound_obstacles.pdb"
   "/home/whj/ros/devel/lib/xunjian_nav/ultrasound_obstacles"
 )

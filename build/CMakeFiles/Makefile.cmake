@@ -340,7 +340,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "xunjian_nav/CMakeFiles/tf_generate_messages_lisp.dir/DependInfo.cmake"
   "xunjian_nav/CMakeFiles/tf_generate_messages_py.dir/DependInfo.cmake"
   "xunjian_nav/CMakeFiles/ultra_print.dir/DependInfo.cmake"
-  "xunjian_nav/CMakeFiles/ultrasound_obstacles.dir/DependInfo.cmake"
+  "xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/DependInfo.cmake"
   "xunjian_nav/CMakeFiles/wheel_speed_pub.dir/DependInfo.cmake"
   "xunjian_nav/CMakeFiles/xunjian_nav_gencpp.dir/DependInfo.cmake"
   "xunjian_nav/CMakeFiles/xunjian_nav_generate_messages.dir/DependInfo.cmake"
