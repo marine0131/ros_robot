@@ -1,0 +1,2 @@
+rbx1/rbx1:rbx1/rbx1_apps:rbx1/rbx1_bringup:rbx1/rbx1_description:rbx1/rbx1_dynamixels:rbx1/rbx1_nav:rbx1/rbx1_speech:rbx1/rbx1_vision:serial:sick_tim:xunjian_nav
+-DCATKIN_DEVEL_PREFIX=/home/whj/ros/devel -DCMAKE_INSTALL_PREFIX=/home/whj/ros/install -G Unix Makefiles
