@@ -1,6 +1,7 @@
 gmapping 运行指令表
 ls -l /dev/ttyUSB*
 sudo chmod 666 /dev/ttyUSB0
+sudo usermod -aG　dialout whj  #其中whj是我的用户名，换成你想用USB的用户名即可．把此用户名加入dialout用户组，然后注销下电脑，这样下次重启也不用修改权限
 roscore
 roslaunch xunjian_nav xunjian_robot.launch
 查看tf tree   rosrun tf view_frames
