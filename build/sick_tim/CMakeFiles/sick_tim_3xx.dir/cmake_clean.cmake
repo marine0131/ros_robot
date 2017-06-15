@@ -3,8 +3,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/sick_tim_3xx.dir/src/sick_tim_common_usb.cpp.o"
   "CMakeFiles/sick_tim_3xx.dir/src/sick_tim_common_mockup.cpp.o"
   "CMakeFiles/sick_tim_3xx.dir/src/abstract_parser.cpp.o"
-  "/home/whj/ros/devel/lib/libsick_tim_3xx.pdb"
-  "/home/whj/ros/devel/lib/libsick_tim_3xx.so"
+  "/home/exbot/ros/devel/lib/libsick_tim_3xx.pdb"
+  "/home/exbot/ros/devel/lib/libsick_tim_3xx.so"
 )
 
 # Per-language clean rules from dependency scanning.

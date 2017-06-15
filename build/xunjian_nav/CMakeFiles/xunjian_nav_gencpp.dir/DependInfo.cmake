@@ -16,9 +16,9 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/whj/ros/devel/include"
-  "/home/whj/ros/src/xunjian_nav/include"
-  "/home/whj/ros/src/serial/include"
+  "/home/exbot/ros/devel/include"
+  "/home/exbot/ros/src/xunjian_nav/include"
+  "/home/exbot/ros/src/serial/include"
   "/opt/ros/indigo/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

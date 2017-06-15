@@ -1,8 +1,8 @@
-# Install script for directory: /home/whj/ros/src/rbx1/rbx1_apps
+# Install script for directory: /home/exbot/ros/src/rbx1/rbx1_apps
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/whj/ros/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/exbot/ros/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/whj/ros/build/rbx1/rbx1_apps/catkin_generated/installspace/rbx1_apps.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/exbot/ros/build/rbx1/rbx1_apps/catkin_generated/installspace/rbx1_apps.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rbx1_apps/cmake" TYPE FILE FILES
-    "/home/whj/ros/build/rbx1/rbx1_apps/catkin_generated/installspace/rbx1_appsConfig.cmake"
-    "/home/whj/ros/build/rbx1/rbx1_apps/catkin_generated/installspace/rbx1_appsConfig-version.cmake"
+    "/home/exbot/ros/build/rbx1/rbx1_apps/catkin_generated/installspace/rbx1_appsConfig.cmake"
+    "/home/exbot/ros/build/rbx1/rbx1_apps/catkin_generated/installspace/rbx1_appsConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rbx1_apps" TYPE FILE FILES "/home/whj/ros/src/rbx1/rbx1_apps/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rbx1_apps" TYPE FILE FILES "/home/exbot/ros/src/rbx1/rbx1_apps/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

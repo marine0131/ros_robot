@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/whj/ros/src
+CMAKE_SOURCE_DIR = /home/exbot/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/whj/ros/build
+CMAKE_BINARY_DIR = /home/exbot/ros/build
 
 # Utility rule file for actionlib_msgs_generate_messages_cpp.
 
@@ -56,10 +56,10 @@ xunjian_nav/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build: actionlib
 .PHONY : xunjian_nav/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
 
 xunjian_nav/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/clean:
-	cd /home/whj/ros/build/xunjian_nav && $(CMAKE_COMMAND) -P CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/exbot/ros/build/xunjian_nav && $(CMAKE_COMMAND) -P CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : xunjian_nav/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/clean
 
 xunjian_nav/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/depend:
-	cd /home/whj/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/whj/ros/src /home/whj/ros/src/xunjian_nav /home/whj/ros/build /home/whj/ros/build/xunjian_nav /home/whj/ros/build/xunjian_nav/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/exbot/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/exbot/ros/src /home/exbot/ros/src/xunjian_nav /home/exbot/ros/build /home/exbot/ros/build/xunjian_nav /home/exbot/ros/build/xunjian_nav/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : xunjian_nav/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/depend
 

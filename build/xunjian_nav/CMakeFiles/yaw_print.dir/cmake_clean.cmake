@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/yaw_print.dir/src/yaw_print.cpp.o"
-  "/home/whj/ros/devel/lib/xunjian_nav/yaw_print.pdb"
-  "/home/whj/ros/devel/lib/xunjian_nav/yaw_print"
+  "/home/exbot/ros/devel/lib/xunjian_nav/yaw_print.pdb"
+  "/home/exbot/ros/devel/lib/xunjian_nav/yaw_print"
 )
 
 # Per-language clean rules from dependency scanning.

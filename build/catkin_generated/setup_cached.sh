@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/whj/ros/build"
+export PWD="/home/exbot/ros/build"

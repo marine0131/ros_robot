@@ -1,8 +1,8 @@
-prefix=/home/whj/ros/devel
+prefix=/home/exbot/ros/devel
 
 Name: rbx1_vision
 Description: Description of rbx1_vision
 Version: 0.4.0
 Cflags: 
-Libs: -L/home/whj/ros/devel/lib 
+Libs: -L/home/exbot/ros/devel/lib 
 Requires: 

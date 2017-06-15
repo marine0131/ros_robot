@@ -4,10 +4,10 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/whj/ros/src/sick_tim/src/abstract_parser.cpp" "/home/whj/ros/build/sick_tim/CMakeFiles/sick_tim_3xx.dir/src/abstract_parser.cpp.o"
-  "/home/whj/ros/src/sick_tim/src/sick_tim_common.cpp" "/home/whj/ros/build/sick_tim/CMakeFiles/sick_tim_3xx.dir/src/sick_tim_common.cpp.o"
-  "/home/whj/ros/src/sick_tim/src/sick_tim_common_mockup.cpp" "/home/whj/ros/build/sick_tim/CMakeFiles/sick_tim_3xx.dir/src/sick_tim_common_mockup.cpp.o"
-  "/home/whj/ros/src/sick_tim/src/sick_tim_common_usb.cpp" "/home/whj/ros/build/sick_tim/CMakeFiles/sick_tim_3xx.dir/src/sick_tim_common_usb.cpp.o"
+  "/home/exbot/ros/src/sick_tim/src/abstract_parser.cpp" "/home/exbot/ros/build/sick_tim/CMakeFiles/sick_tim_3xx.dir/src/abstract_parser.cpp.o"
+  "/home/exbot/ros/src/sick_tim/src/sick_tim_common.cpp" "/home/exbot/ros/build/sick_tim/CMakeFiles/sick_tim_3xx.dir/src/sick_tim_common.cpp.o"
+  "/home/exbot/ros/src/sick_tim/src/sick_tim_common_mockup.cpp" "/home/exbot/ros/build/sick_tim/CMakeFiles/sick_tim_3xx.dir/src/sick_tim_common_mockup.cpp.o"
+  "/home/exbot/ros/src/sick_tim/src/sick_tim_common_usb.cpp" "/home/exbot/ros/build/sick_tim/CMakeFiles/sick_tim_3xx.dir/src/sick_tim_common_usb.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -24,8 +24,8 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/whj/ros/devel/include"
-  "/home/whj/ros/src/sick_tim/include"
+  "/home/exbot/ros/devel/include"
+  "/home/exbot/ros/src/sick_tim/include"
   "/opt/ros/indigo/include"
   "/usr/include/libusb-1.0"
   )

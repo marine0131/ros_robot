@@ -1,8 +1,8 @@
-prefix=/home/whj/ros/devel
+prefix=/home/exbot/ros/devel
 
 Name: serial
 Description: Description of serial
 Version: 1.2.1
-Cflags: -I/home/whj/ros/src/serial/include
-Libs: -L/home/whj/ros/devel/lib -lserial
+Cflags: -I/home/exbot/ros/src/serial/include
+Libs: -L/home/exbot/ros/devel/lib -lserial
 Requires: 

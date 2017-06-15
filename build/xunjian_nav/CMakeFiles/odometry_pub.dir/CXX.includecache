@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/whj/ros/devel/include/xunjian_nav/Sensor.h
+/home/exbot/ros/devel/include/xunjian_nav/Sensor.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/whj/ros/src/xunjian_nav/src/odometry_pub.cpp
+/home/exbot/ros/src/xunjian_nav/src/odometry_pub.cpp
 ros/ros.h
 -
 tf/transform_broadcaster.h
@@ -30,7 +30,7 @@ tf/transform_broadcaster.h
 nav_msgs/Odometry.h
 -
 xunjian_nav/Sensor.h
-/home/whj/ros/src/xunjian_nav/src/xunjian_nav/Sensor.h
+/home/exbot/ros/src/xunjian_nav/src/xunjian_nav/Sensor.h
 math.h
 -
 

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/whj/ros/src
+CMAKE_SOURCE_DIR = /home/exbot/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/whj/ros/build
+CMAKE_BINARY_DIR = /home/exbot/ros/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -56,10 +56,10 @@ rbx1/rbx1/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empty_expo
 .PHONY : rbx1/rbx1/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 rbx1/rbx1/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/whj/ros/build/rbx1/rbx1 && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/exbot/ros/build/rbx1/rbx1 && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : rbx1/rbx1/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 rbx1/rbx1/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/whj/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/whj/ros/src /home/whj/ros/src/rbx1/rbx1 /home/whj/ros/build /home/whj/ros/build/rbx1/rbx1 /home/whj/ros/build/rbx1/rbx1/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/exbot/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/exbot/ros/src /home/exbot/ros/src/rbx1/rbx1 /home/exbot/ros/build /home/exbot/ros/build/rbx1/rbx1 /home/exbot/ros/build/rbx1/rbx1/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rbx1/rbx1/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

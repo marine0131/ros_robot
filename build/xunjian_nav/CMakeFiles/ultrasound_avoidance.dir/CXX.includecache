@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/whj/ros/devel/include/xunjian_nav/Ultrasound.h
+/home/exbot/ros/devel/include/xunjian_nav/Ultrasound.h
 string
 -
 vector
@@ -22,13 +22,13 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/whj/ros/src/xunjian_nav/src/ultrasound_avoidance.cc
+/home/exbot/ros/src/xunjian_nav/src/ultrasound_avoidance.cc
 ros/ros.h
 -
 geometry_msgs/Twist.h
 -
 xunjian_nav/Ultrasound.h
-/home/whj/ros/src/xunjian_nav/src/xunjian_nav/Ultrasound.h
+/home/exbot/ros/src/xunjian_nav/src/xunjian_nav/Ultrasound.h
 iostream
 -
 

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/whj/ros/src
+CMAKE_SOURCE_DIR = /home/exbot/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/whj/ros/build
+CMAKE_BINARY_DIR = /home/exbot/ros/build
 
 # Utility rule file for roscpp_generate_messages_py.
 
@@ -56,10 +56,10 @@ sick_tim/CMakeFiles/roscpp_generate_messages_py.dir/build: roscpp_generate_messa
 .PHONY : sick_tim/CMakeFiles/roscpp_generate_messages_py.dir/build
 
 sick_tim/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	cd /home/whj/ros/build/sick_tim && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/exbot/ros/build/sick_tim && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : sick_tim/CMakeFiles/roscpp_generate_messages_py.dir/clean
 
 sick_tim/CMakeFiles/roscpp_generate_messages_py.dir/depend:
-	cd /home/whj/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/whj/ros/src /home/whj/ros/src/sick_tim /home/whj/ros/build /home/whj/ros/build/sick_tim /home/whj/ros/build/sick_tim/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/exbot/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/exbot/ros/src /home/exbot/ros/src/sick_tim /home/exbot/ros/build /home/exbot/ros/build/sick_tim /home/exbot/ros/build/sick_tim/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sick_tim/CMakeFiles/roscpp_generate_messages_py.dir/depend
 

@@ -1,5 +1,5 @@
-execute_process(COMMAND "/home/whj/ros/build/rbx1/rbx1_nav/catkin_generated/python_distutils_install.sh" RESULT_VARIABLE res)
+execute_process(COMMAND "/home/exbot/ros/build/rbx1/rbx1_nav/catkin_generated/python_distutils_install.sh" RESULT_VARIABLE res)
 
 if(NOT res EQUAL 0)
-  message(FATAL_ERROR "execute_process(/home/whj/ros/build/rbx1/rbx1_nav/catkin_generated/python_distutils_install.sh) returned error code ")
+  message(FATAL_ERROR "execute_process(/home/exbot/ros/build/rbx1/rbx1_nav/catkin_generated/python_distutils_install.sh) returned error code ")
 endif()

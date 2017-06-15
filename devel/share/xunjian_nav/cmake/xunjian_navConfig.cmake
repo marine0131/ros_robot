@@ -67,14 +67,14 @@ set(xunjian_nav_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(xunjian_nav_SOURCE_PREFIX /home/whj/ros/src/xunjian_nav)
-  set(xunjian_nav_DEVEL_PREFIX /home/whj/ros/devel)
+  set(xunjian_nav_SOURCE_PREFIX /home/exbot/ros/src/xunjian_nav)
+  set(xunjian_nav_DEVEL_PREFIX /home/exbot/ros/devel)
   set(xunjian_nav_INSTALL_PREFIX "")
   set(xunjian_nav_PREFIX ${xunjian_nav_DEVEL_PREFIX})
 else()
   set(xunjian_nav_SOURCE_PREFIX "")
   set(xunjian_nav_DEVEL_PREFIX "")
-  set(xunjian_nav_INSTALL_PREFIX /home/whj/ros/install)
+  set(xunjian_nav_INSTALL_PREFIX /home/exbot/ros/install)
   set(xunjian_nav_PREFIX ${xunjian_nav_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(xunjian_nav_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/whj/ros/devel/include;/home/whj/ros/src/xunjian_nav/include " STREQUAL " ")
+if(NOT "/home/exbot/ros/devel/include;/home/exbot/ros/src/xunjian_nav/include " STREQUAL " ")
   set(xunjian_nav_INCLUDE_DIRS "")
-  set(_include_dirs "/home/whj/ros/devel/include;/home/whj/ros/src/xunjian_nav/include")
+  set(_include_dirs "/home/exbot/ros/devel/include;/home/exbot/ros/src/xunjian_nav/include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -103,7 +103,7 @@ if(NOT "/home/whj/ros/devel/include;/home/whj/ros/src/xunjian_nav/include " STRE
         message(FATAL_ERROR "Project 'xunjian_nav' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  Ask the maintainer 'exbot <exbot@todo.todo>' to fix it.")
       endif()
     else()
-      message(FATAL_ERROR "Project 'xunjian_nav' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/whj/ros/src/xunjian_nav/${idir}'.  Ask the maintainer 'exbot <exbot@todo.todo>' to fix it.")
+      message(FATAL_ERROR "Project 'xunjian_nav' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/exbot/ros/src/xunjian_nav/${idir}'.  Ask the maintainer 'exbot <exbot@todo.todo>' to fix it.")
     endif()
     _list_append_unique(xunjian_nav_INCLUDE_DIRS ${include})
   endforeach()
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/whj/ros/devel/lib;/home/whj/ros/devel/lib;/home/whj/catkin_ws/devel/lib;/opt/ros/indigo/lib)
+    foreach(path /home/exbot/ros/devel/lib;/home/exbot/ros/devel/lib;/home/exbot/slam_ws/devel/lib;/home/exbot/wsy_robot/devel/lib;/home/exbot/catkin_ws/devel/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

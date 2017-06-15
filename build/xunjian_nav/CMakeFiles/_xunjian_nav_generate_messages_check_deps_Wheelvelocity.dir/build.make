@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/whj/ros/src
+CMAKE_SOURCE_DIR = /home/exbot/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/whj/ros/build
+CMAKE_BINARY_DIR = /home/exbot/ros/build
 
 # Utility rule file for _xunjian_nav_generate_messages_check_deps_Wheelvelocity.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/whj/ros/build
 include xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/progress.make
 
 xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity:
-	cd /home/whj/ros/build/xunjian_nav && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py xunjian_nav /home/whj/ros/src/xunjian_nav/msg/Wheelvelocity.msg 
+	cd /home/exbot/ros/build/xunjian_nav && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py xunjian_nav /home/exbot/ros/src/xunjian_nav/msg/Wheelvelocity.msg 
 
 _xunjian_nav_generate_messages_check_deps_Wheelvelocity: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity
 _xunjian_nav_generate_messages_check_deps_Wheelvelocity: xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/build.make
@@ -57,10 +57,10 @@ xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.d
 .PHONY : xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/build
 
 xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/clean:
-	cd /home/whj/ros/build/xunjian_nav && $(CMAKE_COMMAND) -P CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/cmake_clean.cmake
+	cd /home/exbot/ros/build/xunjian_nav && $(CMAKE_COMMAND) -P CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/cmake_clean.cmake
 .PHONY : xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/clean
 
 xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/depend:
-	cd /home/whj/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/whj/ros/src /home/whj/ros/src/xunjian_nav /home/whj/ros/build /home/whj/ros/build/xunjian_nav /home/whj/ros/build/xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/exbot/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/exbot/ros/src /home/exbot/ros/src/xunjian_nav /home/exbot/ros/build /home/exbot/ros/build/xunjian_nav /home/exbot/ros/build/xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : xunjian_nav/CMakeFiles/_xunjian_nav_generate_messages_check_deps_Wheelvelocity.dir/depend
 

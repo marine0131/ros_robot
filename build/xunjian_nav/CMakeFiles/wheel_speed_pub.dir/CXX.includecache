@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/whj/ros/devel/include/xunjian_nav/Wheelvelocity.h
+/home/exbot/ros/devel/include/xunjian_nav/Wheelvelocity.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/whj/ros/src/xunjian_nav/src/wheel_speed_pub.cpp
+/home/exbot/ros/src/xunjian_nav/src/wheel_speed_pub.cpp
 ros/ros.h
 -
 tf/transform_broadcaster.h
@@ -34,7 +34,7 @@ geometry_msgs/Twist.h
 std_msgs/Int16.h
 -
 xunjian_nav/Wheelvelocity.h
-/home/whj/ros/src/xunjian_nav/src/xunjian_nav/Wheelvelocity.h
+/home/exbot/ros/src/xunjian_nav/src/xunjian_nav/Wheelvelocity.h
 iostream
 -
 

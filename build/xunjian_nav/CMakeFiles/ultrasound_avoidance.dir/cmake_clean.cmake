@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.o"
-  "/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance.pdb"
-  "/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance"
+  "/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance.pdb"
+  "/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance"
 )
 
 # Per-language clean rules from dependency scanning.

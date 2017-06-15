@@ -1,8 +1,8 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/sick_tim310s01.dir/src/sick_tim310s01.cpp.o"
   "CMakeFiles/sick_tim310s01.dir/src/sick_tim310s01_parser.cpp.o"
-  "/home/whj/ros/devel/lib/sick_tim/sick_tim310s01.pdb"
-  "/home/whj/ros/devel/lib/sick_tim/sick_tim310s01"
+  "/home/exbot/ros/devel/lib/sick_tim/sick_tim310s01.pdb"
+  "/home/exbot/ros/devel/lib/sick_tim/sick_tim310s01"
 )
 
 # Per-language clean rules from dependency scanning.

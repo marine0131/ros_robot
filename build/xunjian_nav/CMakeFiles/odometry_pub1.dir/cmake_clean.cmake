@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/odometry_pub1.dir/src/odometry_pub1.cpp.o"
-  "/home/whj/ros/devel/lib/xunjian_nav/odometry_pub1.pdb"
-  "/home/whj/ros/devel/lib/xunjian_nav/odometry_pub1"
+  "/home/exbot/ros/devel/lib/xunjian_nav/odometry_pub1.pdb"
+  "/home/exbot/ros/devel/lib/xunjian_nav/odometry_pub1"
 )
 
 # Per-language clean rules from dependency scanning.

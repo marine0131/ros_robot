@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/whj/ros/src/xunjian_nav/src/odometry_pub.cpp" "/home/whj/ros/build/xunjian_nav/CMakeFiles/odometry_pub.dir/src/odometry_pub.cpp.o"
+  "/home/exbot/ros/src/xunjian_nav/src/odometry_pub.cpp" "/home/exbot/ros/build/xunjian_nav/CMakeFiles/odometry_pub.dir/src/odometry_pub.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,14 +17,14 @@ SET(CMAKE_TARGET_DEFINITIONS
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/whj/ros/build/serial/CMakeFiles/serial.dir/DependInfo.cmake"
+  "/home/exbot/ros/build/serial/CMakeFiles/serial.dir/DependInfo.cmake"
   )
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/whj/ros/devel/include"
-  "/home/whj/ros/src/xunjian_nav/include"
-  "/home/whj/ros/src/serial/include"
+  "/home/exbot/ros/devel/include"
+  "/home/exbot/ros/src/xunjian_nav/include"
+  "/home/exbot/ros/src/serial/include"
   "/opt/ros/indigo/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

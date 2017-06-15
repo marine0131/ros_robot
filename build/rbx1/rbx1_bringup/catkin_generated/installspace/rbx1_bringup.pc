@@ -1,8 +1,8 @@
-prefix=/home/whj/ros/install
+prefix=/home/exbot/ros/install
 
 Name: rbx1_bringup
 Description: Description of rbx1_bringup
 Version: 0.4.0
 Cflags: 
-Libs: -L/home/whj/ros/install/lib 
+Libs: -L/home/exbot/ros/install/lib 
 Requires: 

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/whj/ros/src
+CMAKE_SOURCE_DIR = /home/exbot/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/whj/ros/build
+CMAKE_BINARY_DIR = /home/exbot/ros/build
 
 # Include any dependencies generated for this target.
 include xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/depend.make
@@ -50,18 +50,18 @@ include xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/progress.make
 include xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/flags.make
 
 xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.o: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/flags.make
-xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.o: /home/whj/ros/src/xunjian_nav/src/ultrasound_avoidance.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/ros/build/CMakeFiles $(CMAKE_PROGRESS_1)
+xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.o: /home/exbot/ros/src/xunjian_nav/src/ultrasound_avoidance.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/exbot/ros/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.o"
-	cd /home/whj/ros/build/xunjian_nav && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.o -c /home/whj/ros/src/xunjian_nav/src/ultrasound_avoidance.cc
+	cd /home/exbot/ros/build/xunjian_nav && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.o -c /home/exbot/ros/src/xunjian_nav/src/ultrasound_avoidance.cc
 
 xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.i"
-	cd /home/whj/ros/build/xunjian_nav && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/whj/ros/src/xunjian_nav/src/ultrasound_avoidance.cc > CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.i
+	cd /home/exbot/ros/build/xunjian_nav && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/exbot/ros/src/xunjian_nav/src/ultrasound_avoidance.cc > CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.i
 
 xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.s"
-	cd /home/whj/ros/build/xunjian_nav && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/whj/ros/src/xunjian_nav/src/ultrasound_avoidance.cc -o CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.s
+	cd /home/exbot/ros/build/xunjian_nav && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/exbot/ros/src/xunjian_nav/src/ultrasound_avoidance.cc -o CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.s
 
 xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.o.requires:
 .PHONY : xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.o.requires
@@ -79,47 +79,47 @@ ultrasound_avoidance_OBJECTS = \
 # External object files for target ultrasound_avoidance
 ultrasound_avoidance_EXTERNAL_OBJECTS =
 
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.o
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build.make
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /home/whj/ros/devel/lib/libserial.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libtf.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libtf2_ros.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libactionlib.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libmessage_filters.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libroscpp.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libxmlrpcpp.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libtf2.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libroscpp_serialization.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/librosconsole.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/librosconsole_log4cxx.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/librosconsole_backend_interface.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/liblog4cxx.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/librostime.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libcpp_common.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance"
-	cd /home/whj/ros/build/xunjian_nav && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ultrasound_avoidance.dir/link.txt --verbose=$(VERBOSE)
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.o
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build.make
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /home/exbot/ros/devel/lib/libserial.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libtf.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libtf2_ros.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libactionlib.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libmessage_filters.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libroscpp.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libxmlrpcpp.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libtf2.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libroscpp_serialization.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/librosconsole.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/librosconsole_log4cxx.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/librosconsole_backend_interface.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/liblog4cxx.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/librostime.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /opt/ros/indigo/lib/libcpp_common.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance"
+	cd /home/exbot/ros/build/xunjian_nav && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ultrasound_avoidance.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build: /home/whj/ros/devel/lib/xunjian_nav/ultrasound_avoidance
+xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build: /home/exbot/ros/devel/lib/xunjian_nav/ultrasound_avoidance
 .PHONY : xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/build
 
 xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/requires: xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/src/ultrasound_avoidance.cc.o.requires
 .PHONY : xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/requires
 
 xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/clean:
-	cd /home/whj/ros/build/xunjian_nav && $(CMAKE_COMMAND) -P CMakeFiles/ultrasound_avoidance.dir/cmake_clean.cmake
+	cd /home/exbot/ros/build/xunjian_nav && $(CMAKE_COMMAND) -P CMakeFiles/ultrasound_avoidance.dir/cmake_clean.cmake
 .PHONY : xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/clean
 
 xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/depend:
-	cd /home/whj/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/whj/ros/src /home/whj/ros/src/xunjian_nav /home/whj/ros/build /home/whj/ros/build/xunjian_nav /home/whj/ros/build/xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/exbot/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/exbot/ros/src /home/exbot/ros/src/xunjian_nav /home/exbot/ros/build /home/exbot/ros/build/xunjian_nav /home/exbot/ros/build/xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : xunjian_nav/CMakeFiles/ultrasound_avoidance.dir/depend
 

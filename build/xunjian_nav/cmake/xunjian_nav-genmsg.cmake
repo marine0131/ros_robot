@@ -2,7 +2,7 @@
 
 message(STATUS "xunjian_nav: 3 messages, 0 services")
 
-set(MSG_I_FLAGS "-Ixunjian_nav:/home/whj/ros/src/xunjian_nav/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Ixunjian_nav:/home/exbot/ros/src/xunjian_nav/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -15,19 +15,19 @@ add_custom_target(xunjian_nav_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/whj/ros/src/xunjian_nav/msg/Wheelvelocity.msg" NAME_WE)
+get_filename_component(_filename "/home/exbot/ros/src/xunjian_nav/msg/Wheelvelocity.msg" NAME_WE)
 add_custom_target(_xunjian_nav_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xunjian_nav" "/home/whj/ros/src/xunjian_nav/msg/Wheelvelocity.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xunjian_nav" "/home/exbot/ros/src/xunjian_nav/msg/Wheelvelocity.msg" ""
 )
 
-get_filename_component(_filename "/home/whj/ros/src/xunjian_nav/msg/Sensor.msg" NAME_WE)
+get_filename_component(_filename "/home/exbot/ros/src/xunjian_nav/msg/Ultrasound.msg" NAME_WE)
 add_custom_target(_xunjian_nav_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xunjian_nav" "/home/whj/ros/src/xunjian_nav/msg/Sensor.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xunjian_nav" "/home/exbot/ros/src/xunjian_nav/msg/Ultrasound.msg" ""
 )
 
-get_filename_component(_filename "/home/whj/ros/src/xunjian_nav/msg/Ultrasound.msg" NAME_WE)
+get_filename_component(_filename "/home/exbot/ros/src/xunjian_nav/msg/Sensor.msg" NAME_WE)
 add_custom_target(_xunjian_nav_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xunjian_nav" "/home/whj/ros/src/xunjian_nav/msg/Ultrasound.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xunjian_nav" "/home/exbot/ros/src/xunjian_nav/msg/Sensor.msg" ""
 )
 
 #
@@ -37,19 +37,19 @@ add_custom_target(_xunjian_nav_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(xunjian_nav
-  "/home/whj/ros/src/xunjian_nav/msg/Wheelvelocity.msg"
+  "/home/exbot/ros/src/xunjian_nav/msg/Wheelvelocity.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/xunjian_nav
 )
 _generate_msg_cpp(xunjian_nav
-  "/home/whj/ros/src/xunjian_nav/msg/Sensor.msg"
+  "/home/exbot/ros/src/xunjian_nav/msg/Ultrasound.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/xunjian_nav
 )
 _generate_msg_cpp(xunjian_nav
-  "/home/whj/ros/src/xunjian_nav/msg/Ultrasound.msg"
+  "/home/exbot/ros/src/xunjian_nav/msg/Sensor.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/xunjian_nav
@@ -69,11 +69,11 @@ add_custom_target(xunjian_nav_generate_messages_cpp
 add_dependencies(xunjian_nav_generate_messages xunjian_nav_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/whj/ros/src/xunjian_nav/msg/Wheelvelocity.msg" NAME_WE)
+get_filename_component(_filename "/home/exbot/ros/src/xunjian_nav/msg/Wheelvelocity.msg" NAME_WE)
 add_dependencies(xunjian_nav_generate_messages_cpp _xunjian_nav_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/ros/src/xunjian_nav/msg/Sensor.msg" NAME_WE)
+get_filename_component(_filename "/home/exbot/ros/src/xunjian_nav/msg/Ultrasound.msg" NAME_WE)
 add_dependencies(xunjian_nav_generate_messages_cpp _xunjian_nav_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/ros/src/xunjian_nav/msg/Ultrasound.msg" NAME_WE)
+get_filename_component(_filename "/home/exbot/ros/src/xunjian_nav/msg/Sensor.msg" NAME_WE)
 add_dependencies(xunjian_nav_generate_messages_cpp _xunjian_nav_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -86,19 +86,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS xunjian_nav_generate_messages_cpp)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(xunjian_nav
-  "/home/whj/ros/src/xunjian_nav/msg/Wheelvelocity.msg"
+  "/home/exbot/ros/src/xunjian_nav/msg/Wheelvelocity.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/xunjian_nav
 )
 _generate_msg_lisp(xunjian_nav
-  "/home/whj/ros/src/xunjian_nav/msg/Sensor.msg"
+  "/home/exbot/ros/src/xunjian_nav/msg/Ultrasound.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/xunjian_nav
 )
 _generate_msg_lisp(xunjian_nav
-  "/home/whj/ros/src/xunjian_nav/msg/Ultrasound.msg"
+  "/home/exbot/ros/src/xunjian_nav/msg/Sensor.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/xunjian_nav
@@ -118,11 +118,11 @@ add_custom_target(xunjian_nav_generate_messages_lisp
 add_dependencies(xunjian_nav_generate_messages xunjian_nav_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/whj/ros/src/xunjian_nav/msg/Wheelvelocity.msg" NAME_WE)
+get_filename_component(_filename "/home/exbot/ros/src/xunjian_nav/msg/Wheelvelocity.msg" NAME_WE)
 add_dependencies(xunjian_nav_generate_messages_lisp _xunjian_nav_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/ros/src/xunjian_nav/msg/Sensor.msg" NAME_WE)
+get_filename_component(_filename "/home/exbot/ros/src/xunjian_nav/msg/Ultrasound.msg" NAME_WE)
 add_dependencies(xunjian_nav_generate_messages_lisp _xunjian_nav_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/ros/src/xunjian_nav/msg/Ultrasound.msg" NAME_WE)
+get_filename_component(_filename "/home/exbot/ros/src/xunjian_nav/msg/Sensor.msg" NAME_WE)
 add_dependencies(xunjian_nav_generate_messages_lisp _xunjian_nav_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -135,19 +135,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS xunjian_nav_generate_messages_lisp)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(xunjian_nav
-  "/home/whj/ros/src/xunjian_nav/msg/Wheelvelocity.msg"
+  "/home/exbot/ros/src/xunjian_nav/msg/Wheelvelocity.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/xunjian_nav
 )
 _generate_msg_py(xunjian_nav
-  "/home/whj/ros/src/xunjian_nav/msg/Sensor.msg"
+  "/home/exbot/ros/src/xunjian_nav/msg/Ultrasound.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/xunjian_nav
 )
 _generate_msg_py(xunjian_nav
-  "/home/whj/ros/src/xunjian_nav/msg/Ultrasound.msg"
+  "/home/exbot/ros/src/xunjian_nav/msg/Sensor.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/xunjian_nav
@@ -167,11 +167,11 @@ add_custom_target(xunjian_nav_generate_messages_py
 add_dependencies(xunjian_nav_generate_messages xunjian_nav_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/whj/ros/src/xunjian_nav/msg/Wheelvelocity.msg" NAME_WE)
+get_filename_component(_filename "/home/exbot/ros/src/xunjian_nav/msg/Wheelvelocity.msg" NAME_WE)
 add_dependencies(xunjian_nav_generate_messages_py _xunjian_nav_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/ros/src/xunjian_nav/msg/Sensor.msg" NAME_WE)
+get_filename_component(_filename "/home/exbot/ros/src/xunjian_nav/msg/Ultrasound.msg" NAME_WE)
 add_dependencies(xunjian_nav_generate_messages_py _xunjian_nav_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/ros/src/xunjian_nav/msg/Ultrasound.msg" NAME_WE)
+get_filename_component(_filename "/home/exbot/ros/src/xunjian_nav/msg/Sensor.msg" NAME_WE)
 add_dependencies(xunjian_nav_generate_messages_py _xunjian_nav_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

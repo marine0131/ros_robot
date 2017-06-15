@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/serial_node.dir/src/serial_node.cpp.o"
-  "/home/whj/ros/devel/lib/xunjian_nav/serial_node.pdb"
-  "/home/whj/ros/devel/lib/xunjian_nav/serial_node"
+  "/home/exbot/ros/devel/lib/xunjian_nav/serial_node.pdb"
+  "/home/exbot/ros/devel/lib/xunjian_nav/serial_node"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -2,9 +2,9 @@ global_costmap:
    global_frame: /map
    robot_base_frame: /base_link
    update_frequency: 3.0  #地图更新的频率
-   publish_frequency: 1.0   #地图发布出来显示更新的频率
+   publish_frequency: 1.0  #地图发布出来显示更新的频率
    static_map: true
    rolling_window: false  #当静态地图设置为true，rolling_window设置为false
    resolution: 0.05
-   transform_tolerance: 2.0  #指定tf变换中能容许的数据延迟的时间，这里为1s
+   transform_tolerance: 1.0  #指定tf变换中能容许的数据延迟的时间，这里为1s
    map_type: costmap

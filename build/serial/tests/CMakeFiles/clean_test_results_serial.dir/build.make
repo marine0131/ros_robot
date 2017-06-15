@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/whj/ros/src
+CMAKE_SOURCE_DIR = /home/exbot/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/whj/ros/build
+CMAKE_BINARY_DIR = /home/exbot/ros/build
 
 # Utility rule file for clean_test_results_serial.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/whj/ros/build
 include serial/tests/CMakeFiles/clean_test_results_serial.dir/progress.make
 
 serial/tests/CMakeFiles/clean_test_results_serial:
-	cd /home/whj/ros/build/serial/tests && /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/remove_test_results.py /home/whj/ros/build/test_results/serial
+	cd /home/exbot/ros/build/serial/tests && /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/remove_test_results.py /home/exbot/ros/build/test_results/serial
 
 clean_test_results_serial: serial/tests/CMakeFiles/clean_test_results_serial
 clean_test_results_serial: serial/tests/CMakeFiles/clean_test_results_serial.dir/build.make
@@ -57,10 +57,10 @@ serial/tests/CMakeFiles/clean_test_results_serial.dir/build: clean_test_results_
 .PHONY : serial/tests/CMakeFiles/clean_test_results_serial.dir/build
 
 serial/tests/CMakeFiles/clean_test_results_serial.dir/clean:
-	cd /home/whj/ros/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_serial.dir/cmake_clean.cmake
+	cd /home/exbot/ros/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_serial.dir/cmake_clean.cmake
 .PHONY : serial/tests/CMakeFiles/clean_test_results_serial.dir/clean
 
 serial/tests/CMakeFiles/clean_test_results_serial.dir/depend:
-	cd /home/whj/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/whj/ros/src /home/whj/ros/src/serial/tests /home/whj/ros/build /home/whj/ros/build/serial/tests /home/whj/ros/build/serial/tests/CMakeFiles/clean_test_results_serial.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/exbot/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/exbot/ros/src /home/exbot/ros/src/serial/tests /home/exbot/ros/build /home/exbot/ros/build/serial/tests /home/exbot/ros/build/serial/tests/CMakeFiles/clean_test_results_serial.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial/tests/CMakeFiles/clean_test_results_serial.dir/depend
 

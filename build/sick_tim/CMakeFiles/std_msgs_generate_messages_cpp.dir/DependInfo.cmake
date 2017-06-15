@@ -16,8 +16,8 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/whj/ros/devel/include"
-  "/home/whj/ros/src/sick_tim/include"
+  "/home/exbot/ros/devel/include"
+  "/home/exbot/ros/src/sick_tim/include"
   "/opt/ros/indigo/include"
   "/usr/include/libusb-1.0"
   )

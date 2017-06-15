@@ -1,8 +1,8 @@
-# Install script for directory: /home/whj/ros/src/serial/tests
+# Install script for directory: /home/exbot/ros/src/serial/tests
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/whj/ros/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/exbot/ros/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

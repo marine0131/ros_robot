@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/whj/ros/src/serial/tests/unit/unix_timer_tests.cc" "/home/whj/ros/build/serial/tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o"
+  "/home/exbot/ros/src/serial/tests/unit/unix_timer_tests.cc" "/home/exbot/ros/build/serial/tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,13 +15,13 @@ SET(CMAKE_TARGET_DEFINITIONS
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/whj/ros/build/serial/CMakeFiles/serial.dir/DependInfo.cmake"
+  "/home/exbot/ros/build/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/exbot/ros/build/serial/CMakeFiles/serial.dir/DependInfo.cmake"
   )
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/whj/ros/src/serial/include"
-  "/usr/local/include"
+  "/home/exbot/ros/src/serial/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

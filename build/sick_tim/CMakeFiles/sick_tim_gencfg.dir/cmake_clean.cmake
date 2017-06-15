@@ -1,10 +1,10 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/sick_tim_gencfg"
-  "/home/whj/ros/devel/include/sick_tim/SickTimConfig.h"
-  "/home/whj/ros/devel/share/sick_tim/docs/SickTimConfig.dox"
-  "/home/whj/ros/devel/share/sick_tim/docs/SickTimConfig-usage.dox"
-  "/home/whj/ros/devel/lib/python2.7/dist-packages/sick_tim/cfg/SickTimConfig.py"
-  "/home/whj/ros/devel/share/sick_tim/docs/SickTimConfig.wikidoc"
+  "/home/exbot/ros/devel/include/sick_tim/SickTimConfig.h"
+  "/home/exbot/ros/devel/share/sick_tim/docs/SickTimConfig.dox"
+  "/home/exbot/ros/devel/share/sick_tim/docs/SickTimConfig-usage.dox"
+  "/home/exbot/ros/devel/lib/python2.7/dist-packages/sick_tim/cfg/SickTimConfig.py"
+  "/home/exbot/ros/devel/share/sick_tim/docs/SickTimConfig.wikidoc"
 )
 
 # Per-language clean rules from dependency scanning.

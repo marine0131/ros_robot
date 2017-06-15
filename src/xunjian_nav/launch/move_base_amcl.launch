@@ -4,13 +4,14 @@
    	<node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0.21 0 0.67 0 0 0 1 base_link laser 50"  />
  	<!-- <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 map odom 50" />-->
 	
+	<!-- map_server -->
+  	<node name="map_server" pkg="map_server" type="map_server" args="$(find xunjian_nav)/maps/company_map0615.yaml" respawn="false" />
+
 	<!-- laser -->
   	<!--<include file="$(find rplidar_ros)/launch/rplidar.launch"/>-->
-  	<!--<include file="$(find laser_filters)/examples/shadow_filter_a2.launch"/>-->
   	<include file="$(find sick_tim)/launch/sick_tim561_2050101.launch"/>
-	
-	<!-- map_server -->
-  	<node name="map_server" pkg="map_server" type="map_server" args="$(find xunjian_nav)/maps/company_map0525.yaml" respawn="false" />
+	<!--<include file="$(find laser_filters)/examples/shadow_filter_a2.launch"/>-->
+	<!--<include file="$(find laser_filters)/launch/laser_filter_chain.launch" />-->
 
 	<!-- amcl -->
   	<include file="$(find xunjian_nav)/launch/amcl.launch" />

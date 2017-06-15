@@ -67,14 +67,14 @@ set(sick_tim_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(sick_tim_SOURCE_PREFIX /home/whj/ros/src/sick_tim)
-  set(sick_tim_DEVEL_PREFIX /home/whj/ros/devel)
+  set(sick_tim_SOURCE_PREFIX /home/exbot/ros/src/sick_tim)
+  set(sick_tim_DEVEL_PREFIX /home/exbot/ros/devel)
   set(sick_tim_INSTALL_PREFIX "")
   set(sick_tim_PREFIX ${sick_tim_DEVEL_PREFIX})
 else()
   set(sick_tim_SOURCE_PREFIX "")
   set(sick_tim_DEVEL_PREFIX "")
-  set(sick_tim_INSTALL_PREFIX /home/whj/ros/install)
+  set(sick_tim_INSTALL_PREFIX /home/exbot/ros/install)
   set(sick_tim_PREFIX ${sick_tim_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(sick_tim_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/whj/ros/devel/include;/home/whj/ros/src/sick_tim/include;/usr/include;/usr/include/libusb-1.0 " STREQUAL " ")
+if(NOT "/home/exbot/ros/devel/include;/home/exbot/ros/src/sick_tim/include;/usr/include;/usr/include/libusb-1.0 " STREQUAL " ")
   set(sick_tim_INCLUDE_DIRS "")
-  set(_include_dirs "/home/whj/ros/devel/include;/home/whj/ros/src/sick_tim/include;/usr/include;/usr/include/libusb-1.0")
+  set(_include_dirs "/home/exbot/ros/devel/include;/home/exbot/ros/src/sick_tim/include;/usr/include;/usr/include/libusb-1.0")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -103,7 +103,7 @@ if(NOT "/home/whj/ros/devel/include;/home/whj/ros/src/sick_tim/include;/usr/incl
         message(FATAL_ERROR "Project 'sick_tim' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  Ask the maintainer 'Martin Günther <martin.guenther@dfki.de>' to fix it.")
       endif()
     else()
-      message(FATAL_ERROR "Project 'sick_tim' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/whj/ros/src/sick_tim/${idir}'.  Ask the maintainer 'Martin Günther <martin.guenther@dfki.de>' to fix it.")
+      message(FATAL_ERROR "Project 'sick_tim' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/exbot/ros/src/sick_tim/${idir}'.  Ask the maintainer 'Martin Günther <martin.guenther@dfki.de>' to fix it.")
     endif()
     _list_append_unique(sick_tim_INCLUDE_DIRS ${include})
   endforeach()
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/whj/ros/devel/lib;/home/whj/ros/devel/lib;/home/whj/catkin_ws/devel/lib;/opt/ros/indigo/lib)
+    foreach(path /home/exbot/ros/devel/lib;/home/exbot/ros/devel/lib;/home/exbot/slam_ws/devel/lib;/home/exbot/wsy_robot/devel/lib;/home/exbot/catkin_ws/devel/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

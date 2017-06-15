@@ -1,8 +1,8 @@
-# Install script for directory: /home/whj/ros/src/rbx1/rbx1_vision
+# Install script for directory: /home/exbot/ros/src/rbx1/rbx1_vision
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/whj/ros/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/exbot/ros/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,21 +33,21 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/whj/ros/build/rbx1/rbx1_vision/catkin_generated/installspace/rbx1_vision.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/exbot/ros/build/rbx1/rbx1_vision/catkin_generated/installspace/rbx1_vision.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rbx1_vision/cmake" TYPE FILE FILES
-    "/home/whj/ros/build/rbx1/rbx1_vision/catkin_generated/installspace/rbx1_visionConfig.cmake"
-    "/home/whj/ros/build/rbx1/rbx1_vision/catkin_generated/installspace/rbx1_visionConfig-version.cmake"
+    "/home/exbot/ros/build/rbx1/rbx1_vision/catkin_generated/installspace/rbx1_visionConfig.cmake"
+    "/home/exbot/ros/build/rbx1/rbx1_vision/catkin_generated/installspace/rbx1_visionConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rbx1_vision" TYPE FILE FILES "/home/whj/ros/src/rbx1/rbx1_vision/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rbx1_vision" TYPE FILE FILES "/home/exbot/ros/src/rbx1/rbx1_vision/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  INCLUDE("/home/whj/ros/build/rbx1/rbx1_vision/catkin_generated/safe_execute_install.cmake")
+  INCLUDE("/home/exbot/ros/build/rbx1/rbx1_vision/catkin_generated/safe_execute_install.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

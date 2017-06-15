@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/whj/ros/src
+CMAKE_SOURCE_DIR = /home/exbot/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/whj/ros/build
+CMAKE_BINARY_DIR = /home/exbot/ros/build
 
 # Utility rule file for _run_tests_serial_gtest_serial-test.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/whj/ros/build
 include serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/progress.make
 
 serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test:
-	cd /home/whj/ros/build/serial/tests && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/whj/ros/build/test_results/serial/gtest-serial-test.xml /home/whj/ros/devel/lib/serial/serial-test\ --gtest_output=xml:/home/whj/ros/build/test_results/serial/gtest-serial-test.xml
+	cd /home/exbot/ros/build/serial/tests && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/exbot/ros/build/test_results/serial/gtest-serial-test.xml /home/exbot/ros/devel/lib/serial/serial-test\ --gtest_output=xml:/home/exbot/ros/build/test_results/serial/gtest-serial-test.xml
 
 _run_tests_serial_gtest_serial-test: serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test
 _run_tests_serial_gtest_serial-test: serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/build.make
@@ -57,10 +57,10 @@ serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/build: _run_test
 .PHONY : serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/build
 
 serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/clean:
-	cd /home/whj/ros/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_serial_gtest_serial-test.dir/cmake_clean.cmake
+	cd /home/exbot/ros/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_serial_gtest_serial-test.dir/cmake_clean.cmake
 .PHONY : serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/clean
 
 serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/depend:
-	cd /home/whj/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/whj/ros/src /home/whj/ros/src/serial/tests /home/whj/ros/build /home/whj/ros/build/serial/tests /home/whj/ros/build/serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/exbot/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/exbot/ros/src /home/exbot/ros/src/serial/tests /home/exbot/ros/build /home/exbot/ros/build/serial/tests /home/exbot/ros/build/serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/depend
 

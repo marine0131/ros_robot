@@ -3,9 +3,9 @@
   (:export
    "<WHEELVELOCITY>"
    "WHEELVELOCITY"
-   "<SENSOR>"
-   "SENSOR"
    "<ULTRASOUND>"
    "ULTRASOUND"
+   "<SENSOR>"
+   "SENSOR"
   ))
 

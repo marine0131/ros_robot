@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/whj/ros/devel/include/xunjian_nav/Sensor.h
+/home/exbot/ros/devel/include/xunjian_nav/Sensor.h
 string
 -
 vector
@@ -22,11 +22,11 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/whj/ros/src/xunjian_nav/src/yaw_print.cpp
+/home/exbot/ros/src/xunjian_nav/src/yaw_print.cpp
 ros/ros.h
 -
 xunjian_nav/Sensor.h
-/home/whj/ros/src/xunjian_nav/src/xunjian_nav/Sensor.h
+/home/exbot/ros/src/xunjian_nav/src/xunjian_nav/Sensor.h
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h
