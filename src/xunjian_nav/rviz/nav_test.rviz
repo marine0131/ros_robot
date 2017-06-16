@@ -358,10 +358,10 @@ Visualization Manager:
       Topic: /move_base/local_costmap/costmap
       Value: true
     - Class: rviz/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
       Marker Scale: 2
       Name: TF
       Show Arrows: true

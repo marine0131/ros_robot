@@ -1,33 +1,35 @@
 <launch>
-    	<arg name="simulation" default="$(optenv XUNJIAN_SIMULATION false)"/>
-    	<param name="/use_sim_time" value="$(arg simulation)"/>
+	<arg name="simulation" default="$(optenv XUNJIAN_SIMULATION false)"/>
+	<param name="/use_sim_time" value="$(arg simulation)"/>
 	
-	<node pkg="xunjian_nav" type="wheel_speed_pub" name="wheel_speed_pub"  />
-	
+	<node pkg="xunjian_nav" type="serial_node" name="serial_node"/>
+	<node pkg="rostopic" type="rostopic" name="rostopic" args="pub -1 encoder_reset std_msgs/Empty"/>
+
+	<node pkg="xunjian_nav" type="wheel_speed_pub" name="wheel_speed_pub"  />	
 	<node pkg="xunjian_nav" type="odometry_pub" name="odometry_pub"  />
   	
 	<!--<node pkg="xunjian_nav" type="ultrasound_avoidance"  name="ultrasound_avoidance"  />-->
 	<!--<node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0.015 0 0.73 0 0 0 1 base_link laser 50"  />-->
-  	<!--<node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 map odom 50" />-->
+	<!--<node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 map odom 50" />-->
 	
 	<!-- velovity smoother -->
-        <arg name="node_name"             value="velocity_smoother"/>
-        <arg name="nodelet_manager_name"  value="nodelet_manager"/>
-        <arg name="config_file"           value="$(find xunjian_nav)/config/xunjian_robot/yocs_velocity_smoother.yaml"/>
-        <arg name="raw_cmd_vel_topic"     value="cmd_vel"/><!-- cmd_vel  /ultrasound/cmd_vel -->
-        <arg name="smooth_cmd_vel_topic"  value="smoother_cmd_vel"/>
-        <!--<arg name="robot_cmd_vel_topic"   value="robot_cmd_vel"/>-->s
-        <arg name="odom_topic"            value="odom"/>
-  	<!-- nodelet manager -->
-    	<node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager_name)" args="manager"/>
-  	<!-- velocity smoother -->
-    	<include file="$(find yocs_velocity_smoother)/launch/velocity_smoother.launch">
-    		<arg name="node_name"             value="$(arg node_name)"/>
-    		<arg name="nodelet_manager_name"  value="$(arg nodelet_manager_name)"/>
-    		<arg name="config_file"           value="$(arg config_file)"/>
-    		<arg name="raw_cmd_vel_topic"     value="$(arg raw_cmd_vel_topic)"/>
-    		<arg name="smooth_cmd_vel_topic"  value="$(arg smooth_cmd_vel_topic)"/>
-    		<!--<arg name="robot_cmd_vel_topic"   value="$(arg robot_cmd_vel_topic)"/>-->
-    		<arg name="odom_topic"            value="$(arg odom_topic)"/>
-  	</include>
+	<arg name="node_name"             value="velocity_smoother"/>
+	<arg name="nodelet_manager_name"  value="nodelet_manager"/>
+	<arg name="config_file"           value="$(find xunjian_nav)/config/xunjian_robot/yocs_velocity_smoother.yaml"/>
+	<arg name="raw_cmd_vel_topic"     value="cmd_vel"/><!-- cmd_vel  /ultrasound/cmd_vel -->
+	<arg name="smooth_cmd_vel_topic"  value="smoother_cmd_vel"/>
+	<!--<arg name="robot_cmd_vel_topic"   value="robot_cmd_vel"/>-->s
+	<arg name="odom_topic"            value="odom"/>
+	<!-- nodelet manager -->
+	<node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager_name)" args="manager"/>
+	<!-- velocity smoother -->
+	<include file="$(find yocs_velocity_smoother)/launch/velocity_smoother.launch">
+		<arg name="node_name"             value="$(arg node_name)"/>
+		<arg name="nodelet_manager_name"  value="$(arg nodelet_manager_name)"/>
+		<arg name="config_file"           value="$(arg config_file)"/>
+		<arg name="raw_cmd_vel_topic"     value="$(arg raw_cmd_vel_topic)"/>
+		<arg name="smooth_cmd_vel_topic"  value="$(arg smooth_cmd_vel_topic)"/>
+		<!--<arg name="robot_cmd_vel_topic"   value="$(arg robot_cmd_vel_topic)"/>-->
+		<arg name="odom_topic"            value="$(arg odom_topic)"/>
+	</include>
 </launch>

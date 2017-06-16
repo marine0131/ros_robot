@@ -3,10 +3,10 @@ raytrace_range: 3.0  #机器人检测自由空间的最大范围，意味着3m�
 footprint: [[0.25,0],[0.177,0.177],[0,0.25], [-0.177,0.177], [-0.25,0], [-0.177,-0.177], [0,-0.25], [0.177,-0.177]]
 footprint padding: 0.01
 robot_radius: 0.25
-inflation_radius: 1.5  #distance from an obstacle at which costs are incurred for planning paths
+inflation_radius: 0.5  #distance from an obstacle at which costs are incurred for planning paths
 max_obstacle_height: 0.8
 min_obstacle_height: 0.65
-cost_scaling_factor: 2.5  #  default 10 exponential rate at which the obstacle cost drops off 越小衰减曲线的斜率越小，这样障碍物就会分布在路径两端
+cost_scaling_factor: 5  #  default 10 exponential rate at which the obstacle cost drops off 越小衰减曲线的斜率越小，这样障碍物就会分布在路径两端
 lethal_cost_threshold: 100 #
 observation_sources: scan
 scan: {sensor_frame: /laser, data_type: LaserScan, topic: /scan, marking: true, clearing: true}

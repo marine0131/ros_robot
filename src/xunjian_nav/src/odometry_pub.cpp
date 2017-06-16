@@ -11,11 +11,12 @@ encoder data,but from the known velocity of mobile robots.
 #include <nav_msgs/Odometry.h>
 #include"xunjian_nav/Sensor.h"
 #include<math.h>
-#define L 0.367//两轮之间的距离
+//#define L 0.367//两轮之间的距离
+#define L 0.388
 #define r 0.0625//轮子的半径
 #define pulseCount 900//轮子转动一圈的脉冲数
-#define ticks_meter 2290//机器人走一米的脉冲数
-
+//#define ticks_meter 2290//机器人走一米的脉冲数
+#define ticks_meter 2204
 
 xunjian_nav::Sensor msg;
 

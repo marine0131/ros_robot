@@ -44,11 +44,11 @@ amcl运行命令
 	roslaunch xunjian_nav xunjian_robot.launch
 	roslaunch rbx1_nav keyboard_teleop.launch 
 
+robot model
+	roslaunch xunjian_nav urdf_view.launch
 导航
-	1.rosrun xunjian_nav  serial_node
-	2.rostopic pub -1 encoder_reset std_msgs/Empty
-	3.roslaunch xunjian_nav xunjian_robot.launch
-	4.roslaunch xunjian_nav  move_base_amcl.launch
+	1.roslaunch xunjian_nav xunjian_robot.launch
+	2.roslaunch xunjian_nav  move_base_amcl.launch
 
 建图    
 	gmapping   	
