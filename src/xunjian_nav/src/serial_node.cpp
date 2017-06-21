@@ -72,7 +72,7 @@ int frame_decode(unsigned char *data_buf)
         drive_info.right_odm = data_buf[10] + data_buf[11] * 256 + data_buf[12] * 65536 + data_buf[13] * 16777216;
 
         //printf("yaw: %.1f \t\n",drive_info.yaw);
-       //printf("right_odm: %d \t\n",drive_info.right_odm);
+       printf("right_odm: %d \t\n",drive_info.right_odm);
        //printf("left_odm: %d \t\n",drive_info.left_odm);
         break;
 	case 0xBB:

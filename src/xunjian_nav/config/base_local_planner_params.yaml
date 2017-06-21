@@ -8,16 +8,16 @@ clearing_rotation_allowed: true
 
 TrajectoryPlannerROS:
 #ACCELERATION   
-    acc_lim_x: 0.6
+    acc_lim_x: 1.0
     acc_lim_y: 0.0 # zero for a differential drive robot
-    acc_lim_theta: 1.6
+    acc_lim_theta: 1,0
 #VELOCITY
     max_vel_x: 0.6  #0.2
-    min_vel_x: 0.2 #0.1 设置为很大的负值，这将允许机器人陷入一个环境中后退从而达到避障的目的；
+    min_vel_x: 0.3 #0.1 设置为很大的负值，这将允许机器人陷入一个环境中后退从而达到避障的目的；
     max_vel_y: 0.0  # zero for a differential drive robot
     min_vel_y: 0.0
-    max_vel_theta: 1.5 #0.3
-    min_vel_theta: -1.5  #0.15
+    max_vel_theta: 0.6 #0.3
+    min_vel_theta: -0.6  #0.15
     min_in_place_vel_theta: 0.4
     escape_vel: -0.1
 
@@ -25,11 +25,11 @@ TrajectoryPlannerROS:
 
 #GLOBAL TOLERANCE
     yaw_goal_tolerance: 0.2 # 
-    xy_goal_tolerance: 0.3  # 
+    xy_goal_tolerance: 0.5  # 
     latch_xy_goal_tolerance: true  #false
 
 #FORWARD SIMULATION
-    sim_time: 3.5 # 2   这里设置<=2.0会产生局限的性能，尤其是机器人通过狭小的通道；
+    sim_time: 3.0 # 2   这里设置<=2.0会产生局限的性能，尤其是机器人通过狭小的通道；
     sim_granularity: 0.05  #It basically means how frequent should the points on this trajectory be examined；越小计算资源越多
     angular_sim_granularity: 0.025
     vx_samples: 10

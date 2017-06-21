@@ -7,22 +7,16 @@
 	<!-- map_server -->
   	<node name="map_server" pkg="map_server" type="map_server" args="$(find xunjian_nav)/maps/company_map0616.yaml" respawn="false" />
 
-	<!-- laser -->
-  	<!--<include file="$(find rplidar_ros)/launch/rplidar.launch"/>-->
-  	<include file="$(find sick_tim)/launch/sick_tim561_2050101.launch"/>
-	<!--<include file="$(find laser_filters)/examples/shadow_filter_a2.launch"/>-->
-	<!--<include file="$(find laser_filters)/launch/laser_filter_chain.launch" />-->
-
 	<!-- amcl -->
   	<include file="$(find xunjian_nav)/launch/amcl.launch" />
 
 	<!-- move_base -->
   	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true">
-    	<rosparam file="$(find xunjian_nav)/config/xunjian_robot/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    	<rosparam file="$(find xunjian_nav)/config/xunjian_robot/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    	<rosparam file="$(find xunjian_nav)/config/xunjian_robot/local_costmap_params.yaml" command="load" />
-    	<rosparam file="$(find xunjian_nav)/config/xunjian_robot/global_costmap_params.yaml" command="load" />
-    	<rosparam file="$(find xunjian_nav)/config/xunjian_robot/base_local_planner_params.yaml" command="load" />
+    	<rosparam file="$(find xunjian_nav)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    	<rosparam file="$(find xunjian_nav)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    	<rosparam file="$(find xunjian_nav)/config/local_costmap_params.yaml" command="load" />
+    	<rosparam file="$(find xunjian_nav)/config/global_costmap_params.yaml" command="load" />
+    	<rosparam file="$(find xunjian_nav)/config/base_local_planner_params.yaml" command="load" />
     	<!--<rosparam file="$(find xunjian_nav)/config/xunjian_robot/navfn_params.yaml" command="load"/>-->
   	</node>
   	
