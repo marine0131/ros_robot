@@ -15,8 +15,8 @@ encoder data,but from the known velocity of mobile robots.
 #define L 0.388
 #define r 0.0625//轮子的半径
 #define pulseCount 900//轮子转动一圈的脉冲数
-//#define ticks_meter 2290//机器人走一米的脉冲数
-#define ticks_meter 2204
+#define ticks_meter 2290//机器人走一米的脉冲数
+//#define ticks_meter 2204
 
 xunjian_nav::Sensor msg;
 
@@ -24,7 +24,8 @@ void sensorMsg_Callback(const xunjian_nav::Sensor& sensorMsg){
     msg.yawAngle=sensorMsg.yawAngle;
     msg.leftEncoder=sensorMsg.leftEncoder;
     msg.rightEncoder=sensorMsg.rightEncoder;
-
+    msg.vx = sensorMsg.vx;
+    msg.w = sensorMsg.w;
 }
 
 int main(int argc, char **argv)
@@ -32,8 +33,8 @@ int main(int argc, char **argv)
 	ros::init(argc,argv,"odometry_pub");
 	ros::NodeHandle n;
 	
-	ros::Subscriber sensor_sub=n.subscribe("encoder",1000,sensorMsg_Callback);
-	ros::Publisher odom_pub=n.advertise<nav_msgs::Odometry>("odom",1000);//定义发布里程计的对象odom_pub
+	ros::Subscriber sensor_sub=n.subscribe("encoder",50,sensorMsg_Callback);
+	ros::Publisher odom_pub=n.advertise<nav_msgs::Odometry>("odom",50);//定义发布里程计的对象odom_pub
 	tf::TransformBroadcaster odom_broadcaster;//定义odom->base_link的坐标转换对象odom_broadcaster
 
 
@@ -45,7 +46,7 @@ int main(int argc, char **argv)
 	//定义左轮的线速度和右轮的线速度
 	double vR=0;
 	double vL=0;
-	double v=0;
+	double vx=0;
         double w=0;
 	//定义左右轮编码器的值
 	//int right_enc=msg.rightEncoder;
@@ -64,6 +65,7 @@ int main(int argc, char **argv)
 
 while(n.ok())
 {
+	ros::spinOnce();
 	//检查收到的信息
 	current_time=ros::Time::now();
 	double dt=(current_time-last_time).toSec();
@@ -72,16 +74,12 @@ while(n.ok())
 	left_enc=msg.leftEncoder;
  	
         ROS_INFO("right left right1 left1: [%d,%d,%d,%d]",right_enc, left_enc, right_enc_old, left_enc_old);
-
-		
-	vR=(right_enc-right_enc_old)/dt/ticks_meter;
-	vL=(left_enc-left_enc_old)/dt/ticks_meter;
-	v=(vR+vL)/2.0;
-        w=(vR-vL)/L;
-
-	x+=v*cos(th)*dt;
-	y+=v*sin(th)*dt;
-	th+=w*dt;
+	
+	vx = (float)msg.vx/1000.0;
+	w =  (float)msg.w/1000.0;
+	x += vx*cos(th)*dt;
+	y += vx*sin(th)*dt;
+	th+= w*dt;
 	
      ROS_INFO("Yaw angle: %f",th*180/M_PI);
      while (th>=2*M_PI)  th-=2*M_PI;
@@ -113,7 +111,7 @@ while(n.ok())
 
 //设置速度信息
 	odom.child_frame_id="base_link";
-	odom.twist.twist.linear.x=v;
+	odom.twist.twist.linear.x=vx;
 	odom.twist.twist.linear.y=0.0;
 	odom.twist.twist.angular.z=w;
 
@@ -121,7 +119,7 @@ while(n.ok())
 	right_enc_old=right_enc;
 	left_enc_old=left_enc;
 	last_time=current_time; 
-        ros::spinOnce();
+
 	rate.sleep();
 }
     return 0;

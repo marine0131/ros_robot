@@ -16,12 +16,12 @@
 
         <!--  ************** Navigation ***************  -->
 	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-  	  	<rosparam file="$(find xunjian_nav)/config/teb_local_planner/costmap_common_params.yaml" command="load" ns="global_costmap" />
-  	 	<rosparam file="$(find xunjian_nav)/config/teb_local_planner/costmap_common_params.yaml" command="load" ns="local_costmap" />
-  		<rosparam file="$(find xunjian_nav)/config/teb_local_planner/local_costmap_params.yaml" command="load" />
-  		<rosparam file="$(find xunjian_nav)/config/teb_local_planner/global_costmap_params.yaml" command="load" />
+  	  	<rosparam file="$(find xunjian_nav)/config/teb_local_planner/teb_costmap_common_params.yaml" command="load" ns="global_costmap" />
+  	 	<rosparam file="$(find xunjian_nav)/config/teb_local_planner/teb_costmap_common_params.yaml" command="load" ns="local_costmap" />
+  		<rosparam file="$(find xunjian_nav)/config/teb_local_planner/teb_local_costmap_params.yaml" command="load" />
+  		<rosparam file="$(find xunjian_nav)/config/teb_local_planner/teb_global_costmap_params.yaml" command="load" />
   		<rosparam file="$(find xunjian_nav)/config/teb_local_planner/teb_local_planner_params.yaml" command="load" />
-		<rosparam file="$(find xunjian_nav)/config/teb_local_planner/costmap_converter_params.yaml" command="load" />
+		<rosparam file="$(find xunjian_nav)/config/teb_local_planner/teb_costmap_converter_params.yaml" command="load" />
 		<!--<param name="base_global_planner" value="global_planner/GlobalPlanner" />
 		<param name="base_global_planner" value="navfn/NavfnROS" />
 		<param name="planner_frequency" value="1.0" />

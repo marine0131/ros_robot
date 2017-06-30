@@ -1,7 +1,7 @@
 <launch>
 	<!-- tf -->
 	<!--<master auto="start"/>-->
-   	<node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0.21 0 0.67 0 0 0 1 base_link laser 50"  />
+
  	<!-- <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 map odom 50" />-->
 	
 	<!-- map_server -->
@@ -29,6 +29,23 @@
 	<param name = "use_gui" value="$(arg gui)"/>
 
 	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+	
+	<!-- *********velovity smoother *************-->
+	<!-- nodelet manager -->
+	<node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager"/>
+	<!-- velocity smoother -->
+	<include file="$(find yocs_velocity_smoother)/launch/velocity_smoother.launch">
+		<arg name="node_name"             value="velocity_smoother"/>
+		<arg name="nodelet_manager_name"  value="nodelet_manager"/>
+		<arg name="config_file"           value="$(find xunjian_nav)/config/yocs_velocity_smoother.yaml"/>
+		<arg name="raw_cmd_vel_topic"     value="cmd_vel"/>
+		<arg name="smooth_cmd_vel_topic"  value="smoother_cmd_vel"/>
+		<!--<arg name="robot_cmd_vel_topic"   value="robot_cmd_vel"/>-->
+		<arg name="odom_topic"            value="odom"/>
+	</include>
+	
+	<!--*************rotate for initialize ************-->
+	<node name="rotate" pkg="xunjian_nav" type="rotate"/>
 
 	<!-- rviz -->
 	<node name="rviz" pkg="rviz" type="rviz"  required="true"

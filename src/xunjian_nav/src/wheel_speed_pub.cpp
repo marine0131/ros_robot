@@ -5,7 +5,7 @@
 #include<std_msgs/Int16.h>
 #include"xunjian_nav/Wheelvelocity.h"
 #include<iostream>
-#define L 0.367
+#define L 0.388
 xunjian_nav::Wheelvelocity v ;
 ros::Publisher pubVel;
 //ros::Publisher *pubPtr2;
@@ -30,12 +30,12 @@ void callback(const geometry_msgs::Twist& cmd_vel)
 int main(int argc,char **argv){
 	ros::init(argc,argv,"wheel_speed_pub");
 	ros::NodeHandle n;
-  	pubVel=n.advertise<xunjian_nav::Wheelvelocity>("wheel_speed",1000);
+  	pubVel=n.advertise<xunjian_nav::Wheelvelocity>("wheel_speed",50);
         //pubPtr2 =new ros::Publisher(n.advertise<std_msgs::Int16>("vR",1000));
 
 	//如果是键盘控制的话，这里的主题是cmd_vel,如果是自主导航的话则速度需要经过平滑处理，所以主题就是smoother_cmd_vel
-	ros::Subscriber sub=n.subscribe("smoother_cmd_vel",1000,callback);
-	//ros::Subscriber sub=n.subscribe("cmd_vel",1000,callback);
+	//ros::Subscriber sub=n.subscribe("smoother_cmd_vel",1000,callback);
+	ros::Subscriber sub=n.subscribe("cmd_vel",50,callback);
 
 
 	//pubPtr1->publish(v);
