@@ -11,7 +11,7 @@
 	<node pkg="tf" type="static_transform_publisher" name="ultra5_broadcaster" args="-0.20 0.12 0.15 2.62 0 0  base_link ut5 50"  />
 	<node pkg="tf" type="static_transform_publisher" name="ultra6_broadcaster" args="0 0.24 0.15 1.57 0 0  base_link ut6 50"  />
 	<!-- ***********serial port********-->
-	<!--<node pkg="xunjian_nav" type="serial_node" name="serial_node"/>-->
+	<node pkg="xunjian_nav" type="serial_node" name="serial_node" output="log"/>
 	<node pkg="rostopic" type="rostopic" name="rostopic" args="pub -1 encoder_reset std_msgs/Empty"/>
 	
 	<!-- ***********wheel speed pub and odom pub********-->

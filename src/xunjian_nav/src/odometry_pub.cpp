@@ -61,7 +61,7 @@ int main(int argc, char **argv)
 	ros::Time current_time,last_time;
 	current_time=ros::Time::now();
 	last_time=ros::Time::now();
-	ros::Rate rate(20);//机器人发布消息的频率
+	ros::Rate rate(10);//机器人发布消息的频率
 
 while(n.ok())
 {
@@ -73,7 +73,7 @@ while(n.ok())
 	right_enc=msg.rightEncoder;
 	left_enc=msg.leftEncoder;
  	
-        ROS_INFO("right left right1 left1: [%d,%d,%d,%d]",right_enc, left_enc, right_enc_old, left_enc_old);
+        //ROS_INFO("right left right1 left1: [%d,%d,%d,%d]",right_enc, left_enc, right_enc_old, left_enc_old);
 	
 	vx = (float)msg.vx/1000.0;
 	w =  (float)msg.w/1000.0;
@@ -81,7 +81,7 @@ while(n.ok())
 	y += vx*sin(th)*dt;
 	th+= w*dt;
 	
-     ROS_INFO("Yaw angle: %f",th*180/M_PI);
+     //ROS_INFO("Yaw angle: %f",th*180/M_PI);
      while (th>=2*M_PI)  th-=2*M_PI;
      while(th<0)      th+=2*M_PI;
 //由机器人的偏航角得到机器人用四元素表示的姿态

@@ -148,6 +148,10 @@ target_link_libraries(rotate
    ${catkin_LIBRARIES}
  )
 
+add_executable(pose_publisher src/pose_publisher.cpp )
+target_link_libraries(pose_publisher
+   ${catkin_LIBRARIES}
+ )
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
