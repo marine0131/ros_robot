@@ -3,7 +3,7 @@
 #include <actionlib/client/simple_action_client.h>
 
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
-int goal_flag = 0;
+int goal_flag = 1;
 
 int main(int argc, char** argv){
 	ros::init(argc, argv, "nav_goal");
@@ -44,7 +44,7 @@ int main(int argc, char** argv){
 			goal.target_pose.pose.orientation.w = -0.299085223391;
 			break;
 			case 3://wc
-			goal_flag ++;
+			goal_flag =1;
 			goal.target_pose.pose.position.x = 11.3937091827;
 			goal.target_pose.pose.position.y = 0.897811412811;
 			goal.target_pose.pose.orientation.z = 0.424219369561;
