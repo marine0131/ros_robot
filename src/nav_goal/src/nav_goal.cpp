@@ -69,6 +69,7 @@ int main(int argc, char** argv){
 		if (ii>=2) ii = 0;
 		ac.sendGoal(goals[p[ii].get_goal());
 		ii ++;	
+
 		ac.waitForResult();
 		if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
 			ROS_INFO("goal reached");
