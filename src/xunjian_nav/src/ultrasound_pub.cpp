@@ -13,12 +13,18 @@ sensor_msgs::Range ultra_msg5;
 sensor_msgs::Range ultra_msg6;	
 
 void range_callback(const xunjian_nav::Ultrasound& ut){
-    ultra_msg1.range = (float)ut.ultra_1/100.0f;
-	ultra_msg2.range = (float)ut.ultra_2/100.0f;
-	ultra_msg3.range = (float)ut.ultra_3/100.0f;
-	ultra_msg4.range = (float)ut.ultra_4/100.0f;
-	ultra_msg5.range = (float)ut.ultra_5/100.0f;
-	ultra_msg6.range = (float)ut.ultra_6/100.0f;
+	float u1=(float)ut.ultra_1/100.0f;
+	float u2=(float)ut.ultra_2/100.0f;
+	float u3=(float)ut.ultra_3/100.0f;
+	float u4=(float)ut.ultra_4/100.0f;
+	float u5=(float)ut.ultra_5/100.0f;
+	float u6=(float)ut.ultra_6/100.0f;
+	ultra_msg1.range = u1>ultra_msg1.max_range?ultra_msg1.max_range:u1;
+	ultra_msg2.range = u2>ultra_msg2.max_range?ultra_msg2.max_range:u2;
+	ultra_msg3.range = u3>ultra_msg3.max_range?ultra_msg3.max_range:u3;
+	ultra_msg4.range = u4>ultra_msg4.max_range?ultra_msg4.max_range:u4;
+	ultra_msg5.range = u5>ultra_msg5.max_range?ultra_msg5.max_range:u5;
+	ultra_msg6.range = u6>ultra_msg6.max_range?ultra_msg6.max_range:u6;
 
 }
 
@@ -69,12 +75,12 @@ int main(int argc, char **argv){
 		ultra_msg5.field_of_view = 0.5;
 		ultra_msg6.field_of_view = 0.5;
 
-		ultra_msg1.min_range = 0.03;
-		ultra_msg2.min_range = 0.03;
-		ultra_msg3.min_range = 0.03;
-		ultra_msg4.min_range = 0.03;
-		ultra_msg5.min_range = 0.03;
-		ultra_msg6.min_range = 0.03;
+		ultra_msg1.min_range = 0.02;
+		ultra_msg2.min_range = 0.02;
+		ultra_msg3.min_range = 0.02;
+		ultra_msg4.min_range = 0.02;
+		ultra_msg5.min_range = 0.02;
+		ultra_msg6.min_range = 0.02;
 
 		ultra_msg1.max_range = 0.5;
 		ultra_msg2.max_range = 0.5;

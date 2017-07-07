@@ -5,9 +5,9 @@ footprint: [[0.25,0],[0.17,0.17],[0,0.25], [-0.17,0.17], [-0.25,0], [-0.17,-0.17
 footprint padding: 0.01
 robot_radius: 0.26
 inflation_radius: 0.45 #distance from an obstacle at which costs are incurred for planning paths
-max_obstacle_height: 0.8
-min_obstacle_height: 0.65
+max_obstacle_height: 0.3
+min_obstacle_height: 0.1
 cost_scaling_factor: 2.0  #  default 10 exponential rate at which the obstacle cost drops off 越小衰减曲线的斜率越小，这样障碍物就会分布在路径两端
 lethal_cost_threshold: 100 #
 observation_sources: scan
-scan: {sensor_frame: /laser, data_type: LaserScan, topic: /scan, marking: true, clearing: true}
+scan: {sensor_frame: /laser, data_type: LaserScan, topic: /scan, marking: true, clearing: true, clear_on_max_reading: true}

@@ -42,28 +42,6 @@ class Goals{
 		move_base_msgs::MoveBaseGoal goal;
 };
 
-/*
-move_base_msgs::MoveBaseGoal goals[20];
-
-goals[0].target_pose.header.frame_id="map";
-goals[0].target_pose.pose.position = [1.45884692669,0.41893029213,0];
-goals[0].target_pose.pose.orientation=[0,0,0.380679358544,0.924707102805];
-goals[1].target_pose.header.frame_id="map";
-goals[1].target_pose.pose.position = [6.51145744324,-2.35952734947,0];
-goals[1].target_pose.pose.orientation=[0,0,0.909674541736,-0.415321836794];
-goals[2].target_pose.header.frame_id="map";
-goals[2].target_pose.pose.position = [-4.2894,-7.019709,0];
-goals[2].target_pose.pose.orientation=[0,0,0.954226403507,-0.299085223391];
-goals[3].target_pose.header.frame_id="map";
-goals[3].target_pose.pose.position = [11.3937091827,0.897811412811,0];
-goals[3].target_pose.pose.orientation=[0,0,0.424219369561,0.905559454972];
-goals[4].target_pose.header.frame_id="map";
-goals[4].target_pose.pose.position = [-0.576218009,1.0124691725,0];
-goals[4].target_pose.pose.orientation=[0,0,-0.3492525274,0.9370286399];
-goals[5].target_pose.header.frame_id="map";
-goals[5].target_pose.pose.position = [3.52077460289,-6.87122631073,0];
-goals[5].target_pose.pose.orientation=[0,0,-0.341993935225,0.939702159341];
-*/
 int main(int argc, char** argv){
 	ros::init(argc, argv, "nav_goal");
 	//tell the action client that we want to spin a tread by default
