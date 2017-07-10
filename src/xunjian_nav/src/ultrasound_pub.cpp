@@ -19,12 +19,12 @@ void range_callback(const xunjian_nav::Ultrasound& ut){
 	float u4=(float)ut.ultra_4/100.0f;
 	float u5=(float)ut.ultra_5/100.0f;
 	float u6=(float)ut.ultra_6/100.0f;
-	ultra_msg1.range = u1>ultra_msg1.max_range?ultra_msg1.max_range:u1;
-	ultra_msg2.range = u2>ultra_msg2.max_range?ultra_msg2.max_range:u2;
-	ultra_msg3.range = u3>ultra_msg3.max_range?ultra_msg3.max_range:u3;
-	ultra_msg4.range = u4>ultra_msg4.max_range?ultra_msg4.max_range:u4;
-	ultra_msg5.range = u5>ultra_msg5.max_range?ultra_msg5.max_range:u5;
-	ultra_msg6.range = u6>ultra_msg6.max_range?ultra_msg6.max_range:u6;
+	ultra_msg1.range = u1;//>ultra_msg1.max_range?ultra_msg1.max_range:u1;
+	ultra_msg2.range = u2;//>ultra_msg2.max_range?ultra_msg2.max_range:u2;
+	ultra_msg3.range = u3;//>ultra_msg3.max_range?ultra_msg3.max_range:u3;
+	ultra_msg4.range = u4;//>ultra_msg4.max_range?ultra_msg4.max_range:u4;
+	ultra_msg5.range = u5;//>ultra_msg5.max_range?ultra_msg5.max_range:u5;
+	ultra_msg6.range = u6;//>ultra_msg6.max_range?ultra_msg6.max_range:u6;
 
 }
 

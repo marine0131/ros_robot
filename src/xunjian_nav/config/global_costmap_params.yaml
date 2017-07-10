@@ -9,16 +9,13 @@ global_costmap:
    transform_tolerance: 1.0  #指定tf变换中能容许的数据延迟的时间，这里为1s
    map_type: costmap
 
-plugins:
- - {name: static_layer, type: "costmap_2d::StaticLayer"}
- - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
- - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
- - {name: sonar_layer, type: "range_sensor_layer::RangeSensorLayer"}
+   plugins:
+     - {name: static_layer, type: "costmap_2d::StaticLayer"}
+     - {name: sonar_layer, type: "range_sensor_layer::RangeSensorLayer"}
+     - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
+     - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
 
-obstacle_layer:
-  observation_sources: scan
-  scan: {sensor_frame: /laser, data_type: LaserScan, topic: /scan, marking: true, clearing: true}
-
-sonar_layer:
-  topics: ["/ultra_dist1","/ultra_dist2","/ultra_dist3","/ultra_dist4","/ultra_dist5","/ultra_dist6"]
-  no_reading_timeout: 1.0
+#   sonar_layer:
+#     topics: ["/ultra_dist1","/ultra_dist2","/ultra_dist3","/ultra_dist4","/ultra_dist5","/ultra_dist6"]
+#     no_reading_timeout: 1.0
+    

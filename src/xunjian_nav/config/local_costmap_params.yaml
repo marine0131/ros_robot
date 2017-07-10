@@ -12,15 +12,27 @@ local_costmap:
    transform_tolerance: 2.0
    map_type: costmap
 
-plugins:
- - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
- - {name: sonar_layer, type: "range_sensor_layer::RangeSensorLayer"}
- - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
- 
-obstacle_layer:
-  observation_sources: scan
-  scan: {sensor_frame: /laser, data_type: LaserScan, topic: /scan, marking: true, clearing: true}
+   plugins:
+     - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
+     - {name: sonar_layer, type: "range_sensor_layer::RangeSensorLayer"}
+     - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
 
-sonar_layer:
-  topics: ["/ultra_dist1","/ultra_dist2","/ultra_dist3","/ultra_dist4","/ultra_dist5","/ultra_dist6"]
-  no_reading_timeout: 1.0
+   sonar_layer:
+     topics: ["/ultra_dist1","/ultra_dist2","/ultra_dist3","/ultra_dist4","/ultra_dist5","/ultra_dist6"]
+     no_reading_timeout: 1.0
+     clear_threshold: 0.6
+     mark_threshold: 0.8
+     clear_on_max_reading: true
+   
+   obstacle_layer:
+     enable: true
+     track_unknown_space: false
+     combination_method: 1
+     observation_sources: scan
+     scan: {sensor_frame: /laser, data_type: LaserScan, topic: /scan, marking: true, clearing: true, clear_on_max_reading: true, inf_is_valid: true}
+
+   inflation_layer:
+     enable: true
+     inflation_radius: 0.45
+     cost_scaling_factor: 2.0
+
