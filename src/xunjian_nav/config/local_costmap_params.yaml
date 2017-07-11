@@ -26,7 +26,8 @@ local_costmap:
    
    obstacle_layer:
      enable: true
-     track_unknown_space: false
+     track_unknown_space: true
+     footprint_clearing_enabled: true
      combination_method: 1
      observation_sources: scan
      scan: {sensor_frame: /laser, data_type: LaserScan, topic: /scan, marking: true, clearing: true, clear_on_max_reading: true, inf_is_valid: true}

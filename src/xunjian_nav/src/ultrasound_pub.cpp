@@ -25,6 +25,7 @@ void range_callback(const xunjian_nav::Ultrasound& ut){
 	ultra_msg4.range = u4;//>ultra_msg4.max_range?ultra_msg4.max_range:u4;
 	ultra_msg5.range = u5;//>ultra_msg5.max_range?ultra_msg5.max_range:u5;
 	ultra_msg6.range = u6;//>ultra_msg6.max_range?ultra_msg6.max_range:u6;
+	printf("ultra:%f,%f,%f,%f,%f,%f",u1,u2,u3,u4,u5,u6);
 
 }
 
@@ -68,26 +69,26 @@ int main(int argc, char **argv){
 		ultra_msg5.header = header5;
 		ultra_msg6.header = header6;
 		
-		ultra_msg1.field_of_view = 0.5;
-		ultra_msg2.field_of_view = 0.5;
-		ultra_msg3.field_of_view = 0.5;
-		ultra_msg4.field_of_view = 0.5;
-		ultra_msg5.field_of_view = 0.5;
-		ultra_msg6.field_of_view = 0.5;
+		ultra_msg1.field_of_view = 0.3;
+		ultra_msg2.field_of_view = 0.3;
+		ultra_msg3.field_of_view = 0.3;
+		ultra_msg4.field_of_view = 0.3;
+		ultra_msg5.field_of_view = 0.3;
+		ultra_msg6.field_of_view = 0.3;
 
-		ultra_msg1.min_range = 0.02;
-		ultra_msg2.min_range = 0.02;
-		ultra_msg3.min_range = 0.02;
-		ultra_msg4.min_range = 0.02;
-		ultra_msg5.min_range = 0.02;
-		ultra_msg6.min_range = 0.02;
+		ultra_msg1.min_range = 0.03;
+		ultra_msg2.min_range = 0.03;
+		ultra_msg3.min_range = 0.03;
+		ultra_msg4.min_range = 0.03;
+		ultra_msg5.min_range = 0.03;
+		ultra_msg6.min_range = 0.03;
 
-		ultra_msg1.max_range = 0.5;
-		ultra_msg2.max_range = 0.5;
-		ultra_msg3.max_range = 0.5;
-		ultra_msg4.max_range = 0.5;
-		ultra_msg5.max_range = 0.5;
-		ultra_msg6.max_range = 0.5;
+		ultra_msg1.max_range = 1.0;
+		ultra_msg2.max_range = 1.0;
+		ultra_msg3.max_range = 1.0;
+		ultra_msg4.max_range = 1.0;
+		ultra_msg5.max_range = 1.0;
+		ultra_msg6.max_range = 1.0;
 
 		ultra_pub1.publish(ultra_msg1);
 		ultra_pub2.publish(ultra_msg2);

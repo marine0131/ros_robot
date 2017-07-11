@@ -268,7 +268,7 @@ int main (int argc, char** argv){
 
     try
     {
-        ser.setPort("/dev/ttyUSB0");
+        ser.setPort("/dev/xunjian_base");
         ser.setBaudrate(115200);
         serial::Timeout to = serial::Timeout::simpleTimeout(1000);
         ser.setTimeout(to);

@@ -223,12 +223,12 @@ void RangeSensorLayer::processFixedRangeMsg(sensor_msgs::Range& range_message)
 
 void RangeSensorLayer::processVariableRangeMsg(sensor_msgs::Range& range_message)
 {
-  if (range_message.range < range_message.min_range || range_message.range > range_message.max_range)
+  if (range_message.range < range_message.min_range)
     return;
 
   bool clear_sensor_cone = false;
 
-  if (range_message.range == range_message.max_range && clear_on_max_reading_)
+  if (range_message.range >= range_message.max_range && clear_on_max_reading_)
     clear_sensor_cone = true;
 
   updateCostmap(range_message, clear_sensor_cone);
