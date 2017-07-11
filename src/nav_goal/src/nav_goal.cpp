@@ -1,7 +1,8 @@
 #include <ros/ros.h>
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
-//#include <../include/nav_goal/nav_goal.h>
+#include "move_base/move_base.h" 
+#include <cstdlib>
 
 #define DOOR 0
 #define SERVER 1
@@ -42,11 +43,16 @@ class Goals{
 		move_base_msgs::MoveBaseGoal goal;
 };
 
+
 int main(int argc, char** argv){
 	ros::init(argc, argv, "nav_goal");
+	ros::NodeHandle nh;
 	//tell the action client that we want to spin a tread by default
+	ros::ServiceClient client=nh.serviceClient<std_srvs::Empty>("/move_base/clear_costmaps");
+	std_srvs::Empty srv;
 	MoveBaseClient ac("move_base", true);
 	Goals goals[20];
+
 	goals[0].set_frame("map");
 	goals[0].set_position(1.45884692669,0.41893029213,0);
 	goals[0].set_quat(0,0,0.380679358544,0.924707102805);
@@ -70,12 +76,15 @@ int main(int argc, char** argv){
 	while(!ac.waitForServer(ros::Duration(5.0))){
 		ROS_INFO("Waiting for the move_base action server to come up");	
 	}
-	int p[4]={WC, SERVER, BOSS, SERVER};
+	int p[2]={DOOR, ROOM};
 	int ii = 0;
 	while(ros::ok()){
-		if (ii>=4) ii = 0;
+		if (ii>=2) ii = 0;
 		ac.sendGoal(goals[p[ii]].get_goal());
 		ii ++;	
+		if(client.call(srv)){
+			 ROS_INFO("I got the goal and the costmap layers are reset!!!!!"); 
+		}
 
 		ac.waitForResult();
 		if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
