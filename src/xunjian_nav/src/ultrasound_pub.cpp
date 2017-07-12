@@ -5,6 +5,10 @@
 #include <time.h>
 #include <tf/transform_broadcaster.h>
 
+#define FIELD_OF_VIEW 0.5
+#define MAX_RANGE 0.8
+#define MIN_RANGE 0.02
+
 sensor_msgs::Range ultra_msg1;
 sensor_msgs::Range ultra_msg2;
 sensor_msgs::Range ultra_msg3;
@@ -40,7 +44,7 @@ int main(int argc, char **argv){
 	ros::Publisher ultra_pub5=nh.advertise<sensor_msgs::Range>("ultra_dist5",100);
 	ros::Publisher ultra_pub6=nh.advertise<sensor_msgs::Range>("ultra_dist6",100);
 	
-	ros::Rate loop_rate(10);
+	ros::Rate loop_rate(20);
 	
 	while(ros::ok()){
 		std_msgs::Header header1;
@@ -69,26 +73,26 @@ int main(int argc, char **argv){
 		ultra_msg5.header = header5;
 		ultra_msg6.header = header6;
 		
-		ultra_msg1.field_of_view = 0.3;
-		ultra_msg2.field_of_view = 0.3;
-		ultra_msg3.field_of_view = 0.3;
-		ultra_msg4.field_of_view = 0.3;
-		ultra_msg5.field_of_view = 0.3;
-		ultra_msg6.field_of_view = 0.3;
+		ultra_msg1.field_of_view = FIELD_OF_VIEW;
+		ultra_msg2.field_of_view = FIELD_OF_VIEW;
+		ultra_msg3.field_of_view = FIELD_OF_VIEW;
+		ultra_msg4.field_of_view = FIELD_OF_VIEW;
+		ultra_msg5.field_of_view = FIELD_OF_VIEW;
+		ultra_msg6.field_of_view = FIELD_OF_VIEW;
 
-		ultra_msg1.min_range = 0.03;
-		ultra_msg2.min_range = 0.03;
-		ultra_msg3.min_range = 0.03;
-		ultra_msg4.min_range = 0.03;
-		ultra_msg5.min_range = 0.03;
-		ultra_msg6.min_range = 0.03;
+		ultra_msg1.min_range = MIN_RANGE;
+		ultra_msg2.min_range = MIN_RANGE;
+		ultra_msg3.min_range = MIN_RANGE;
+		ultra_msg4.min_range = MIN_RANGE;
+		ultra_msg5.min_range = MIN_RANGE;
+		ultra_msg6.min_range = MIN_RANGE;
 
-		ultra_msg1.max_range = 1.0;
-		ultra_msg2.max_range = 1.0;
-		ultra_msg3.max_range = 1.0;
-		ultra_msg4.max_range = 1.0;
-		ultra_msg5.max_range = 1.0;
-		ultra_msg6.max_range = 1.0;
+		ultra_msg1.max_range = MAX_RANGE;
+		ultra_msg2.max_range = MAX_RANGE;
+		ultra_msg3.max_range = MAX_RANGE;
+		ultra_msg4.max_range = MAX_RANGE;
+		ultra_msg5.max_range = MAX_RANGE;
+		ultra_msg6.max_range = MAX_RANGE;
 
 		ultra_pub1.publish(ultra_msg1);
 		ultra_pub2.publish(ultra_msg2);

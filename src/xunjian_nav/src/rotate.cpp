@@ -1,7 +1,11 @@
 #include <ros/ros.h>
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include<geometry_msgs/Twist.h>
+#include "move_base/move_base.h" 
+
 ros::Publisher cmd_vel_pub;
+ros::ServiceClient client;
+std_srvs::Empty srv;
 int count=0;
 void get_pose_callback(const geometry_msgs::PoseWithCovarianceStamped& pose){
 	geometry_msgs::Twist msg;
@@ -17,12 +21,16 @@ void get_pose_callback(const geometry_msgs::PoseWithCovarianceStamped& pose){
 	
 	msg.angular.z = 0;
 	cmd_vel_pub.publish(msg);
+	if(client.call(srv)){
+		ROS_INFO("rotate complete and clear costmap"); 
+	}
+
 }
 
 int main(int argc, char** argv){
 	ros::init(argc, argv, "rotate");
 	ros::NodeHandle nh;	
-	
+	client = nh.serviceClient<std_srvs::Empty>("/move_base/clear_costmaps");
 	ros::Subscriber init_pose_sub=nh.subscribe("/initialpose",50, get_pose_callback);
 	cmd_vel_pub=nh.advertise<geometry_msgs::Twist>("/smoother_cmd_vel",50);
 

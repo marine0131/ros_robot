@@ -1,9 +1,9 @@
 base_global_planner: navfn/NavfnROS
 
-controller_frequency: 5.0
+controller_frequency: 7.0
 planner_frequency: 0.5
-recovery_behavior_enabled: false
-clearing_rotation_allowed: false
+recovery_behavior_enabled: true
+clearing_rotation_allowed: true
 
 TrajectoryPlannerROS:
 #ACCELERATION   
@@ -42,7 +42,7 @@ TrajectoryPlannerROS:
     occdist_scale: 0.01   #0.1  越小越好，这样就不会在障碍物附近陷住
     oscillation_reset_dist: 0.2   #0.05    
     heading_scoring: false
-    heading_lookahead: 0.1 #how far look ahead in meters in-place-rotation
+    heading_lookahead: 0.05 #how far look ahead in meters in-place-rotation
     heading_scoring_timestep: 0.8
     dwa: true   
     publish_cost_grid_pc: false

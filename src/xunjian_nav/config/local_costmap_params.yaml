@@ -13,7 +13,7 @@ local_costmap:
    map_type: costmap
 
    plugins:
-     - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
+     - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}
      - {name: sonar_layer, type: "range_sensor_layer::RangeSensorLayer"}
      - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
 

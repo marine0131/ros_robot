@@ -286,7 +286,7 @@ int main (int argc, char** argv){
         return -1;
     }
 
-    ros::Rate loop_rate(50);
+    ros::Rate loop_rate(20);
     while(ros::ok()){
 	ros::spinOnce();//check subscribed topic and process
 

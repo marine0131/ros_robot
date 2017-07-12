@@ -76,19 +76,19 @@ int main(int argc, char** argv){
 	while(!ac.waitForServer(ros::Duration(5.0))){
 		ROS_INFO("Waiting for the move_base action server to come up");	
 	}
-	int p[2]={DOOR, ROOM};
+	int p[4]={WC, SERVER, BOSS, SERVER};
 	int ii = 0;
 	while(ros::ok()){
-		if (ii>=2) ii = 0;
+		if (ii>=4) ii = 0;
 		ac.sendGoal(goals[p[ii]].get_goal());
 		ii ++;	
 		if(client.call(srv)){
-			 ROS_INFO("I got the goal and the costmap layers are reset!!!!!"); 
+			 ROS_INFO("I got the goal and clear costmap"); 
 		}
 
 		ac.waitForResult();
 		if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
-			ROS_INFO("goal reached");
+			ROS_INFO("I reached goal");
 		else
 			ROS_INFO("fail to reach the goal");
 	}

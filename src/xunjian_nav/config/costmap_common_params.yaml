@@ -12,3 +12,6 @@ clearing: true
 inflation_radius: 0.45 #distance from an obstacle at which costs are incurred for planning paths
 cost_scaling_factor: 2.0  #  default 10 exponential rate at which the obstacle cost drops off 越小衰减曲线的斜率越小，这样障碍物就会分布在路径两端
 lethal_cost_threshold: 100 #
+
+observation_sources: scan
+scan: {sensor_frame: /laser, data_type: LaserScan, topic: /scan, marking: true, clearing: true, clear_on_max_reading: true, inf_is_valid: true}
