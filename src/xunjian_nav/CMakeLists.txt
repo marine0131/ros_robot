@@ -52,7 +52,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
    Wheelvelocity.msg
-   Sensor.msg
+   Encoder.msg
    Ultrasound.msg
  )
 

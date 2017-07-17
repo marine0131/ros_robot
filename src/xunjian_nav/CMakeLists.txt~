@@ -11,7 +11,6 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   geometry_msgs
   nav_msgs
-  geometry_msgs
   tf
   message_generation
   )
@@ -120,11 +119,6 @@ target_link_libraries(odometry_pub
    ${catkin_LIBRARIES}
  )
 
-add_executable(odometry_pub1 src/odometry_pub1.cpp )
-target_link_libraries(odometry_pub1
-   ${catkin_LIBRARIES}
- )
-
 add_executable(wheel_speed_pub src/wheel_speed_pub.cpp )
 target_link_libraries(wheel_speed_pub
    ${catkin_LIBRARIES}
@@ -139,10 +133,26 @@ target_link_libraries(ultra_print
    ${catkin_LIBRARIES}
  )
 
-add_executable(ultrasound_obstacles src/ultrasound_avoidance.cc )
+add_executable(ultrasound_avoidance src/ultrasound_avoidance.cc )
 target_link_libraries(ultrasound_avoidance
    ${catkin_LIBRARIES}
  )
+
+add_executable(ultrasound_pub src/ultrasound_pub.cpp )
+target_link_libraries(ultrasound_pub
+   ${catkin_LIBRARIES}
+ )
+
+add_executable(rotate src/rotate.cpp )
+target_link_libraries(rotate
+   ${catkin_LIBRARIES}
+ )
+
+add_executable(pose_publisher src/pose_publisher.cpp )
+target_link_libraries(pose_publisher
+   ${catkin_LIBRARIES}
+ )
+
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(xunjian_nav_node xunjian_nav_generate_messages_cpp)
@@ -159,6 +169,14 @@ target_link_libraries(ultrasound_avoidance
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
 
+#catkin_python_setup()
+#catkin_package(
+#  DEPENDS $(SYS_DEPS)
+#  CATKIN_DEPENDS ${CATKIN_DEPS}
+#)
+#install(PROGRAMS node/calibrate_linear.py node/calibrate_angular.py
+#  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#)
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 # install(PROGRAMS

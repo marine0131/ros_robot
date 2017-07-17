@@ -9,7 +9,7 @@ encoder data,but from the known velocity of mobile robots.
 #include <ros/ros.h>
 #include <tf/transform_broadcaster.h>
 #include <nav_msgs/Odometry.h>
-#include"xunjian_nav/Sensor.h"
+#include"xunjian_nav/Encoder.h"
 #include<math.h>
 //#define L 0.367//两轮之间的距离
 #define L 0.388
@@ -18,14 +18,14 @@ encoder data,but from the known velocity of mobile robots.
 #define ticks_meter 2290//机器人走一米的脉冲数
 //#define ticks_meter 2204
 
-xunjian_nav::Sensor msg;
+xunjian_nav::Encoder msg;
 
-void sensorMsg_Callback(const xunjian_nav::Sensor& sensorMsg){
-    msg.yawAngle=sensorMsg.yawAngle;
-    msg.leftEncoder=sensorMsg.leftEncoder;
-    msg.rightEncoder=sensorMsg.rightEncoder;
-    msg.vx = sensorMsg.vx;
-    msg.w = sensorMsg.w;
+void sensorMsg_Callback(const xunjian_nav::Encoder& msg){
+    msg.yawAngle=msg.yawAngle;
+    msg.leftEncoder=msg.leftEncoder;
+    msg.rightEncoder=msg.rightEncoder;
+    msg.vx = msg.vx;
+    msg.w = msg.w;
 }
 
 int main(int argc, char **argv)

@@ -9,7 +9,7 @@
 #include<geometry_msgs/Twist.h>
 #include <stdio.h>
 #include "xunjian_nav/Wheelvelocity.h"
-#include "xunjian_nav/Sensor.h"
+#include "xunjian_nav/Encoder.h"
 #include "xunjian_nav/Ultrasound.h"
 #include <iostream>
 #define PI 3.1415926
@@ -55,7 +55,7 @@ struct DRIVE_INFO  drive_info;
 struct WHEEL_SPEED wheel_speed;
 int cmd_vel_vx, cmd_vel_w;
 
-xunjian_nav::Sensor msg;
+xunjian_nav::Encoder msg;
 xunjian_nav::Ultrasound range_msg;
 
 int frame_decode(unsigned char *data_buf)
@@ -259,7 +259,7 @@ int main (int argc, char** argv){
     ros::Subscriber encoder_sub=nh.subscribe("encoder_reset",1,encoderClean);
     ros::Subscriber v_sub = nh.subscribe("smoother_cmd_vel", 1, v_callback);
 
-    ros::Publisher sensor_pub = nh.advertise<xunjian_nav::Sensor>("encoder", 50);
+    ros::Publisher encoder_pub = nh.advertise<xunjian_nav::Encoder>("encoder", 50);
     ros::Publisher range_pub=nh.advertise<xunjian_nav::Ultrasound>("range_dist",50);
 
     msg.yawAngle=0.0;
@@ -327,7 +327,7 @@ int main (int argc, char** argv){
 	//tm_cnt++;
 	//if ((tm_cnt % 5) == 0){
 	//	tm_cnt = 0;
-        	sensor_pub.publish(msg);
+        	encoder_pub.publish(msg);
         	range_pub.publish(range_msg);
 	//}
 
