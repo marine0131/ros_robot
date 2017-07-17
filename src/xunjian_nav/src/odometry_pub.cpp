@@ -18,14 +18,14 @@ encoder data,but from the known velocity of mobile robots.
 #define ticks_meter 2290//机器人走一米的脉冲数
 //#define ticks_meter 2204
 
-xunjian_nav::Encoder msg;
+xunjian_nav::Encoder enc;
 
 void sensorMsg_Callback(const xunjian_nav::Encoder& msg){
-    msg.yawAngle=msg.yawAngle;
-    msg.leftEncoder=msg.leftEncoder;
-    msg.rightEncoder=msg.rightEncoder;
-    msg.vx = msg.vx;
-    msg.w = msg.w;
+    enc.yawAngle=msg.yawAngle;
+    enc.leftEncoder=msg.leftEncoder;
+    enc.rightEncoder=msg.rightEncoder;
+    enc.vx = msg.vx;
+    enc.w = msg.w;
 }
 
 int main(int argc, char **argv)
@@ -70,13 +70,13 @@ while(n.ok())
 	current_time=ros::Time::now();
 	double dt=(current_time-last_time).toSec();
 
-	right_enc=msg.rightEncoder;
-	left_enc=msg.leftEncoder;
+	right_enc=enc.rightEncoder;
+	left_enc=enc.leftEncoder;
  	
         //ROS_INFO("right left right1 left1: [%d,%d,%d,%d]",right_enc, left_enc, right_enc_old, left_enc_old);
 	
-	vx = (float)msg.vx/1000.0;
-	w =  (float)msg.w/1000.0;
+	vx = (float)enc.vx/1000.0;
+	w =  (float)enc.w/1000.0;
 	x += vx*cos(th)*dt;
 	y += vx*sin(th)*dt;
 	th+= w*dt;
