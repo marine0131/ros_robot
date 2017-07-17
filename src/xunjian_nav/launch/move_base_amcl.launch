@@ -30,19 +30,7 @@
 
 	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
 	
-	<!-- *********velovity smoother *************-->
-	<!-- nodelet manager -->
-	<node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager"/>
-	<!-- velocity smoother -->
-	<include file="$(find yocs_velocity_smoother)/launch/velocity_smoother.launch">
-		<arg name="node_name"             value="velocity_smoother"/>
-		<arg name="nodelet_manager_name"  value="nodelet_manager"/>
-		<arg name="config_file"           value="$(find xunjian_nav)/config/yocs_velocity_smoother.yaml"/>
-		<arg name="raw_cmd_vel_topic"     value="cmd_vel"/>
-		<arg name="smooth_cmd_vel_topic"  value="smoother_cmd_vel"/>
-		<!--<arg name="robot_cmd_vel_topic"   value="robot_cmd_vel"/>-->
-		<arg name="odom_topic"            value="odom"/>
-	</include>
+	
 	
 	<!--*************rotate for initialize ************-->
 	<node pkg="xunjian_nav" name="rotate" type="rotate" output="screen"/>
@@ -51,6 +39,6 @@
 	<node pkg="xunjian_nav" name="pose_punlisher" type="pose_publisher"/>
 
 	<!-- rviz -->
-	<node pkg="rviz" name="rviz" type="rviz" required="true"
-    	args="-d $(find xunjian_nav)/rviz/nav_test.rviz"/>
+	<!-- <node pkg="rviz" name="rviz" type="rviz" required="true"
+    	args="-d $(find xunjian_nav)/rviz/nav_test.rviz"/> -->
 </launch>
