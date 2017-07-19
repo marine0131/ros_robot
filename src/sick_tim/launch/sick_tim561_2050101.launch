@@ -22,7 +22,7 @@
 
     <!-- Uncomment this to enable TCP instead of USB connection; 'hostname' is the host name or IP address of the laser scanner
     In cases where a race condition exists and the computer boots up before the TIM is ready, increase 'timelimit.'-->
-         <param name="hostname" type="string" value="192.168.2.11" />
+         <param name="hostname" type="string" value="192.168.168.150" />
          <param name="port" type="string" value="2112" />
          <param name="timelimit" type="int" value="5" />
     

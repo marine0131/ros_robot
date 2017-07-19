@@ -35,7 +35,7 @@ struct WHEEL_SPEED {
 };
 
 struct DRIVE_INFO {
-    double yaw;
+    int yaw;
     long left_odm;
     long right_odm;
     signed short V;
@@ -80,13 +80,13 @@ int frame_decode(unsigned char *data_buf)
 	drive_info.V = data_buf[14] | ((data_buf[15] << 8) & 0xFF00);
 	drive_info.W = data_buf[16] | ((data_buf[17] << 8) & 0xFF00);
 
-        msg.yawAngle=drive_info.yaw*PI/180.0;
+        msg.yawAngle=drive_info.yaw;
         msg.leftEncoder=drive_info.left_odm;
         msg.rightEncoder=drive_info.right_odm;
 	msg.vx = drive_info.V;
 	msg.w = drive_info.W;
 	
-        //printf("%i,%ld,%ld,%d,%d\n",ros::Time::now(),drive_info.left_odm,drive_info.right_odm,drive_info.V,drive_info.W);
+        printf("111,%ld,%ld,%d,%d\n",drive_info.left_odm,drive_info.right_odm,drive_info.V,drive_info.W);
 
         break;
 	case 0xBB:
@@ -262,7 +262,7 @@ int main (int argc, char** argv){
     ros::Publisher encoder_pub = nh.advertise<xunjian_nav::Encoder>("encoder", 50);
     ros::Publisher range_pub=nh.advertise<xunjian_nav::Ultrasound>("range_dist",50);
 
-    msg.yawAngle=0.0;
+    msg.yawAngle=0;
     msg.leftEncoder=0;
     msg.rightEncoder=0;
 

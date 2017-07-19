@@ -1,8 +1,0 @@
-prefix=/home/exbot/ros/install
-
-Name: cartographer_ros_msgs
-Description: Description of cartographer_ros_msgs
-Version: 1.0.0
-Cflags: -I/home/exbot/ros/install/include
-Libs: -L/home/exbot/ros/install/lib 
-Requires: 

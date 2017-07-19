@@ -1,2 +1,0 @@
-cartographer_ros/cartographer_ros:cartographer_ros/cartographer_ros_msgs:cartographer_ros/cartographer_rviz:laser_filters:rbx1/rbx1:rbx1/rbx1_apps:rbx1/rbx1_bringup:rbx1/rbx1_description:rbx1/rbx1_dynamixels:rbx1/rbx1_nav:rbx1/rbx1_speech:rbx1/rbx1_vision:serial:sick_tim:xunjian_nav
--DCATKIN_DEVEL_PREFIX=/home/exbot/ros/devel -DCMAKE_INSTALL_PREFIX=/home/exbot/ros/install -G Unix Makefiles
