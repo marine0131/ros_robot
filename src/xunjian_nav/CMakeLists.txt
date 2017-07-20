@@ -124,20 +124,6 @@ target_link_libraries(wheel_speed_pub
    ${catkin_LIBRARIES}
  )
 
-add_executable(yaw_print src/yaw_print.cpp )
-target_link_libraries(yaw_print
-   ${catkin_LIBRARIES}
- )
-add_executable(ultra_print src/ultra_print.cpp )
-target_link_libraries(ultra_print
-   ${catkin_LIBRARIES}
- )
-
-add_executable(ultrasound_avoidance src/ultrasound_avoidance.cc )
-target_link_libraries(ultrasound_avoidance
-   ${catkin_LIBRARIES}
- )
-
 add_executable(ultrasound_pub src/ultrasound_pub.cpp )
 target_link_libraries(ultrasound_pub
    ${catkin_LIBRARIES}
