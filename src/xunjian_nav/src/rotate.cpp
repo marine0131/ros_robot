@@ -11,7 +11,7 @@ void get_pose_callback(const geometry_msgs::PoseWithCovarianceStamped& pose){
 	geometry_msgs::Twist msg;
 	msg.linear.x = msg.linear.y = msg.linear.z = 0;
 	msg.angular.x = msg.angular.y = 0;
-	msg.angular.z = 0.6;
+	msg.angular.z = 0.8;
 	ROS_INFO("rotate for initialize");
 	count = 2*(2*3.14/msg.angular.z + 0.5);	
 	for(int i=0; i < count; i ++){

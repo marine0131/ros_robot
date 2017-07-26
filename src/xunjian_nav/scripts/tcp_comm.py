@@ -34,7 +34,7 @@ ENC_ID=0x11
 ULTRA_ID=0x12
 VEL_ID=0x13
 RESET_ID=0x14
-
+MAX_PACK_LEN=41
 Q30=1073741824.0
 connect_flag = True
 
@@ -80,13 +80,12 @@ class Tcp_comm():
 				now = rospy.Time.now()
 				if data is not None:
 					if data[0]==ENC_ID:
-						rospy.loginfo('recv enc data')
-						enc_msg.yawAngle=data[1]/57.3
-						enc_msg.leftEncoder=data[2]
-						enc_msg.rightEncoder=data[3]
-						enc_msg.vx = data[4]
-						enc_msg.w = data[5]
-						enc_pub.publish(vel_msg)
+						rospy.loginfo('recv enc data,%d,%d,%d,%d',data[1],data[2],data[3],data[4])
+						enc_msg.leftEncoder=data[1]
+						enc_msg.rightEncoder=data[2]
+						enc_msg.vx = data[3]
+						enc_msg.w = data[4]
+						enc_pub.publish(enc_msg)
 					elif data[0]==ULTRA_ID:
 						rospy.loginfo('recv ultra data')
 						ut_msg.ultra_1=data[1]
@@ -140,7 +139,9 @@ class Tcp_comm():
 		global connect_flag
 		if connect_flag:
 			data = [(int)(msg.linear.x*1000), (int)(msg.angular.z*1000)]#extract data from msg
+			rospy.loginfo('set vel:%d,%d',data[0],data[1])
 			pack = self.msg_pack(VEL_ID, data)#pack the data
+			#print repr(pack)
 			try:
 				self.sock.sendall(pack)
 			except Exception as e:
@@ -181,7 +182,10 @@ class Tcp_comm():
 			return None
 		data_len = struct.unpack('>B',raw_len)[0]#len is unsigned byte 
 		# Read the message data
-		rospy.loginfo('recv pack_len:%d',data_len)
+		#rospy.loginfo('recv pack_len:%d',data_len)
+		if data_len<1 or data_len>MAX_PACK_LEN:
+			self.recvall(4096)
+			return None
 		pack = self.recvall(data_len)
 		if not pack:
 			return None
