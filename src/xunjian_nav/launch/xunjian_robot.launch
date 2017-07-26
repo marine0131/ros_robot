@@ -12,7 +12,7 @@
 	<node pkg="tf" type="static_transform_publisher" name="ultra6_broadcaster" args="0.125 0.217 0.70 1.05 0 0  base_link ut6 50"  />
 	<!-- ***********serial port********-->
 	<!-- <node pkg="xunjian_nav" type="serial_node" name="serial_node" output="log"/>-->
-	<node name="tcp_comm" pkg="ros_tcp_comm" type="tcp_comm.py" output="screen">
+	<node name="tcp_comm" pkg="xunjian_nav" type="tcp_comm.py" output="screen">
       	<param name="port_number" type="int" value="24000"/>
       	<param name="ip" type="string" value="127.0.0.1"/>
     </node>

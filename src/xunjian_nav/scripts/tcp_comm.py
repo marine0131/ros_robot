@@ -25,14 +25,16 @@ import time
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Empty
 from sensor_msgs.msg import Imu
-from xunjian_nav.msg import Sensor, Ultrasound
+from xunjian_nav.msg import Encoder, Ultrasound
 from tf.transformations import euler_from_quaternion
 
 HEADER=0xFA
 IMU_ID=0x10
-ULTRA_ID=0x55
-VEL_ID=0xF8
-RESET_ID=0x56
+ENC_ID=0x11
+ULTRA_ID=0x12
+VEL_ID=0x13
+RESET_ID=0x14
+
 Q30=1073741824.0
 connect_flag = True
 
@@ -43,9 +45,9 @@ class Tcp_comm():
 		RECEIVER_IP = rospy.get_param('~ip')
 		PORT = rospy.get_param('~port_number')
 		
+		self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		#socket connection
 		try:
-			self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 			self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)#reuse addr
 			self.sock.bind(("", PORT))
 			self.sock.listen(1)
@@ -61,11 +63,11 @@ class Tcp_comm():
 		rospy.Subscriber("smoother_cmd_vel", Twist, self.vel_callback, queue_size=1)
 		rospy.Subscriber("encoder_reset", Empty, self.rst_callback, queue_size=1)
 
-		enc_pub = rospy.Publisher("encoder", Sensor, queue_size=10)
+		enc_pub = rospy.Publisher("encoder", Encoder, queue_size=10)
 		ut_pub = rospy.Publisher("range_dist", Ultrasound, queue_size=10)
 		imu_pub = rospy.Publisher("imu",Imu,queue_size=10)
 
-		enc_msg = Sensor()
+		enc_msg = Encoder()
 		ut_msg = Ultrasound()
 		imu_msg = Imu()
 		global connect_flag
@@ -77,7 +79,8 @@ class Tcp_comm():
 				self.sock.settimeout(None)
 				now = rospy.Time.now()
 				if data is not None:
-					if data[0]==VEL_ID:
+					if data[0]==ENC_ID:
+						rospy.loginfo('recv enc data')
 						enc_msg.yawAngle=data[1]/57.3
 						enc_msg.leftEncoder=data[2]
 						enc_msg.rightEncoder=data[3]
@@ -85,6 +88,7 @@ class Tcp_comm():
 						enc_msg.w = data[5]
 						enc_pub.publish(vel_msg)
 					elif data[0]==ULTRA_ID:
+						rospy.loginfo('recv ultra data')
 						ut_msg.ultra_1=data[1]
 						ut_msg.ultra_2=data[2]
 						ut_msg.ultra_3=data[3]
@@ -93,6 +97,7 @@ class Tcp_comm():
 						ut_msg.ultra_6=data[6]
 						ut_pub.publish(ut_msg)
 					elif data[0]==IMU_ID:
+						rospy.loginfo('recv imu data')
 						imu_msg.header.frame_id = "imu_base"
 						imu_msg.header.stamp = now
 						imu_msg.angular_velocity.x=data[1]/65536.0*4000.0
@@ -128,7 +133,7 @@ class Tcp_comm():
 				self.sock, addr = self.sock.accept()
 				rospy.loginfo("connectted")
 				connect_flag = True
-        self.sock.close()       
+		self.sock.close()       
 		rospy.spin()
 
 	def vel_callback(self, msg):
