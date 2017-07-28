@@ -11,12 +11,6 @@ encoder data,but from the known velocity of mobile robots.
 #include <nav_msgs/Odometry.h>
 #include"xunjian_nav/Encoder.h"
 #include<math.h>
-//#define L 0.367//两轮之间的距离
-#define L 0.388
-#define r 0.0625//轮子的半径
-#define pulseCount 900//轮子转动一圈的脉冲数
-#define ticks_meter 2290//机器人走一米的脉冲数
-//#define ticks_meter 2204
 
 xunjian_nav::Encoder enc;
 
@@ -33,7 +27,7 @@ int main(int argc, char **argv)
 	ros::NodeHandle n;
 	
 	ros::Subscriber sensor_sub=n.subscribe("encoder",1,sensorMsg_Callback);
-	ros::Publisher odom_pub=n.advertise<nav_msgs::Odometry>("odom",50);//定义发布里程计的对象odom_pub
+	ros::Publisher odom_pub=n.advertise<nav_msgs::Odometry>("odom_raw",50);//定义发布里程计的对象odom_pub
 	tf::TransformBroadcaster odom_broadcaster;//定义odom->base_link的坐标转换对象odom_broadcaster
 
 

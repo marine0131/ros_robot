@@ -7,6 +7,9 @@
 	<!-- map_server -->
   	<node pkg="map_server" name="map_server" type="map_server" args="$(find xunjian_nav)/maps/company_map.yaml" respawn="false" />
 
+	<!-- odom ekf-->
+	<include file="$(find xunjian_nav)/launch/odom_ekf.launch"/>
+
 	<!-- amcl -->
   	<include file="$(find xunjian_nav)/launch/amcl.launch" />
 

@@ -8,9 +8,9 @@
     author: Haijun Wang
 
     This node sends and receive messages across a lan or wireless network via a TCP connection.
-  
 
-    Currently this node receives location data from the turtlesim node. To 
+
+    Currently this node receives location data from the turtlesim node. To
     send different data change the params inside the 'tcp_comm.launch' file.
 
 """
@@ -44,7 +44,7 @@ class Tcp_comm():
 
 		RECEIVER_IP = rospy.get_param('~ip')
 		PORT = rospy.get_param('~port_number')
-		
+
 		self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		#socket connection
 		try:
@@ -59,7 +59,7 @@ class Tcp_comm():
 			rospy.loginfo("CONNECTION ERROR")
 			rospy.loginfo(e)
 			sys.exit()
-	
+
 		rospy.Subscriber("smoother_cmd_vel", Twist, self.vel_callback, queue_size=1)
 		rospy.Subscriber("encoder_reset", Empty, self.rst_callback, queue_size=1)
 
@@ -71,7 +71,7 @@ class Tcp_comm():
 		ut_msg = Ultrasound()
 		imu_msg = Imu()
 		global connect_flag
-		while True:#receive data 
+		while True:#receive data
 			connect_flag = True
 			try:
 				self.sock.settimeout(5)#timeout 5s
@@ -97,7 +97,7 @@ class Tcp_comm():
 						ut_pub.publish(ut_msg)
 					elif data[0]==IMU_ID:
 						rospy.loginfo('recv imu data')
-						imu_msg.header.frame_id = "imu_base"
+						imu_msg.header.frame_id = "imu"
 						imu_msg.header.stamp = now
 						imu_msg.angular_velocity.x=data[1]/65536.0*4000.0
 						imu_msg.angular_velocity.y=data[2]/65536.0*4000.0
@@ -109,7 +109,7 @@ class Tcp_comm():
 						imu_msg.orientation.x=data[8]/Q30
 						imu_msg.orientation.y=data[9]/Q30
 						imu_msg.orientation.z=data[10]/Q30
-						
+
 						imu_pub.publish(imu_msg)
 						#(roll,pitch,yaw)=euler_from_quaternion([imu_msg.orientation.x,imu_msg.orientation.y,imu_msg.orientation.z,imu_msg.orientation.w])
 						#rospy.loginfo((roll*57.3,pitch*57.3,yaw*57.3))
@@ -132,7 +132,7 @@ class Tcp_comm():
 				self.sock, addr = self.sock.accept()
 				rospy.loginfo("connectted")
 				connect_flag = True
-		self.sock.close()       
+		self.sock.close()
 		rospy.spin()
 
 	def vel_callback(self, msg):
@@ -162,7 +162,7 @@ class Tcp_comm():
 				rospy.loginfo("SENDER ERROR")
 				rospy.loginfo(e)
 
-	def msg_pack(self, idd, data):	
+	def msg_pack(self, idd, data):
 		pack = struct.pack('>B',HEADER)#pack header
 		pack = pack+struct.pack('>B',len(data)*4+1)	#pack len
 		pack = pack + struct.pack('>B',idd) #pack header
@@ -180,7 +180,7 @@ class Tcp_comm():
 		raw_len= self.recvall(1)#next is len
 		if not raw_len:
 			return None
-		data_len = struct.unpack('>B',raw_len)[0]#len is unsigned byte 
+		data_len = struct.unpack('>B',raw_len)[0]#len is unsigned byte
 		# Read the message data
 		#rospy.loginfo('recv pack_len:%d',data_len)
 		if data_len<1 or data_len>MAX_PACK_LEN:
