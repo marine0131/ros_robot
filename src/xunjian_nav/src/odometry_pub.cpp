@@ -54,7 +54,7 @@ int main(int argc, char **argv)
 	ros::Time current_time,last_time;
 	current_time=ros::Time::now();
 	last_time=ros::Time::now();
-	ros::Rate rate(50);//机器人发布消息的频率
+	ros::Rate rate(20);//机器人发布消息的频率
 
 while(n.ok())
 {

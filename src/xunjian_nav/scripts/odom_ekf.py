@@ -74,7 +74,7 @@ class OdomEKF():
         self.odom = Odometry()
         self.odom_in=Odometry()
         self.twst = Twist()
-        rate = rospy.Rate(30)
+        rate = rospy.Rate(20)
         while True:
             self.odom.header = self.odom_in.header
             self.odom.header.frame_id = '/odom'
