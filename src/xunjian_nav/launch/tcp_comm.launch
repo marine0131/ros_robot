@@ -1,5 +1,5 @@
 <launch>  
-    <node name="tcp_comm" pkg="ros_tcp_comm" type="tcp_comm.py" output="screen">
+    <node name="tcp_comm" pkg="xunjian_nav" type="tcp_comm.py" output="screen">
       	<param name="port_number" type="int" value="24000"/>
       	<param name="ip" type="string" value="127.0.0.1"/>
     </node>

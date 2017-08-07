@@ -3,7 +3,8 @@
 	<param name="/use_sim_time" value="$(arg simulation)"/>
 	
 	<!--**************static tf*************-->
-	<node pkg="tf" type="static_transform_publisher" name="imu_broadcaster"   args="0.12 0 0.7 0 0 0 base_link imu 50" />
+<!--<node pkg="tf" type="static_transform_publisher" name="imu_broadcaster"   args="0.12 0 0.7 0 0.7071 -0.7071 0 base_link imu 50" /> -->
+	<node pkg="tf" type="static_transform_publisher" name="imu_broadcaster"   args="0.12 0 0.72 0 0 0 base_link imu 50" />
 	<node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0.21 0 0.21 0 0 0 1 base_link laser 50"  />
 	<node pkg="tf" type="static_transform_publisher" name="ultra1_broadcaster" args="0.25 0.0 0.70 0 0 0  base_link ut1 50"  />
 	<node pkg="tf" type="static_transform_publisher" name="ultra2_broadcaster" args="0.125 -0.217 0.70 -1.05 0 0  base_link ut2 50"  />
@@ -11,6 +12,8 @@
 	<node pkg="tf" type="static_transform_publisher" name="ultra4_broadcaster" args="-0.25 0.0 0.70 -3.14 0 0  base_link ut4 50"  />
 	<node pkg="tf" type="static_transform_publisher" name="ultra5_broadcaster" args="-0.125 0.217 0.70 2.1 0 0  base_link ut5 50"  />
 	<node pkg="tf" type="static_transform_publisher" name="ultra6_broadcaster" args="0.125 0.217 0.70 1.05 0 0  base_link ut6 50"  />
+<!--<node pkg="tf" type="static_transform_publisher" name="baselink_broadcaster" args="0 0 0.01 0 0 0 base_footprint base_link 50" /> -->
+<!--	<node pkg="tf" type="static_transform_publisher" name="odom_encoder_broadcaster" args="0 0 0 0 0 0  odom odom_encoder 50"  /> -->
 	<!-- ***********serial port********-->
 	<!-- <node pkg="xunjian_nav" type="serial_node" name="serial_node" output="log"/>-->
 	<node name="tcp_comm" pkg="xunjian_nav" type="tcp_comm.py" output="screen">

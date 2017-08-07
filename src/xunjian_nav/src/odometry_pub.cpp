@@ -11,6 +11,7 @@ encoder data,but from the known velocity of mobile robots.
 #include <nav_msgs/Odometry.h>
 #include"xunjian_nav/Encoder.h"
 #include<math.h>
+#include<boost/assign/list_of.hpp>
 
 xunjian_nav::Encoder enc;
 
@@ -28,19 +29,19 @@ int main(int argc, char **argv)
 	
 	ros::Subscriber sensor_sub=n.subscribe("encoder",1,sensorMsg_Callback);
 	ros::Publisher odom_pub=n.advertise<nav_msgs::Odometry>("odom_raw",50);//定义发布里程计的对象odom_pub
-	tf::TransformBroadcaster odom_broadcaster;//定义odom->base_link的坐标转换对象odom_broadcaster
+	//tf::TransformBroadcaster odom_broadcaster;//定义odom->base_link的坐标转换对象odom_broadcaster
 
 
 	//定义机器人的初始位置和初始速度
 	double x=0.0;
 	double y=0.0;
 	//double th=msg.yawAngle;
-        double th=0.0;
+    double th=0.0;
 	//定义左轮的线速度和右轮的线速度
 	double vR=0;
 	double vL=0;
 	double vx=0;
-        double w=0;
+    double w=0;
 	//定义左右轮编码器的值
 	//int right_enc=msg.rightEncoder;
 	//int left_enc=msg.leftEncoder;
@@ -74,16 +75,16 @@ while(n.ok())
 	y += vx*sin(th)*dt;
 	th+= w*dt;
 	
-     while (th>=2*M_PI)  th-=2*M_PI;
-     while(th<0)      th+=2*M_PI;
+     while (th >= M_PI)  th -= 2*M_PI;
+     while(th <= -M_PI)  th += 2*M_PI;
 //由机器人的偏航角得到机器人用四元素表示的姿态
 //PS：实际中偏航角由六轴陀螺仪获得
 	geometry_msgs::Quaternion odom_quat=tf::createQuaternionMsgFromYaw(th);
 
-	geometry_msgs::TransformStamped odom_trans;
+	//geometry_msgs::TransformStamped odom_trans;
 //时间戳信息
 //通过tf发布坐标变换，这里的tf/tfMessage包含stamp信息，frame_id信息和child_frame_id信息以及translation和rotation信息
-	odom_trans.header.stamp=current_time;
+	/*odom_trans.header.stamp=current_time;
 	odom_trans.header.frame_id="odom";
 	odom_trans.child_frame_id="base_link";
 	odom_trans.transform.translation.x=x;
@@ -91,7 +92,7 @@ while(n.ok())
 	odom_trans.transform.translation.z=0.0;
 	odom_trans.transform.rotation=odom_quat;
 
-	odom_broadcaster.sendTransform(odom_trans);//发布tf变换消息
+	odom_broadcaster.sendTransform(odom_trans);//发布tf变换消息*/
 	nav_msgs::Odometry odom;
 	odom.header.stamp=current_time;
 	odom.header.frame_id="odom";
@@ -100,13 +101,23 @@ while(n.ok())
 	odom.pose.pose.position.y=y;
 	odom.pose.pose.position.z=0.0;
 	odom.pose.pose.orientation=odom_quat;
-
+	odom.pose.covariance = boost::assign::list_of(1e-3) (0) (0) (0) (0) (0)
+			                                       (0) (1e-3) (0) (0) (0) (0)
+												   (0) (0) (1e6) (0) (0) (0)
+												   (0) (0) (0) (1e6) (0) (0)
+												   (0) (0) (0) (0) (1e6) (0)
+												   (0) (0) (0) (0) (0) (1e3);
 //设置速度信息
-	odom.child_frame_id="base_link";
+    odom.child_frame_id="base_link";
 	odom.twist.twist.linear.x=vx;
 	odom.twist.twist.linear.y=0.0;
 	odom.twist.twist.angular.z=w;
-
+	odom.twist.covariance = boost::assign::list_of(1e-3) (0) (0) (0) (0) (0)
+			                                      (0) (1e-3) (0) (0) (0) (0)
+												  (0) (0) (1e6) (0) (0) (0)
+												  (0) (0) (0) (1e6) (0) (0)
+                                                  (0) (0) (0) (0) (1e6) (0)
+												  (0) (0) (0) (0) (0) (1e3);
 	odom_pub.publish(odom);//发布经过坐标变换后的里程计信息
 	right_enc_old=right_enc;
 	left_enc_old=left_enc;

@@ -2,13 +2,13 @@
 	<!-- tf -->
 	<!--<master auto="start"/>-->
 
- 	<!-- <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 map odom 50" />-->
+<!-- 	<node pkg="tf" type="static_transform_publisher" name="odom_combined_broadcaster" args="0 0 0 0 0 0 odom odom_combined 50" /> -->
 	
 	<!-- map_server -->
   	<node pkg="map_server" name="map_server" type="map_server" args="$(find xunjian_nav)/maps/company_map.yaml" respawn="false" />
 
 	<!-- odom ekf-->
-	<include file="$(find xunjian_nav)/launch/odom_ekf.launch"/>
+<!--	<include file="$(find xunjian_nav)/launch/odom_ekf.launch"/> -->
 
 	<!-- amcl -->
   	<include file="$(find xunjian_nav)/launch/amcl.launch" />
@@ -21,6 +21,7 @@
     	<rosparam file="$(find xunjian_nav)/config/global_costmap_params.yaml" command="load" />
     	<rosparam file="$(find xunjian_nav)/config/base_local_planner_params.yaml" command="load" />
     	<!--<rosparam file="$(find xunjian_nav)/config/xunjian_robot/navfn_params.yaml" command="load"/>-->
+		<remap from="odom" to="odometry/filtered"/>
   	</node>
   	
 	<!--urdf model-->
@@ -40,6 +41,8 @@
 	
 	<!--*************pose publisher***************-->
 	<node pkg="xunjian_nav" name="pose_punlisher" type="pose_publisher"/>
+	<node pkg="xunjian_nav" type="grid_pose_pub.py" name="grid_pose_pub"/>
+	<node pkg="xunjian_nav" type="grid_laser_pub.py" name="grid_laser_pub" output="screen"/>
 
 	<!-- rviz -->
 	<!-- <node pkg="rviz" name="rviz" type="rviz" required="true"

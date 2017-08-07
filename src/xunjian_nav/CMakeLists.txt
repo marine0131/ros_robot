@@ -51,9 +51,11 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
 add_message_files(
   FILES
-   Wheelvelocity.msg
    Encoder.msg
    Ultrasound.msg
+   GridPose.msg
+   GridLaser.msg
+   GridPoint.msg
  )
 
 ## Generate services in the 'srv' folder
@@ -116,11 +118,6 @@ target_link_libraries(serial_node
 
 add_executable(odometry_pub src/odometry_pub.cpp )
 target_link_libraries(odometry_pub
-   ${catkin_LIBRARIES}
- )
-
-add_executable(wheel_speed_pub src/wheel_speed_pub.cpp )
-target_link_libraries(wheel_speed_pub
    ${catkin_LIBRARIES}
  )
 

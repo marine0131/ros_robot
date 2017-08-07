@@ -96,23 +96,25 @@ class Tcp_comm():
 						ut_msg.ultra_6=data[6]
 						ut_pub.publish(ut_msg)
 					elif data[0]==IMU_ID:
-						rospy.loginfo('recv imu data')
+						#rospy.loginfo('recv imu data')
 						imu_msg.header.frame_id = "imu"
 						imu_msg.header.stamp = now
-						imu_msg.angular_velocity.x=data[1]/65536.0*4000.0
-						imu_msg.angular_velocity.y=data[2]/65536.0*4000.0
-						imu_msg.angular_velocity.z=data[3]/65536.0*4000.0
-						imu_msg.linear_acceleration.x=data[4]/65536.0*4.0
-						imu_msg.linear_acceleration.y=data[5]/65536.0*4.0
-						imu_msg.linear_acceleration.z=data[6]/65536.0*4.0
+						imu_msg.angular_velocity.x=data[1]/65536.0*4000.0/57.3
+						imu_msg.angular_velocity.y=data[2]/65536.0*4000.0/57.3
+						imu_msg.angular_velocity.z=data[3]/65536.0*4000.0/57.3
+						imu_msg.linear_acceleration.x=data[4]/65536.0*4.0*9.8
+						imu_msg.linear_acceleration.y=data[5]/65536.0*4.0*9.8
+						imu_msg.linear_acceleration.z=data[6]/65536.0*4.0*9.8
 						imu_msg.orientation.w=data[7]/Q30
 						imu_msg.orientation.x=data[8]/Q30
 						imu_msg.orientation.y=data[9]/Q30
 						imu_msg.orientation.z=data[10]/Q30
-
+						imu_msg.orientation_covariance=[1e6, 0, 0, 0, 1e6, 0, 0, 0, 1e-6]
+						imu_msg.angular_velocity_covariance=[1e6, 0, 0, 0, 1e6, 0, 0, 0, 1e-6]
+						imu_msg.linear_acceleration_covariance = [-1, 0, 0, 0, 0, 0, 0, 0, 0]
 						imu_pub.publish(imu_msg)
-						#(roll,pitch,yaw)=euler_from_quaternion([imu_msg.orientation.x,imu_msg.orientation.y,imu_msg.orientation.z,imu_msg.orientation.w])
-						#rospy.loginfo((roll*57.3,pitch*57.3,yaw*57.3))
+						(roll,pitch,yaw)=euler_from_quaternion([imu_msg.orientation.x,imu_msg.orientation.y,imu_msg.orientation.z,imu_msg.orientation.w])
+						rospy.loginfo("recv imu data:%d,%d,%d",(int)(roll*57.3),(int)(pitch*57.3),(int)(yaw*57.3))
 					else:
 						rospy.loginfo("error: unrecognized header,0x%x",data[0])
 				else:
@@ -134,6 +136,7 @@ class Tcp_comm():
 				connect_flag = True
 		self.sock.close()
 		rospy.spin()
+
 
 	def vel_callback(self, msg):
 		global connect_flag

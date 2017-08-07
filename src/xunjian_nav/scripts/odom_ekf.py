@@ -26,8 +26,9 @@
 import rospy
 from geometry_msgs.msg import PoseWithCovarianceStamped
 from nav_msgs.msg import Odometry
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import *
 from xunjian_nav.msg import Encoder
+from tf.broadcaster import TransformBroadcaster
 
 ODOM_POSE_COVARIANCE = [1e-3, 0, 0, 0, 0, 0,
                         0, 1e-3, 0, 0, 0, 0,
@@ -61,37 +62,40 @@ class OdomEKF():
         rospy.init_node('odom_ekf', anonymous=False)
 
         # Publisher of type nav_msgs/Odometry
-        self.ekf_pub = rospy.Publisher('output', Odometry, queue_size=5)
+        self.ekf_pub = rospy.Publisher('odom', Odometry, queue_size=5)
 
         # Wait for the /odom_combined topic to become available
-        rospy.wait_for_message('input', PoseWithCovarianceStamped)
-        rospy.wait_for_message('encoder',Sensor)
+        rospy.wait_for_message('robot_pose_ekf/odom_combined', PoseWithCovarianceStamped)
+        rospy.wait_for_message('encoder',Encoder)
 
         # Subscribe to the /odom_combined topic
-        rospy.Subscriber('input', PoseWithCovarianceStamped, self.pub_ekf_odom)
-        rospy.Subscriber('encoder',Sensor,self.pub_ekf_twist)
+        rospy.Subscriber('robot_pose_ekf/odom_combined', PoseWithCovarianceStamped, self.pub_ekf_odom)
+        rospy.Subscriber('encoder',Encoder,self.pub_ekf_twist)
 
         self.odom = Odometry()
         self.odom_in=Odometry()
-        self.twst = Twist()
+        self.odom_broadcaster=TransformBroadcaster()
+        self.twist = Twist()
         rate = rospy.Rate(20)
-        while True:
+        while not rospy.is_shutdown():
+            self.odom_broadcaster.sendTransform((self.odom_in.pose.pose.position.x, self.odom_in.pose.pose.position.y, 0),
+                                                (self.odom_in.pose.pose.orientation.x, self.odom_in.pose.pose.orientation.y, self.odom_in.pose.pose.orientation.z, self.odom_in.pose.pose.orientation.w)
+                                                 , rospy.Time.now(), "base_link", "odom")
             self.odom.header = self.odom_in.header
-            self.odom.header.frame_id = '/odom'
-            self.odom.child_frame_id = 'base_link'
-
+            self.odom.child_frame_id = "base_link"
+            #self.odom.header.stamp =rospy.Time.now()
             self.odom.pose = self.odom_in.pose
-            self.odom.twist.twist = self.twst
+            self.odom.twist.twist = self.twist
 
-            if odom.twist.linear.x == 0 and odom.twist.angular.z == 0:
-                odom.pose.covariance=ODOM_POSE_COVARIANCE2
-                odom.twist.covariance=ODOM_POSE_COVARIANCE2
+            if self.odom.twist.twist.linear.x == 0 and self.odom.twist.twist.angular.z == 0:
+                self.odom.pose.covariance=ODOM_POSE_COVARIANCE2
+                self.odom.twist.covariance=ODOM_POSE_COVARIANCE2
             else:
-                odom.pose.covariance=ODOM_POSE_COVARIANCE
-                odom.twist.covariance=ODOM_POSE_COVARIANCE
+                self.odom.pose.covariance=ODOM_POSE_COVARIANCE
+                self.odom.twist.covariance=ODOM_POSE_COVARIANCE
 
-            self.ekf_pub.publish(odom)
-            rospy.sleep()
+            self.ekf_pub.publish(self.odom)
+            rate.sleep()
         rospy.spin()
 
     def pub_ekf_odom(self, msg1):
@@ -99,15 +103,15 @@ class OdomEKF():
         self.odom_in.pose = msg1.pose
 
     def pub_ekf_twist(self, msg2):
-        self.twst.linear.x = msg2.vx
-        self.twst.linear.y = 0
-        self.twst.angular.z = msg2.w
+
+        self.twist.linear.x = msg2.vx/1000.0
+        self.twist.linear.y = 0
+        self.twist.angular.z = msg2.w/1000.0
 
 if __name__ == '__main__':
     try:
         OdomEKF()
     except:
         pass
-
 
 
