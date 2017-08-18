@@ -1,0 +1,8 @@
+prefix=/home/robot/ros/devel
+
+Name: dashgo_tools
+Description: Description of dashgo_tools
+Version: 1.2.0
+Cflags: 
+Libs: -L/home/robot/ros/devel/lib 
+Requires: 

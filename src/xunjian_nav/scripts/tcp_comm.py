@@ -71,7 +71,7 @@ class Tcp_comm():
 		ut_msg = Ultrasound()
 		imu_msg = Imu()
 		global connect_flag
-		while True:#receive data
+		while not rospy.is_shutdown():#receive data
 			connect_flag = True
 			try:
 				self.sock.settimeout(5)#timeout 5s
@@ -99,19 +99,19 @@ class Tcp_comm():
 						#rospy.loginfo('recv imu data')
 						imu_msg.header.frame_id = "imu"
 						imu_msg.header.stamp = now
-						imu_msg.angular_velocity.x=data[1]/65536.0*4000.0/57.3
-						imu_msg.angular_velocity.y=data[2]/65536.0*4000.0/57.3
-						imu_msg.angular_velocity.z=data[3]/65536.0*4000.0/57.3
-						imu_msg.linear_acceleration.x=data[4]/65536.0*4.0*9.8
-						imu_msg.linear_acceleration.y=data[5]/65536.0*4.0*9.8
-						imu_msg.linear_acceleration.z=data[6]/65536.0*4.0*9.8
+						imu_msg.angular_velocity.x=0#data[1]/65536.0*500.0/57.3
+						imu_msg.angular_velocity.y=0#data[2]/65536.0*500.0/57.3
+						imu_msg.angular_velocity.z=0#data[3]/65536.0*500.0/57.3
+						imu_msg.linear_acceleration.x=0#data[4]/65536.0*16.0*9.8
+						imu_msg.linear_acceleration.y=0#data[5]/65536.0*16.0*9.8
+						imu_msg.linear_acceleration.z=0#data[6]/65536.0*16.0*9.8
 						imu_msg.orientation.w=data[7]/Q30
 						imu_msg.orientation.x=data[8]/Q30
 						imu_msg.orientation.y=data[9]/Q30
 						imu_msg.orientation.z=data[10]/Q30
-						imu_msg.orientation_covariance=[1e6, 0, 0, 0, 1e6, 0, 0, 0, 1e-6]
-						imu_msg.angular_velocity_covariance=[1e6, 0, 0, 0, 1e6, 0, 0, 0, 1e-6]
-						imu_msg.linear_acceleration_covariance = [-1, 0, 0, 0, 0, 0, 0, 0, 0]
+						imu_msg.orientation_covariance=[0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25]
+						imu_msg.angular_velocity_covariance=[0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2]
+						imu_msg.linear_acceleration_covariance = [0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5]
 						imu_pub.publish(imu_msg)
 						(roll,pitch,yaw)=euler_from_quaternion([imu_msg.orientation.x,imu_msg.orientation.y,imu_msg.orientation.z,imu_msg.orientation.w])
 						rospy.loginfo("recv imu data:%d,%d,%d",(int)(roll*57.3),(int)(pitch*57.3),(int)(yaw*57.3))

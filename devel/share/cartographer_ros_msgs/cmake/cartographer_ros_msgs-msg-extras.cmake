@@ -1,0 +1,2 @@
+set(cartographer_ros_msgs_MESSAGE_FILES "/home/robot/ros/src/cartographer_ros/cartographer_ros_msgs/msg/SubmapList.msg;/home/robot/ros/src/cartographer_ros/cartographer_ros_msgs/msg/TrajectorySubmapList.msg;/home/robot/ros/src/cartographer_ros/cartographer_ros_msgs/msg/SubmapEntry.msg")
+set(cartographer_ros_msgs_SERVICE_FILES "/home/robot/ros/src/cartographer_ros/cartographer_ros_msgs/srv/SubmapQuery.srv;/home/robot/ros/src/cartographer_ros/cartographer_ros_msgs/srv/FinishTrajectory.srv")

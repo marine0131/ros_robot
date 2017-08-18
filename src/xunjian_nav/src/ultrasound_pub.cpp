@@ -59,12 +59,12 @@ int main(int argc, char **argv){
 		header4.stamp = ros::Time::now();
 		header5.stamp = ros::Time::now();
 		header6.stamp = ros::Time::now();
-		header1.frame_id = "/ut1";
-		header2.frame_id = "/ut2";
-		header3.frame_id = "/ut3";
-		header4.frame_id = "/ut4";
-		header5.frame_id = "/ut5";
-		header6.frame_id = "/ut6";
+		header1.frame_id = "ut1";
+		header2.frame_id = "ut2";
+		header3.frame_id = "ut3";
+		header4.frame_id = "ut4";
+		header5.frame_id = "ut5";
+		header6.frame_id = "ut6";
 		
 		ultra_msg1.header = header1;
 		ultra_msg2.header = header2;

@@ -78,21 +78,22 @@ class OdomEKF():
         self.twist = Twist()
         rate = rospy.Rate(20)
         while not rospy.is_shutdown():
-            self.odom_broadcaster.sendTransform((self.odom_in.pose.pose.position.x, self.odom_in.pose.pose.position.y, 0),
-                                                (self.odom_in.pose.pose.orientation.x, self.odom_in.pose.pose.orientation.y, self.odom_in.pose.pose.orientation.z, self.odom_in.pose.pose.orientation.w)
-                                                 , rospy.Time.now(), "base_link", "odom")
+           # self.odom_broadcaster.sendTransform((self.odom_in.pose.pose.position.x, self.odom_in.pose.pose.position.y, 0),
+           #                                     (self.odom_in.pose.pose.orientation.x, self.odom_in.pose.pose.orientation.y, self.odom_in.pose.pose.orientation.z, self.odom_in.pose.pose.orientation.w)
+           #                                      , rospy.Time.now(), "base_link", "odom")
             self.odom.header = self.odom_in.header
             self.odom.child_frame_id = "base_link"
             #self.odom.header.stamp =rospy.Time.now()
             self.odom.pose = self.odom_in.pose
             self.odom.twist.twist = self.twist
-
+            '''
             if self.odom.twist.twist.linear.x == 0 and self.odom.twist.twist.angular.z == 0:
                 self.odom.pose.covariance=ODOM_POSE_COVARIANCE2
                 self.odom.twist.covariance=ODOM_POSE_COVARIANCE2
             else:
                 self.odom.pose.covariance=ODOM_POSE_COVARIANCE
                 self.odom.twist.covariance=ODOM_POSE_COVARIANCE
+            '''
 
             self.ekf_pub.publish(self.odom)
             rate.sleep()

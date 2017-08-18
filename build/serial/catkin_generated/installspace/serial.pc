@@ -1,0 +1,8 @@
+prefix=/home/robot/ros/install
+
+Name: serial
+Description: Description of serial
+Version: 1.2.1
+Cflags: -I/home/robot/ros/install/include
+Libs: -L/home/robot/ros/install/lib -lserial
+Requires: 

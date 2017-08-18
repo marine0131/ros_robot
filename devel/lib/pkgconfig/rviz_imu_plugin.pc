@@ -1,0 +1,8 @@
+prefix=/home/robot/ros/devel
+
+Name: rviz_imu_plugin
+Description: Description of rviz_imu_plugin
+Version: 1.0.15
+Cflags: 
+Libs: -L/home/robot/ros/devel/lib 
+Requires: rviz

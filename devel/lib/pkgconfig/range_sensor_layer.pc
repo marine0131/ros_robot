@@ -1,0 +1,8 @@
+prefix=/home/robot/ros/devel
+
+Name: range_sensor_layer
+Description: Description of range_sensor_layer
+Version: 0.3.1
+Cflags: -I/home/robot/ros/devel/include
+Libs: -L/home/robot/ros/devel/lib 
+Requires: sensor_msgs

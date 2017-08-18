@@ -1,0 +1,8 @@
+prefix=/home/robot/ros/devel
+
+Name: imu_processors
+Description: Description of imu_processors
+Version: 0.2.2
+Cflags: 
+Libs: -L/home/robot/ros/devel/lib 
+Requires: roscpp sensor_msgs geometry_msgs nav_msgs tf

@@ -1,0 +1,8 @@
+prefix=/home/robot/ros/install
+
+Name: xunjian_nav
+Description: Description of xunjian_nav
+Version: 0.0.0
+Cflags: -I/home/robot/ros/install/include
+Libs: -L/home/robot/ros/install/lib -lxunjian_nav
+Requires: roscpp rospy std_msgs serial message_runtime

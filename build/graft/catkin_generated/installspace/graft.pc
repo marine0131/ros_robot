@@ -1,0 +1,8 @@
+prefix=/home/robot/ros/install
+
+Name: graft
+Description: Description of graft
+Version: 0.2.3
+Cflags: -I/home/robot/ros/install/include
+Libs: -L/home/robot/ros/install/lib 
+Requires: message_runtime rosconsole roscpp geometry_msgs sensor_msgs nav_msgs tf

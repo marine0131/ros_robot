@@ -136,6 +136,12 @@ target_link_libraries(pose_publisher
    ${catkin_LIBRARIES}
  )
 
+
+add_executable(robot_cmd_vel_pub src/robot_cmd_vel_pub.cpp )                                                         
+target_link_libraries(robot_cmd_vel_pub
+  ${catkin_LIBRARIES}
+  )
+
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(xunjian_nav_node xunjian_nav_generate_messages_cpp)

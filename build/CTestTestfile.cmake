@@ -1,0 +1,35 @@
+# CMake generated Testfile for 
+# Source directory: /home/robot/ros/src
+# Build directory: /home/robot/ros/build
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+SUBDIRS(gtest)
+SUBDIRS(imu_pipeline/imu_pipeline)
+SUBDIRS(imu_tools/imu_tools)
+SUBDIRS(cartographer_ros/cartographer_ros_msgs)
+SUBDIRS(rbx1/rbx1)
+SUBDIRS(serial)
+SUBDIRS(rbx1/rbx1_bringup)
+SUBDIRS(rbx1/rbx1_dynamixels)
+SUBDIRS(rbx1/rbx1_speech)
+SUBDIRS(rbx1/rbx1_vision)
+SUBDIRS(nav_goal)
+SUBDIRS(sick_tim)
+SUBDIRS(cartographer_ros/cartographer_ros)
+SUBDIRS(dashgo_tools)
+SUBDIRS(graft)
+SUBDIRS(imu_tools/imu_complementary_filter)
+SUBDIRS(imu_pipeline/imu_processors)
+SUBDIRS(laser_filters)
+SUBDIRS(rbx1/rbx1_apps)
+SUBDIRS(rbx1/rbx1_nav)
+SUBDIRS(robot_pose_ekf)
+SUBDIRS(imu_tools/imu_filter_madgwick)
+SUBDIRS(robot_localization)
+SUBDIRS(imu_pipeline/imu_transformer)
+SUBDIRS(rbx1/rbx1_description)
+SUBDIRS(cartographer_ros/cartographer_rviz)
+SUBDIRS(imu_tools/rviz_imu_plugin)
+SUBDIRS(range_sensor_layer)
+SUBDIRS(xunjian_nav)
