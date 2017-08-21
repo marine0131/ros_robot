@@ -111,12 +111,12 @@ while(n.ok())
 	odom.twist.twist.linear.x=vx;
 	odom.twist.twist.linear.y=0.0;
 	odom.twist.twist.angular.z=w;
-	/*odom.twist.covariance = boost::assign::list_of(1e-5) (0) (0) (0) (0) (0)
-			                                      (0) (1e-5) (0) (0) (0) (0)
-												  (0) (0) (1e-5) (0) (0) (0)
-												  (0) (0) (0) (1e-5) (0) (0)
-                                                  (0) (0) (0) (0) (1e-5) (0)
-												  (0) (0) (0) (0) (0) (1e-5);*/
+	odom.twist.covariance = boost::assign::list_of(0.001) (0) (0) (0) (0) (0)
+			                                      (0) (0.001) (0) (0) (0) (0)
+												  (0) (0) (1e5) (0) (0) (0)
+												  (0) (0) (0) (1e5) (0) (0)
+                                                  (0) (0) (0) (0) (1e5) (0)
+												  (0) (0) (0) (0) (0) (0.01);
 	odom_pub.publish(odom);//发布经过坐标变换后的里程计信息
 	right_enc_old=right_enc;
 	left_enc_old=left_enc;

@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="tf" type="static_transform_publisher" name="laser_base_broadcaster" args="0.21 0 0.21 0 0 0 base_link laser 50"/>
+  <include file="$(find sick_tim)/launch/sick_tim561_2050101.launch"/>
+</launch>
+
+

@@ -203,6 +203,7 @@ class Tcp_comm():
             aaa = self.recvall(4096)
             #bbb = struct.unpack('>B')
             rospy.loginfo('len error,%d,%d',header,data_len)
+            rospy.loginfo(repr(aaa))
             return None
         pack = self.recvall(data_len)
         if not pack:
