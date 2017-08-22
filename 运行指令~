@@ -1,57 +1,79 @@
-gmapping 运行指令表
 ls -l /dev/ttyUSB*
 sudo chmod 666 /dev/ttyUSB0
-roscore
-roslaunch xunjian_nav xunjian_robot.launch
-查看tf tree   rosrun tf view_frames
-运行rplidar a2节点  roslaunch rplidar_ros  rplidar.launch 
-rosrun gmapping slam_gmapping scan:=scan
-rosrun rviz rviz
 
-键盘控制机器人运动    roslaunch rbx1_nav keyboard_teleop.launch 
-打印偏航角信息     rosrun  xunjian_nav yaw_print
-串口连接   rosrun xunjian_nav  serial_example_node
-编码器清零 rostopic pub -1 motor_encoderClean std_msgs/Empty
+##永久获取串口权限
+	sudo usermod -aG　dialout whj  
+##查看tf tree   
+	rosrun tf view_frames
 
-                  rosrun xunjian_nav  car_speed
-                  rosrun xunjian_nav  odometry_pub
+##键盘控制机器人运动    
+	roslaunch xunjian_nav keyboard_teleop.launch 
+##打印偏航角信息     
+	rosrun  xunjian_nav yaw_print
+##串口连接   
+	rosrun xunjian_nav  serial_example_node
+##编码器清零 
+	rostopic pub -1 motor_encoderClean std_msgs/Empty
 
+##编码器校准
+	1.rosrun xunjian_nav calibrate_linear.py
+	2.rosrun xunjian_nav calibrate_angular.py
 
-激光节点      roslaunch   rplidar_ros  view_rplidar.launch   
+##激光节点demo   
+####rplidar
+	--- roslaunch rplidar_ros  view_rplidar.launch   
+####sicktim
+	--- roslaunch sick_tim sick_tim_view.launch
 
+##查看机器人模型demo
+	roslaunch xunjian_nav urdf_view.launch
 
-最新的运行指令   1.rosrun xunjian_nav  serial_node
-                2.rostopic pub -1 encoder_reset std_msgs/Empty
-                3.roslaunch xunjian_nav xunjian_robot.launch
-                4.roslaunch xunjian_nav move_base_gmapping.launch
-                5.rosrun rviz rviz -d `rospack find rbx1_nav`/gmapping.rviz
+##运动指令发布
+	rostopic pub -r 10 /smoother_cmd_vel geometry_msgs/Twist '{linear: {x: 0.2, y: 0, z: 0}, angular: {x: 0, y: 0, z: 0}}'
 
-amcl运行命令   1.rosrun xunjian_nav  serial_node
-              2.rostopic pub -1 encoder_reset std_msgs/Empty
-              3.roslaunch xunjian_nav xunjian_robot.launch
-              4.roslaunch rplidar_ros  rplidar.launch
-              5.roslaunch xunjian_nav  move_base_amcl.launch
-              6.rosrun rviz rviz -d `rospack find rbx1_nav/rviz`/amcl.rviz
+##导航
+	1.roslaunch xunjian_nav xunjian_robot.launch
+	2.roslaunch xunjian_nav  move_base_amcl.launch
 
-键盘控制           rosrun xunjian_nav  serial_node
-                  roslaunch xunjian_nav xunjian_robot.launch
-                  roslaunch rbx1_nav keyboard_teleop.launch 
-
-导航
-               1.rosrun xunjian_nav  serial_node
-               2.rostopic pub -1 encoder_reset std_msgs/Empty
-               3.roslaunch xunjian_nav xunjian_robot.launch
-               4.roslaunch xunjian_nav  move_base_amcl.launch
-建图       	1.rosrun xunjian_nav  serial_node
-               2.rostopic pub -1 encoder_reset std_msgs/Empty
-               3.roslaunch xunjian_nav gmapping_demo.launch
-               4.roscd xunjian_nav/maps
-               5.rosrun map_server map_saver -f company_map
+##建图    
+####gmapping   	
+	1.roslaunch xunjian_nav xunjian_robot.launch
+	2.roslaunch xunjian_nav gmapping_demo.launch
+	
+####cartographer mapping	
+	1.roslaunch xunjian_nav xunjian_robot.launch	
+	2.roslaunch cartographer_ros my_revo_lds.launch
 
 
-其他辅助功能指令： roscd xunjian_nav/xunjian_bag
-                  rosbag  record -O company_data  /scan /tf   ####记录数据包指令
+##其他辅助功能指令： 
+####发送目标
+	rosrun nav_goal nav_goal
+   
+####记录数据包指令
+	roscd xunjian_nav/xunjian_bag
+	rosbag  record -O company_data  /scan /tf   
 
-                  roscd xunjian_nav/maps
-                  rosrun map_server map_saver -f company_map     ####保存地图指令
-                  rostopic pub -1 move_base/cancel actionlib_msgs/GoalID {}    ####终止导航的指令
+####保存地图指令
+ 	roscd xunjian_nav/maps
+	rosrun map_server map_saver -f company_map    
+ 
+####终止导航的指令
+	rostopic pub -1 move_base/cancel actionlib_msgs/GoalID {}   
+
+#####################################
+old运行指令   
+	1.rosrun xunjian_nav  serial_node
+	2.rostopic pub -1 encoder_reset std_msgs/Empty
+	3.roslaunch xunjian_nav xunjian_robot.launch
+	4.roslaunch xunjian_nav move_base_gmapping.launch
+	5.rosrun rviz rviz -d `rospack find rbx1_nav`/gmapping.rviz
+
+amcl运行命令   
+	1.rosrun xunjian_nav  serial_node
+	2.rostopic pub -1 encoder_reset std_msgs/Empty
+	3.roslaunch xunjian_nav xunjian_robot.launch
+	4.roslaunch rplidar_ros  rplidar.launch
+	5.roslaunch xunjian_nav  move_base_amcl.launch
+	6.rosrun rviz rviz -d `rospack find rbx1_nav/rviz`/amcl.rviz
+
+

@@ -76,4 +76,13 @@ amcl运行命令
 	5.roslaunch xunjian_nav  move_base_amcl.launch
 	6.rosrun rviz rviz -d `rospack find rbx1_nav/rviz`/amcl.rviz
 
+#######  2017/08/22 整理后的运行指令
+建图指令
+roslaunch xunjian_nav xunjian_mapping.launch
+手机端通过 DashgoAPP通过WiFi连接进行手动控制机器人直行和旋转
+从机显示 rosrun rviz rviz -d `rospack find cartographer_ros`/configuration_files/demo_2d.rviz
 
+自主导航指令
+roslaunch xunjian_nav xunjian_robot.launch
+roslaunch xunjian_nav xunjian_move_base.launch
+从机显示  rosrun rviz rviz -d `rospack find xunjian_nav`/rviz/demo.rviz

@@ -80,10 +80,10 @@ while(n.ok())
 //PS：实际中偏航角由六轴陀螺仪获得
 	geometry_msgs::Quaternion odom_quat=tf::createQuaternionMsgFromYaw(th);
 
-	//geometry_msgs::TransformStamped odom_trans;
+	/*geometry_msgs::TransformStamped odom_trans;
 //时间戳信息
 //通过tf发布坐标变换，这里的tf/tfMessage包含stamp信息，frame_id信息和child_frame_id信息以及translation和rotation信息
-	/*odom_trans.header.stamp=current_time;
+	odom_trans.header.stamp=current_time;
 	odom_trans.header.frame_id="odom";
 	odom_trans.child_frame_id="base_link";
 	odom_trans.transform.translation.x=x;

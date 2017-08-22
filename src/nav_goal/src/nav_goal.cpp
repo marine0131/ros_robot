@@ -8,8 +8,7 @@
 #define SERVER 1
 #define BOSS 2
 #define WC 3
-#define ROOM 4
-#define GATE 5
+#define GATE 4
 using namespace std;
 
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
@@ -54,23 +53,20 @@ int main(int argc, char** argv){
 	Goals goals[20];
 
 	goals[0].set_frame("map");
-	goals[0].set_position(1.45884692669,0.41893029213,0);
-	goals[0].set_quat(0,0,0.380679358544,0.924707102805);
+	goals[0].set_position(0.088,2.398,0);
+	goals[0].set_quat(0,0,0.814,0.580);
 	goals[1].set_frame("map");
-	goals[1].set_position(6.51145744324,-2.35952734947,0);
-	goals[1].set_quat(0,0,0.909674541736,-0.415321836794);
+	goals[1].set_position(4.710,5.683,0);
+	goals[1].set_quat(0,0,-0.611,0.792);
 	goals[2].set_frame("map");
-	goals[2].set_position(-4.2894,-7.019709,0);
-	goals[2].set_quat(0,0,0.954226403507,-0.299085223391);
+	goals[2].set_position(4.941,-5.283,0);
+	goals[2].set_quat(0,0,-0.602,0.799);
 	goals[3].set_frame("map");
-	goals[3].set_position(11.3937091827,0.897811412811,0);
-	goals[3].set_quat(0,0,0.424219369561,0.905559454972);
-	goals[4].set_frame("map");
-	goals[4].set_position(-0.576218009,1.0124691725,0);
-	goals[4].set_quat(0,0,-0.3492525274,0.9370286399);
+	goals[3].set_position(4.902,9.369,0);
+	goals[3].set_quat(0,0,-0.619,0.785);
 	goals[5].set_frame("map");
-	goals[5].set_position(3.52077460289,-6.87122631073,0);
-	goals[5].set_quat(0,0,-0.341993935225,0.939702159341);
+	goals[5].set_position(6.794,0.273,0);
+	goals[5].set_quat(0,0,-0.602,0.799);
 
 	//wait for the action server to come up
 	while(!ac.waitForServer(ros::Duration(5.0))){

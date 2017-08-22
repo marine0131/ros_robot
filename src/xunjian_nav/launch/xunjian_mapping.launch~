@@ -1,7 +1,7 @@
 <launch>
 	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
-    <!--<include file="$(find sick_tim)/launch/sick_tim561_2050101.launch"/> -->
-    <include file="$(find xunjian_nav)/launch/xunjian_robot.launch" />
+    <include file="$(find sick_tim)/launch/sick_tim561_2050101.launch"/>
+    <!--<include file="$(find xunjian_nav)/launch/xunjian_robot.launch" />-->
 	<include file="$(find cartographer_ros)/launch/my_revo_lds.launch" />
     <include file="$(find xunjian_nav)/launch/xunjian_description.launch" />
 </launch>
